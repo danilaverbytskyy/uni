@@ -1,0 +1,20 @@
+Z:\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\bin\Debug\35_2_Verbytskyy_P1.exe.config
+Z:\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\bin\Debug\35_2_Verbytskyy_P1.exe
+Z:\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\bin\Debug\35_2_Verbytskyy_P1.pdb
+Z:\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\obj\Debug\35_2_Verbytskyy_P1.csproj.AssemblyReference.cache
+Z:\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\obj\Debug\_35_2_Verbytskyy_P1.Form1.resources
+Z:\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\obj\Debug\_35_2_Verbytskyy_P1.Properties.Resources.resources
+Z:\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\obj\Debug\35_2_Verbytskyy_P1.csproj.GenerateResource.cache
+Z:\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\obj\Debug\35_2_Verbytskyy_P1.csproj.CoreCompileInputs.cache
+Z:\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\obj\Debug\35_2_Verbytskyy_P1.exe
+Z:\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\obj\Debug\35_2_Verbytskyy_P1.pdb
+D:\Программы для практики\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\bin\Debug\35_2_Verbytskyy_P1.exe.config
+D:\Программы для практики\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\bin\Debug\35_2_Verbytskyy_P1.exe
+D:\Программы для практики\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\bin\Debug\35_2_Verbytskyy_P1.pdb
+D:\Программы для практики\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\obj\Debug\35_2_Verbytskyy_P1.csproj.AssemblyReference.cache
+D:\Программы для практики\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\obj\Debug\_35_2_Verbytskyy_P1.Form1.resources
+D:\Программы для практики\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\obj\Debug\_35_2_Verbytskyy_P1.Properties.Resources.resources
+D:\Программы для практики\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\obj\Debug\35_2_Verbytskyy_P1.csproj.GenerateResource.cache
+D:\Программы для практики\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\obj\Debug\35_2_Verbytskyy_P1.csproj.CoreCompileInputs.cache
+D:\Программы для практики\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\obj\Debug\35_2_Verbytskyy_P1.exe
+D:\Программы для практики\35_2_Verbytskyy_P1\35_2_Verbytskyy_P1\obj\Debug\35_2_Verbytskyy_P1.pdb
