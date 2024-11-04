@@ -15507,7 +15507,7 @@
 									"top": 1045,
 									"width": 170.13720703125,
 									"height": 13,
-									"text": "Contract"
+									"text": "Contracts"
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -15778,7 +15778,7 @@
 									"top": 1277,
 									"width": 147.75537109375,
 									"height": 13,
-									"text": "Employee_Groups"
+									"text": "Employees_Groups"
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -16137,7 +16137,7 @@
 									"top": 789,
 									"width": 153.50634765625,
 									"height": 13,
-									"text": "Project_Equipments"
+									"text": "Projects_Equipments"
 								},
 								{
 									"_type": "ERDColumnCompartmentView",
@@ -18201,7 +18201,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGS2SMpABZ4zvQ="
 					},
-					"name": "Contract",
+					"name": "Contracts",
 					"ownedElements": [
 						{
 							"_type": "ERDRelationship",
@@ -18325,7 +18325,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGS2SMpABZ4zvQ="
 					},
-					"name": "Employee_Groups",
+					"name": "Employees_Groups",
 					"ownedElements": [
 						{
 							"_type": "ERDRelationship",
@@ -18465,7 +18465,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGS2SMpABZ4zvQ="
 					},
-					"name": "Project_Equipments",
+					"name": "Projects_Equipments",
 					"ownedElements": [
 						{
 							"_type": "ERDRelationship",
