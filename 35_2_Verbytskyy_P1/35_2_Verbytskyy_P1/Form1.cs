@@ -16,6 +16,8 @@ namespace _35_2_Verbytskyy_P1
     public partial class Form1 : Form
     {
         private double[] _inputPixels = new double[15] { 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d, 0d };
+        private NeuroNet.Network net = new NeuroNet.Network();
+
         public Form1()
         {
             InitializeComponent();
@@ -147,6 +149,7 @@ namespace _35_2_Verbytskyy_P1
                 numberCombination += input[i].ToString();
             }
 
+            numberCombination += "\n";
             if (File.Exists(nameFileTrain))
             {
                 File.AppendAllText(nameFileTrain, numberCombination);
@@ -169,10 +172,17 @@ namespace _35_2_Verbytskyy_P1
                 numberCombination += input[i].ToString();
             }
 
+            numberCombination += "\n";
             if (File.Exists(nameFileTest))
             {
                 File.AppendAllText(nameFileTest, numberCombination);
             }
+        }
+
+        private void buttonRecognize_Click(object sender, EventArgs e)
+        {
+            net.ForwardPass(net, _inputPixels);
+            labelFact.Text = net.fact.ToList().IndexOf(net.fact.Max()).ToString();
         }
     }
 }
