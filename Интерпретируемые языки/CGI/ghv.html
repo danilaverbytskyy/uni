@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Music</title>
+</head>
+<body>
+    <h1>Добавление нового артиста</h1>
+    <form method="post" action="/cgi-bin/cgi_server.py">
+        <label for="artist_name">Имя артиста:</label>
+        <input type="text" id="artist_name" name="artist_name" required><br><br>
+
+        <label for="birth_date">Дата рождения:</label>
+        <input type="date" id="birth_date" name="birth_date" required><br><br>
+
+        <input type="submit" value="Добавить">
+    </form>
+
+    <h2>Список всех артистов</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Имя</th>
+            <th>Дата рождения</th>
+        </tr>
+        <tr><td>1</td><td>Halsey</td><td>1994-09-29</td></tr><tr><td>2</td><td>Taylor Swift</td><td>1989-12-13</td></tr><tr><td>3</td><td>Linkin Park</td><td>1977-02-11</td></tr>
+    </table>
+
+    <h2>Добавить альбом</h2>
+    <form method="post" action="/cgi-bin/cgi_server.py">
+        <label for="album_title">Название альбома:</label>
+        <input type="text" id="album_title" name="album_title" required><br><br>
+
+        <label for="artist_id">ID артиста:</label>
+        <input type="number" id="artist_id" name="artist_id" required><br><br>
+
+        <input type="submit" value="Добавить альбом">
+    </form>
+
+    <h2>Список альбомов</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Артист</th>
+        </tr>
+        <tr><td>1</td><td>Manic</td><td>Halsey</td></tr><tr><td>2</td><td>The Great Impersonator</td><td>Halsey</td></tr><tr><td>3</td><td>Midnights</td><td>Taylor Swift</td></tr><tr><td>4</td><td>evermore</td><td>Taylor Swift</td></tr><tr><td>5</td><td>From Zero</td><td>Linkin Park</td></tr><tr><td>6</td><td>Hybrid Theory</td><td>Linkin Park</td></tr>
+    </table>
+
+    <h2>Добавить трек</h2>
+    <form method="post" action="/cgi-bin/cgi_server.py">
+        <label for="track_title">Название трека:</label>
+        <input type="text" id="track_title" name="track_title" required><br><br>
+
+        <label for="duration">Длительность (в секундах):</label>
+        <input type="number" id="duration" name="duration" required><br><br>
+
+        <label for="artist_id">ID артиста:</label>
+        <input type="number" id="track_artist_id" name="track_artist_id" required><br><br>
+
+        <input type="submit" value="Добавить трек">
+    </form>
+
+    <h2>Список треков</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Длительность (сек)</th>
+            <th>Артист</th>
+        </tr>
+        <tr><td>1</td><td>Graveyard</td><td>182</td><td>Halsey</td></tr><tr><td>2</td><td>Without Me</td><td>201</td><td>Halsey</td></tr><tr><td>3</td><td>Only Living Girl in LA</td><td>225</td><td>Halsey</td></tr><tr><td>4</td><td>I Never Love You</td><td>230</td><td>Halsey</td></tr><tr><td>5</td><td>Anti-Hero</td><td>200</td><td>Taylor Swift</td></tr><tr><td>6</td><td>Lavender Haze</td><td>202</td><td>Taylor Swift</td></tr><tr><td>7</td><td>willow</td><td>214</td><td>Taylor Swift</td></tr><tr><td>8</td><td>champagne problems</td><td>244</td><td>Taylor Swift</td></tr><tr><td>9</td><td>Cut the Bridge</td><td>220</td><td>Linkin Park</td></tr><tr><td>10</td><td>Heavy Is The Crown</td><td>210</td><td>Linkin Park</td></tr><tr><td>11</td><td>In the End</td><td>216</td><td>Linkin Park</td></tr><tr><td>12</td><td>One Step Closer</td><td>155</td><td>Linkin Park</td></tr><tr><td>13</td><td>Crawling</td><td>209</td><td>Linkin Park</td></tr><tr><td>14</td><td>Papercut</td><td>184</td><td>Linkin Park</td></tr><tr><td>15</td><td>Points of Authority</td><td>200</td><td>Linkin Park</td></tr>
+    </table>
+</body>
+</html>

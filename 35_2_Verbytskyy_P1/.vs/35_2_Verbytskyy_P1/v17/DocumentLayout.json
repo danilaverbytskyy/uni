@@ -1,0 +1,197 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|d:\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_verbytskyy_p1\\35_2_verbytskyy_p1\\neuronet\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|solutionrelative:35_2_verbytskyy_p1\\neuronet\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_verbytskyy_p1\\neuronet\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|solutionrelative:35_2_verbytskyy_p1\\neuronet\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_verbytskyy_p1\\neuronet\\inputlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|solutionrelative:35_2_verbytskyy_p1\\neuronet\\inputlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_verbytskyy_p1\\neuronet\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|solutionrelative:35_2_verbytskyy_p1\\neuronet\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_verbytskyy_p1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|solutionrelative:35_2_verbytskyy_p1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_verbytskyy_p1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|solutionrelative:35_2_verbytskyy_p1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_verbytskyy_p1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|solutionrelative:35_2_verbytskyy_p1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_verbytskyy_p1\\neuronet\\hiddenlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|solutionrelative:35_2_verbytskyy_p1\\neuronet\\hiddenlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_verbytskyy_p1\\neuronet\\neuron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|solutionrelative:35_2_verbytskyy_p1\\neuronet\\neuron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_verbytskyy_p1\\neuronet\\outputlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|solutionrelative:35_2_verbytskyy_p1\\neuronet\\outputlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_verbytskyy_p1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFE3592D-A69B-49FF-94F7-1423D2FF5BF8}|35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1.csproj|solutionrelative:35_2_verbytskyy_p1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\Form1.cs",
+              "RelativeDocumentMoniker": "35_2_Verbytskyy_P1\\Form1.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\Form1.cs",
+              "RelativeToolTip": "35_2_Verbytskyy_P1\\Form1.cs",
+              "ViewState": "AQIAALwAAAAAAAAAAAD4v8UAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T19:37:50.675Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Neuron.cs",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\NeuroNet\\Neuron.cs",
+              "RelativeDocumentMoniker": "35_2_Verbytskyy_P1\\NeuroNet\\Neuron.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\NeuroNet\\Neuron.cs",
+              "RelativeToolTip": "35_2_Verbytskyy_P1\\NeuroNet\\Neuron.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAAAA0AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T16:53:20.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HiddenLayer.cs",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\NeuroNet\\HiddenLayer.cs",
+              "RelativeDocumentMoniker": "35_2_Verbytskyy_P1\\NeuroNet\\HiddenLayer.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\NeuroNet\\HiddenLayer.cs",
+              "RelativeToolTip": "35_2_Verbytskyy_P1\\NeuroNet\\HiddenLayer.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAnwCAAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T08:21:02.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OutputLayer.cs",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\NeuroNet\\OutputLayer.cs",
+              "RelativeDocumentMoniker": "35_2_Verbytskyy_P1\\NeuroNet\\OutputLayer.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\NeuroNet\\OutputLayer.cs",
+              "RelativeToolTip": "35_2_Verbytskyy_P1\\NeuroNet\\OutputLayer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T08:29:57.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "35_2_Verbytskyy_P1\\Form1.Designer.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\Form1.Designer.cs",
+              "RelativeToolTip": "35_2_Verbytskyy_P1\\Form1.Designer.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAYwBcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T15:59:15.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\Program.cs",
+              "RelativeDocumentMoniker": "35_2_Verbytskyy_P1\\Program.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\Program.cs",
+              "RelativeToolTip": "35_2_Verbytskyy_P1\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAjwBIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T16:55:18.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\Form1.cs",
+              "RelativeDocumentMoniker": "35_2_Verbytskyy_P1\\Form1.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "35_2_Verbytskyy_P1\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T19:36:06.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Network.cs",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\NeuroNet\\Network.cs",
+              "RelativeDocumentMoniker": "35_2_Verbytskyy_P1\\NeuroNet\\Network.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\NeuroNet\\Network.cs",
+              "RelativeToolTip": "35_2_Verbytskyy_P1\\NeuroNet\\Network.cs",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAowHwAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T08:32:19.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InputLayer.cs",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\NeuroNet\\InputLayer.cs",
+              "RelativeDocumentMoniker": "35_2_Verbytskyy_P1\\NeuroNet\\InputLayer.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\NeuroNet\\InputLayer.cs",
+              "RelativeToolTip": "35_2_Verbytskyy_P1\\NeuroNet\\InputLayer.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAIwFUAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T08:50:13.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Layer.cs",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\NeuroNet\\Layer.cs",
+              "RelativeDocumentMoniker": "35_2_Verbytskyy_P1\\NeuroNet\\Layer.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\NeuroNet\\Layer.cs",
+              "RelativeToolTip": "35_2_Verbytskyy_P1\\NeuroNet\\Layer.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAAA4AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T08:20:15.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\NeuroNet\\Enums.cs",
+              "RelativeDocumentMoniker": "35_2_Verbytskyy_P1\\NeuroNet\\Enums.cs",
+              "ToolTip": "D:\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B \u0434\u043B\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0438\\35_2_Verbytskyy_P1\\35_2_Verbytskyy_P1\\NeuroNet\\Enums.cs",
+              "RelativeToolTip": "35_2_Verbytskyy_P1\\NeuroNet\\Enums.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T16:52:31.209Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
