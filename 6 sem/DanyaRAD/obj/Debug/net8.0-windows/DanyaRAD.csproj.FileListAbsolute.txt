@@ -1,0 +1,17 @@
+D:\Программы для практики\DanyaRAD\bin\Debug\net8.0-windows\DanyaRAD.exe
+D:\Программы для практики\DanyaRAD\bin\Debug\net8.0-windows\DanyaRAD.deps.json
+D:\Программы для практики\DanyaRAD\bin\Debug\net8.0-windows\DanyaRAD.runtimeconfig.json
+D:\Программы для практики\DanyaRAD\bin\Debug\net8.0-windows\DanyaRAD.dll
+D:\Программы для практики\DanyaRAD\bin\Debug\net8.0-windows\DanyaRAD.pdb
+D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.Form1.resources
+D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.csproj.GenerateResource.cache
+D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.GeneratedMSBuildEditorConfig.editorconfig
+D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.AssemblyInfoInputs.cache
+D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.AssemblyInfo.cs
+D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.csproj.CoreCompileInputs.cache
+D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.sourcelink.json
+D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.dll
+D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\refint\DanyaRAD.dll
+D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.pdb
+D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.genruntimeconfig.cache
+D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\ref\DanyaRAD.dll

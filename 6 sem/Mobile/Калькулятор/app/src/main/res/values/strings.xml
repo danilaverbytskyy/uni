@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MobileApplication</string>
+    <string name="s_name">WASD</string>
+    <string name="first_number_hint">Input first number</string>
+    <string name="second">Input second number</string>
+    <string name="input_number_hint">Input number</string>
+    <string name="input_value">123456789.</string>
+</resources>

@@ -1,0 +1,40 @@
+C:\Users\azero\Desktop\Нейросетевые модели\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\bin\Debug\35_2_Filipenko_Problem1.exe.config
+C:\Users\azero\Desktop\Нейросетевые модели\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\bin\Debug\35_2_Filipenko_Problem1.exe
+C:\Users\azero\Desktop\Нейросетевые модели\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\bin\Debug\35_2_Filipenko_Problem1.pdb
+C:\Users\azero\Desktop\Нейросетевые модели\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.csproj.AssemblyReference.cache
+C:\Users\azero\Desktop\Нейросетевые модели\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\_35_2_Filipenko_Problem1.Form1.resources
+C:\Users\azero\Desktop\Нейросетевые модели\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\_35_2_Filipenko_Problem1.Properties.Resources.resources
+C:\Users\azero\Desktop\Нейросетевые модели\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.csproj.GenerateResource.cache
+C:\Users\azero\Desktop\Нейросетевые модели\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.csproj.CoreCompileInputs.cache
+C:\Users\azero\Desktop\Нейросетевые модели\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.exe
+C:\Users\azero\Desktop\Нейросетевые модели\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.pdb
+Z:\Neiro-main\lol\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\bin\Debug\35_2_Filipenko_Problem1.exe.config
+Z:\Neiro-main\lol\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\bin\Debug\35_2_Filipenko_Problem1.exe
+Z:\Neiro-main\lol\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\bin\Debug\35_2_Filipenko_Problem1.pdb
+Z:\Neiro-main\lol\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.csproj.AssemblyReference.cache
+Z:\Neiro-main\lol\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\_35_2_Filipenko_Problem1.Form1.resources
+Z:\Neiro-main\lol\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\_35_2_Filipenko_Problem1.Properties.Resources.resources
+Z:\Neiro-main\lol\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.csproj.GenerateResource.cache
+Z:\Neiro-main\lol\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.csproj.CoreCompileInputs.cache
+Z:\Neiro-main\lol\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.exe
+Z:\Neiro-main\lol\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.pdb
+C:\Users\azero\Downloads\p2\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\bin\Debug\35_2_Filipenko_Problem1.exe.config
+C:\Users\azero\Downloads\p2\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\bin\Debug\35_2_Filipenko_Problem1.exe
+C:\Users\azero\Downloads\p2\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\bin\Debug\35_2_Filipenko_Problem1.pdb
+C:\Users\azero\Downloads\p2\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.csproj.AssemblyReference.cache
+C:\Users\azero\Downloads\p2\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\_35_2_Filipenko_Problem1.Form1.resources
+C:\Users\azero\Downloads\p2\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\_35_2_Filipenko_Problem1.Properties.Resources.resources
+C:\Users\azero\Downloads\p2\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.csproj.GenerateResource.cache
+C:\Users\azero\Downloads\p2\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.csproj.CoreCompileInputs.cache
+C:\Users\azero\Downloads\p2\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.exe
+C:\Users\azero\Downloads\p2\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.pdb
+D:\Danila Verbytskyy\35_2_Filipenko_Problem1\bin\Debug\35_2_Filipenko_Problem1.exe.config
+D:\Danila Verbytskyy\35_2_Filipenko_Problem1\bin\Debug\35_2_Filipenko_Problem1.exe
+D:\Danila Verbytskyy\35_2_Filipenko_Problem1\bin\Debug\35_2_Filipenko_Problem1.pdb
+D:\Danila Verbytskyy\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.csproj.AssemblyReference.cache
+D:\Danila Verbytskyy\35_2_Filipenko_Problem1\obj\Debug\_35_2_Verbytskyy_Danila.Form1.resources
+D:\Danila Verbytskyy\35_2_Filipenko_Problem1\obj\Debug\_35_2_Filipenko_Problem1.Properties.Resources.resources
+D:\Danila Verbytskyy\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.csproj.GenerateResource.cache
+D:\Danila Verbytskyy\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.csproj.CoreCompileInputs.cache
+D:\Danila Verbytskyy\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.exe
+D:\Danila Verbytskyy\35_2_Filipenko_Problem1\obj\Debug\35_2_Filipenko_Problem1.pdb

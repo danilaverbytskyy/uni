@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "DanyaRAD/1.0.0": {
+        "runtime": {
+          "DanyaRAD.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DanyaRAD/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
