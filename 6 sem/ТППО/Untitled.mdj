@@ -300,6 +300,7 @@
 											"model": {
 												"$ref": "AAAAAAGVZlUyoyuI6kY="
 											},
+											"visible": false,
 											"font": "Arial;13;0",
 											"left": 157,
 											"top": 193,
@@ -311,7 +312,7 @@
 									"left": 152,
 									"top": 143,
 									"width": 115.2236328125,
-									"height": 68
+									"height": 53
 								}
 							],
 							"font": "Arial;13;0",
@@ -1116,7 +1117,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGVZeiFlOPkI+I="
 							},
-							"name": "price",
+							"name": "total_price",
 							"length": 0
 						},
 						{
@@ -1993,7 +1994,7 @@
 									"font": "Arial;13;0",
 									"left": 429,
 									"top": 245,
-									"width": 101.70458984375,
+									"width": 101,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGVZzgqHixWw9I="
@@ -2190,7 +2191,7 @@
 									"font": "Arial;13;0",
 									"left": 437,
 									"top": 68.5,
-									"width": 100.94921875,
+									"width": 100,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGVZziUJSyH/iM="
@@ -2920,7 +2921,7 @@
 									"font": "Arial;13;0",
 									"left": 445,
 									"top": 124.5,
-									"width": 100.2890625,
+									"width": 99,
 									"height": 64,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGVZzjivy1cSS0="

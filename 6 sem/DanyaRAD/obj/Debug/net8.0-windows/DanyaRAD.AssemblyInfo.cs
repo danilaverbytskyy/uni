@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DanyaRAD")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37cfc05cda0b1663b369dea546b56e57d8daee0a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+febbb3e8cb21cf5f80936c4c4095c73f2358859f")]
 [assembly: System.Reflection.AssemblyProductAttribute("DanyaRAD")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DanyaRAD")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

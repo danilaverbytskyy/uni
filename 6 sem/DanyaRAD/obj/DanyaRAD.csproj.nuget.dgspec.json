@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Программы для практики\\DanyaRAD\\DanyaRAD.csproj": {}
+    "D:\\uni\\6 sem\\DanyaRAD\\DanyaRAD.csproj": {}
   },
   "projects": {
-    "D:\\Программы для практики\\DanyaRAD\\DanyaRAD.csproj": {
+    "D:\\uni\\6 sem\\DanyaRAD\\DanyaRAD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Программы для практики\\DanyaRAD\\DanyaRAD.csproj",
+        "projectUniqueName": "D:\\uni\\6 sem\\DanyaRAD\\DanyaRAD.csproj",
         "projectName": "DanyaRAD",
-        "projectPath": "D:\\Программы для практики\\DanyaRAD\\DanyaRAD.csproj",
+        "projectPath": "D:\\uni\\6 sem\\DanyaRAD\\DanyaRAD.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Программы для практики\\DanyaRAD\\obj\\",
+        "outputPath": "D:\\uni\\6 sem\\DanyaRAD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

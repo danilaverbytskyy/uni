@@ -15,3 +15,20 @@ D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\
 D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.pdb
 D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.genruntimeconfig.cache
 D:\Программы для практики\DanyaRAD\obj\Debug\net8.0-windows\ref\DanyaRAD.dll
+D:\uni\6 sem\DanyaRAD\bin\Debug\net8.0-windows\DanyaRAD.exe
+D:\uni\6 sem\DanyaRAD\bin\Debug\net8.0-windows\DanyaRAD.deps.json
+D:\uni\6 sem\DanyaRAD\bin\Debug\net8.0-windows\DanyaRAD.runtimeconfig.json
+D:\uni\6 sem\DanyaRAD\bin\Debug\net8.0-windows\DanyaRAD.dll
+D:\uni\6 sem\DanyaRAD\bin\Debug\net8.0-windows\DanyaRAD.pdb
+D:\uni\6 sem\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.Form1.resources
+D:\uni\6 sem\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.csproj.GenerateResource.cache
+D:\uni\6 sem\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.GeneratedMSBuildEditorConfig.editorconfig
+D:\uni\6 sem\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.AssemblyInfoInputs.cache
+D:\uni\6 sem\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.AssemblyInfo.cs
+D:\uni\6 sem\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.csproj.CoreCompileInputs.cache
+D:\uni\6 sem\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.sourcelink.json
+D:\uni\6 sem\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.dll
+D:\uni\6 sem\DanyaRAD\obj\Debug\net8.0-windows\refint\DanyaRAD.dll
+D:\uni\6 sem\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.pdb
+D:\uni\6 sem\DanyaRAD\obj\Debug\net8.0-windows\DanyaRAD.genruntimeconfig.cache
+D:\uni\6 sem\DanyaRAD\obj\Debug\net8.0-windows\ref\DanyaRAD.dll
