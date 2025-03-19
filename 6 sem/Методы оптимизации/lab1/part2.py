@@ -15,16 +15,16 @@ a = -2
 b = 8
 epsilon = 0.2
 N = calculate_N(a, b, epsilon)
-print(N)
+k=0
 
 def f(arg):
     return arg * arg - 2 * arg + 5
 
 
 def fibonacci_method(a, b, epsilon):
+    global k
     n = (b - a) / epsilon
     fib = get_fib(n)
-    k = 0
 
     while k != N - 3:
         y = a + (fib[N - 2] / fib[N]) * (b - a)
@@ -35,9 +35,14 @@ def fibonacci_method(a, b, epsilon):
         else:
             a = y
         k+=1
+
+    print(f"a = {a}, b = {b}")
     x = (a + b) / 2
-    return x, f(x)
+    return x
 
 
-x_min, f_min = fibonacci_method(a, b, epsilon)
-print(f"Минимум находится в точке {x_min}, f(x) = {f_min}")
+x_min = fibonacci_method(a, b, epsilon)
+print(f"Минимум находится в точке {x_min}, f(x) = {f(x_min)}")
+print(f"k = {k}")
+print(f"N = {N}")
+print(f"R(N) = {1 / get_fib(N)[-1]}")

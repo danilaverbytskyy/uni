@@ -7,7 +7,7 @@ def f(arg):
     return arg * arg - 2 * arg + 5
 
 
-epsilon = 0.5
+epsilon = 0.1
 l = 0.2
 a = -2
 b = 8
