@@ -1,60 +1,64 @@
-def get_fib(n):
-    fib = [1, 1]
-    while fib[-1] < n:
-        fib.append(fib[-1] + fib[-2])
-    return fib
-
-
-def calculate_N(a, b, epsilon):
-    right_part = abs(b - a) / epsilon
-    N = 0
-    while get_fib(N)[-1] < right_part:
-        N += 1
-    return len(get_fib(N)) - 1
-
-
-a = -2
-b = 8
-epsilon = 0.2
-N = calculate_N(a, b, epsilon)
-k = 0
-
-
 def f(arg):
-    return arg * arg - 2 * arg + 5
+    return arg ** 2 - 2 * arg + 5
 
 
-def fibonacci_method(a, b, epsilon):
-    global k
-    n = (b - a) / epsilon
-    fib = get_fib(n)
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
 
+
+def calculate_N(a, b, l):
+    N = 0
     while True:
-        y = a + (fib[N - 2] / fib[N]) * (b - a)
-        z = a + (fib[N - 1] / fib[N]) * (b - a)
+        fib = fibonacci(N)
+        if fib >= abs(b - a) / l:
+            return N
+        N += 1
 
-        if f(y) < f(z):
+
+def fibonacci_search(a, b):
+    eps = 0.2
+    l = 0.5
+
+    N = calculate_N(a, b, l)
+
+    k = 0
+
+    y = a + (fibonacci(N - 2) / fibonacci(N)) * (b - a)
+    z = a + (fibonacci(N - 1) / fibonacci(N)) * (b - a)
+
+    fy = f(y)
+    fz = f(z)
+
+    while k < N - 3:
+        if fy <= fz:
             b = z
+            z = y
+            y = a + (fibonacci(N - k - 3) / fibonacci(N - k - 1)) * (b - a)
+            fz = fy
+            fy = f(y)
         else:
             a = y
-
-        if k == N - 3:
-            break
+            y = z
+            z = a + (fibonacci(N - k - 2) / fibonacci(N - 1 - k)) * (b - a)
+            fy = fz
+            fz = f(z)
         k += 1
 
-    y = z
-    z = y + epsilon
+    y = (a + b) / 2
+    z = y + eps
+
     if f(y) <= f(z):
         b = z
     else:
         a = y
-    print(f"a = {a}, b = {b}")
-    x = (a + b) / 2
-    return x
+
+    print(f"{a}, {b}")
+    x_min = (a + b) / 2
+    print(f"Минимум находится в точке {x_min} и равен {f(x_min)}")
+    print(f"k = {k}, N = {N}")
+    print(f"R(N) = {1 / fibonacci(N)}")
 
 
-x_min = fibonacci_method(a, b, epsilon)
-print(f"Минимум находится в точке {x_min}, f(x) = {f(x_min)}")
-print(f"k = {k}")
-print(f"N = {N}")
-print(f"R(N) = {1 / get_fib(N)[-1]}")
+fibonacci_search(-2, 8)
