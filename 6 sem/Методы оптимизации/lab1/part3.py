@@ -23,7 +23,7 @@ def golden_section(a, b):
 
         k += 1
 
-    N = k + 2
+    N = k + 1
 
     print(f"{a}, {b}")
     x_min = (a + b) / 2

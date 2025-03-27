@@ -3,21 +3,25 @@ def f(arg):
 
 
 def fibonacci(n):
-    if n <= 1:
-        return n
-    return fibonacci(n - 1) + fibonacci(n - 2)
+    if n<0:
+        return
+    if n==0 or n==1:
+        return 1
+    fib = [1, 1]
+    for i in range(2, n+1):
+        fib.append(fib[-2] + fib[-1])
+    return fib[-1]
 
 
 def calculate_N(a, b, l):
     N = 0
-    while True:
-        fib = fibonacci(N)
-        if fib >= abs(b - a) / l:
-            return N
+    right_part = abs(b - a) / l
+    while fibonacci(N) < right_part:
         N += 1
+    return N
 
 
-def fibonacci_search(a, b):
+def fibonacci_method(a, b):
     eps = 0.2
     l = 0.5
 
@@ -54,6 +58,10 @@ def fibonacci_search(a, b):
     else:
         a = y
 
+    print('Числа Фибоначчи')
+    for i in range(N+1):
+        print(fibonacci(i), end=' ')
+    print()
     print(f"{a}, {b}")
     x_min = (a + b) / 2
     print(f"Минимум находится в точке {x_min} и равен {f(x_min)}")
@@ -61,4 +69,6 @@ def fibonacci_search(a, b):
     print(f"R(N) = {1 / fibonacci(N)}")
 
 
-fibonacci_search(-2, 8)
+a = -2
+b = 8
+fibonacci_method(a, b)
