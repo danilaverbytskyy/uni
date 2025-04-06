@@ -31,13 +31,13 @@ class AppRepository {
         }
     }
 
-    var listOfFaculty: MutableLiveData<ListOfFaculty?> = MutableLiveData()
+    //var listOfFaculty: MutableLiveData<ListOfFaculty?> = MutableLiveData()
     var faculty : MutableLiveData<Faculty> = MutableLiveData()
 
-    var listOfGroup: MutableLiveData<ListOfGroup?> = MutableLiveData()
+    //var listOfGroup: MutableLiveData<ListOfGroup?> = MutableLiveData()
     var group : MutableLiveData<Group> = MutableLiveData()
 
-    var listOfStudent: MutableLiveData<ListOfStudent?> = MutableLiveData()
+    //var listOfStudent: MutableLiveData<ListOfStudent?> = MutableLiveData()
     var student : MutableLiveData<Student> = MutableLiveData()
 
     fun addFaculty(faculty: Faculty){
