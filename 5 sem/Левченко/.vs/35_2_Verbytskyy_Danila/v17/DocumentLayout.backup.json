@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|d:\\uni\\5 sem\\\u043B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_verbytskyy_danila\\neuronet\\neiron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|solutionrelative:35_2_verbytskyy_danila\\neuronet\\neiron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_verbytskyy_danila\\neuronet\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|solutionrelative:35_2_verbytskyy_danila\\neuronet\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_verbytskyy_danila\\neuronet\\outputlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|solutionrelative:35_2_verbytskyy_danila\\neuronet\\outputlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_verbytskyy_danila\\neuronet\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|solutionrelative:35_2_verbytskyy_danila\\neuronet\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_verbytskyy_danila\\neuronet\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|solutionrelative:35_2_verbytskyy_danila\\neuronet\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|d:\\uni\\5 sem\\\u043B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_verbytskyy_danila\\neuronet\\neiron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|solutionrelative:35_2_verbytskyy_danila\\neuronet\\neiron.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_verbytskyy_danila\\neuronet\\outputlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|solutionrelative:35_2_verbytskyy_danila\\neuronet\\outputlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_verbytskyy_danila\\neuronet\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|solutionrelative:35_2_verbytskyy_danila\\neuronet\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5ED9F21A-60EC-4D76-AC5F-DD850112AE34}|35_2_Verbytskyy_Danila\\35_2_Verbytskyy_Danila.csproj|D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_verbytskyy_danila\\neuronet\\hiddenlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -65,7 +65,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
@@ -115,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Enums.cs",
               "DocumentMoniker": "D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_Verbytskyy_Danila\\NeuroNet\\Enums.cs",
               "RelativeDocumentMoniker": "35_2_Verbytskyy_Danila\\NeuroNet\\Enums.cs",
@@ -127,15 +127,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "OutputLayer.cs",
               "DocumentMoniker": "D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_Verbytskyy_Danila\\NeuroNet\\OutputLayer.cs",
               "RelativeDocumentMoniker": "35_2_Verbytskyy_Danila\\NeuroNet\\OutputLayer.cs",
               "ToolTip": "D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_Verbytskyy_Danila\\NeuroNet\\OutputLayer.cs",
               "RelativeToolTip": "35_2_Verbytskyy_Danila\\NeuroNet\\OutputLayer.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAuwAcAAAABAAAA",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:35:25.566Z"
+              "WhenOpened": "2024-12-23T07:35:25.566Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -145,34 +146,36 @@
               "RelativeDocumentMoniker": "35_2_Verbytskyy_Danila\\NeuroNet\\Layer.cs",
               "ToolTip": "D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_Verbytskyy_Danila\\NeuroNet\\Layer.cs",
               "RelativeToolTip": "35_2_Verbytskyy_Danila\\NeuroNet\\Layer.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:35:01.435Z"
+              "WhenOpened": "2024-12-23T07:35:01.435Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Neiron.cs",
               "DocumentMoniker": "D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_Verbytskyy_Danila\\NeuroNet\\Neiron.cs",
               "RelativeDocumentMoniker": "35_2_Verbytskyy_Danila\\NeuroNet\\Neiron.cs",
               "ToolTip": "D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_Verbytskyy_Danila\\NeuroNet\\Neiron.cs",
               "RelativeToolTip": "35_2_Verbytskyy_Danila\\NeuroNet\\Neiron.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAswEEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAswDoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T07:34:36.61Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "NetWork.cs",
               "DocumentMoniker": "D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_Verbytskyy_Danila\\NeuroNet\\NetWork.cs",
               "RelativeDocumentMoniker": "35_2_Verbytskyy_Danila\\NeuroNet\\NetWork.cs",
               "ToolTip": "D:\\uni\\5 sem\\\u041B\u0435\u0432\u0447\u0435\u043D\u043A\u043E\\35_2_Verbytskyy_Danila\\NeuroNet\\NetWork.cs",
               "RelativeToolTip": "35_2_Verbytskyy_Danila\\NeuroNet\\NetWork.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAgwAYAAAAOAAAA",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwC0AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T07:34:16.362Z"
+              "WhenOpened": "2024-12-23T07:34:16.362Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

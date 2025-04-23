@@ -54,24 +54,24 @@ def scalar_mult(scalar: float, vector: list) -> list:
     return [scalar * x for x in vector]
 
 
-# Параметры алгоритма
+
 eps1 = 0.1
 eps2 = 0.15
 M = 10
-xk = [3, 1]  # начальная точка
+xk = [3, 1]
 k = 0
 
 while True:
-    # Шаг 3: Вычисление градиента
+    # Шаг 3
     grad = getGradient(xk)
 
-    # Шаг 4: Проверка критерия окончания
+    # Шаг 4
     if getNorma(grad) <= eps1:
         print(f'Расчет окончен: норма градиента {getNorma(grad):.4f} <= {eps1}')
         print(f'x* = {xk}, f(x*) = {f(xk):.4f}')
         break
 
-    # Шаг 5: Проверка максимального числа итераций
+    # Шаг 5
     if k >= M:
         print(f'Расчет окончен: достигнуто максимальное число итераций {M}')
         print(f'x* = {xk}, f(x*) = {f(xk):.4f}')
@@ -81,11 +81,11 @@ while True:
 
     dk = scalar_mult(-1, matrix_vector_mult(H_inv, grad))
 
-    # Шаг 10: Обновление точки
+    # Шаг 10
     xk_prev = xk.copy()
     xk = vector_add(xk, dk)
 
-    # Шаг 11: Проверка дополнительных критериев
+    # Шаг 11
     delta_x = vector_sub(xk, xk_prev)
     delta_f = f(xk) - f(xk_prev)
 
