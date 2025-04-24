@@ -60,6 +60,7 @@ eps2 = 0.15
 M = 10
 xk = [3, 1]
 k = 0
+last = False
 
 while True:
     # Шаг 3
@@ -67,7 +68,8 @@ while True:
 
     # Шаг 4
     if getNorma(grad) <= eps1:
-        print(f'Расчет окончен: норма градиента {getNorma(grad):.4f} <= {eps1}')
+        print(f'Расчет окончен: норма градиента <= {eps1}')
+        print(f"k={k + 1}")
         print(f'x* = {xk}, f(x*) = {f(xk):.4f}')
         break
 
@@ -79,7 +81,10 @@ while True:
 
     H_inv = getInverseH()
 
-    dk = scalar_mult(-1, matrix_vector_mult(H_inv, grad))
+    dk = [-1 * elem for elem in grad]
+    if H_inv[0][0] > 0 and H_inv[0][0]*H_inv[1][1]-H_inv[0][1]*H_inv[1][0]>0:
+        tk = 1
+        dk = scalar_mult(-1, matrix_vector_mult(H_inv, grad))
 
     # Шаг 10
     xk_prev = xk.copy()
@@ -89,10 +94,13 @@ while True:
     delta_x = vector_sub(xk, xk_prev)
     delta_f = f(xk) - f(xk_prev)
 
-    if getNorma(delta_x) < eps2 and abs(delta_f) < eps2:
+    if getNorma(delta_x) < eps2 and abs(delta_f) < eps2 and last:
         print(f'Расчет окончен: изменения стали меньше {eps2}')
+        print(f"k={k + 1}")
         print(f'x* = {xk}, f(x*) = {f(xk):.4f}')
         break
+    elif getNorma(delta_x) < eps2 and abs(delta_f) < eps2:
+        last=True
 
     k += 1
     print(f'Итерация {k}: x = {[round(val, 4) for val in xk]}, f(x) = {f(xk):.4f}, ||∇f|| = {getNorma(grad):.4f}')
