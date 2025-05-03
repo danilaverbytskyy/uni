@@ -81,10 +81,12 @@ while True:
 
     H_inv = getInverseH()
 
-    dk = [-1 * elem for elem in grad]
+    dk = []
     if H_inv[0][0] > 0 and H_inv[0][0]*H_inv[1][1]-H_inv[0][1]*H_inv[1][0]>0:
         tk = 1
         dk = scalar_mult(-1, matrix_vector_mult(H_inv, grad))
+    else:
+        dk = [-1 * elem for elem in grad]
 
     # Шаг 10
     xk_prev = xk.copy()
