@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/6 sem/Mobile/KotlinTestApp3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/6 sem/SM VUE/myproject" vcs="Git" />
   </component>
 </project>
