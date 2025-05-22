@@ -1,108 +1,95 @@
-from math import sqrt
+def f(x1, x2):
+    return x1 ** 2 + 4 * x2 ** 2 - x1 * x2 + x1
 
 
-def f(point: list | tuple) -> float:
-    if len(point) != 2:
-        raise Exception('Координаты точки не соответствуют x1 и x2')
-    return point[0] ** 2 + 4 * point[1] ** 2 - point[0] * point[1] + point[0]
+def H():
+    return [[2, -1], [-1, 8]]
 
 
-def getGradient(xk: list | tuple) -> list:
-    return [
-        2 * xk[0] - xk[1] + 1,
-        -xk[0] + 8 * xk[1]
-    ]
+def reverse_H(m):
+    d = m[0][0] * m[1][1] - m[0][1] * m[1][0]
+    rev_m = [[0, 0], [0, 0]]
+    for i in range(2):
+        for j in range(2):
+            rev_m[i][j] = m[2 - i - 1][2 - j - 1] * (-1) ** (i + 1 + j + 1)
+            rev_m[i][j] /= d
+    return rev_m
 
 
-def getH() -> list[list]:
-    return [
-        [2, -1],
-        [-1, 8]
-    ]
+def m_def_true(m):
+    a11 = m[0][0]
+    d = m[0][0] * m[1][1] - m[0][1] * m[1][0]
+    return a11 > 0 and d > 0
 
 
-def getInverseH() -> list[list]:
-    a, b = 2, -1
-    c, d = -1, 8
-    det = a * d - b * c
-    return [
-        [d / det, -b / det],
-        [-c / det, a / det]
-    ]
+reverse_H(H())
 
 
-def getNorma(vector: list) -> float:
-    return sqrt(sum(x ** 2 for x in vector))
+def der_f(x1, x2):
+    return 2 * x1 - x2 + 1, 8 * x2 - x1
 
 
-def matrix_vector_mult(matrix: list[list], vector: list) -> list:
-    return [
-        sum(m * v for m, v in zip(row, vector))
-        for row in matrix
-    ]
+def mult(m1, m2):
+    o1 = -(m1[0][0] * m2[0] + m1[0][1] * m2[1])
+    o2 = -(m1[1][0] * m2[0] + m1[1][1] * m2[1])
+    return o1, o2
 
 
-def vector_sub(v1: list, v2: list) -> list:
-    return [x - y for x, y in zip(v1, v2)]
+def tk(x1, x2):
+    p1 = der_f(x1, x2)[0]
+    p2 = der_f(x1, x2)[1]
+    t = (p1 ** 2 + p2 ** 2) / (4 * (p1 ** 2) + 6 * (p2 ** 2) - 2 * p1 * p2)
+    return t
 
 
-def vector_add(v1: list, v2: list) -> list:
-    return [x + y for x, y in zip(v1, v2)]
+def norm_point(point1, point2):
+    x11 = point1[0]
+    x12 = point1[1]
+    x21 = point2[0]
+    x22 = point2[1]
+    return ((x11 - x21) ** 2 + (x12 - x22) ** 2) ** 0.5
 
 
-def scalar_mult(scalar: float, vector: list) -> list:
-    return [scalar * x for x in vector]
+def norm_func(point1, point2):
+    def f(x1, x2):
+        return 2 * x1 ** 2 + 3 * x2 ** 2 - x1 * x2 + x1
+
+    f1 = f(point1[0], point1[1])
+    f2 = f(point2[0], point2[1])
+    return abs(f1 - f2)
 
 
+def Newton(point, maxiter, e1, e2):
+    k = -1
+    last = False
+    while True:
+        k += 1
+        grad_f = der_f(point[0], point[1])
+        if ((grad_f[0] ** 2 + grad_f[1] ** 2) ** 0.5) < e1:
+            print("Количество итераций: ", k + 1)
+            print("Норма градиента меньше е1")
+            return point[0], point[1]
+        if k >= maxiter:
+            print("Количество итераций: ", k + 1)
+            print("Превышено количество итераций")
+            return point[0], point[1]
+        last_point = point
+        if m_def_true(H()):
+            d = mult(reverse_H(H()), grad_f)
+            point = [point[0] + d[0], point[1] + d[1]]
+        else:
+            d = [-grad_f[0], -grad_f[1]]
+            t = tk(point[0], point[1])
+            point = [point[0] + t * d[0], point[1] + t * d[1]]
 
-eps1 = 0.1
-eps2 = 0.15
-M = 10
-xk = [3, 1]
-k = 0
-last = False
+        if (norm_point(point, last_point)) < e2 and (norm_func(point, last_point)) < e2 and last:
+            print("Количество итераций: ", k + 1)
+            print("Норма точек и модуль функций на шагах к и к-1 меньше е2")
+            return point[0], point[1]
+        elif (norm_point(point, last_point)) < e2 and norm_func(point, last_point) < e2:
+            last = True
 
-while True:
-    # Шаг 3
-    grad = getGradient(xk)
 
-    # Шаг 4
-    if getNorma(grad) <= eps1:
-        print(f'Расчет окончен: норма градиента <= {eps1}')
-        print(f"k={k + 1}")
-        print(f'x* = {xk}, f(x*) = {f(xk):.4f}')
-        break
-
-    # Шаг 5
-    if k >= M:
-        print(f'Расчет окончен: достигнуто максимальное число итераций {M}')
-        print(f'x* = {xk}, f(x*) = {f(xk):.4f}')
-        break
-
-    H_inv = getInverseH()
-
-    dk = []
-    if H_inv[0][0] > 0 and H_inv[0][0]*H_inv[1][1]-H_inv[0][1]*H_inv[1][0]>0:
-        tk = 1
-        dk = scalar_mult(-1, matrix_vector_mult(H_inv, grad))
-    else:
-        dk = [-1 * elem for elem in grad]
-
-    # Шаг 10
-    xk_prev = xk.copy()
-    xk = vector_add(xk, dk)
-
-    # Шаг 11
-    delta_x = vector_sub(xk, xk_prev)
-    delta_f = f(xk) - f(xk_prev)
-
-    if getNorma(delta_x) < eps2 and abs(delta_f) < eps2 and last:
-        print(f'Расчет окончен: изменения стали меньше {eps2}')
-        print(f"k={k + 1}")
-        print(f'x* = {xk}, f(x*) = {f(xk):.4f}')
-        break
-    elif getNorma(delta_x) < eps2 and abs(delta_f) < eps2:
-        last=True
-
-    k += 1
-    print(f'Итерация {k}: x = {[round(val, 4) for val in xk]}, f(x) = {f(xk):.4f}, ||∇f|| = {getNorma(grad):.4f}')
+res = Newton([3, 1], 10, 0.1, 0.15)
+print("x*= ", res)
+print("f(x*)= ", f(res[0], res[1]))

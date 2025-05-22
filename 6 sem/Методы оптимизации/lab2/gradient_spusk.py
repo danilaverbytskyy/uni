@@ -1,79 +1,62 @@
-from math import sqrt
+def f(x1, x2):
+    return x1 ** 2 + 4 * x2 ** 2 - x1 * x2 + x1
 
 
-def f(point: list | tuple) -> float:
-    if len(point) != 2:
-        raise ValueError('Координаты точки не соответствуют x1 и x2')
-    return point[0] ** 2 + 4 * point[1] ** 2 - point[0] * point[1] + point[0]
+def der_f(x1, x2):
+    return 2 * x1 - x2 + 1, 8 * x2 - x1
 
 
-def get_gradient(xk: list | tuple) -> list:
-    return [
-        2 * xk[0] - xk[1] + 1,
-        -xk[0] + 8 * xk[1]
-    ]
+def tk(x1, x2):
+    p1 = der_f(x1, x2)[0]
+    p2 = der_f(x1, x2)[1]
+    t = (p1 ** 2 + p2 ** 2) / (4 * (p1 ** 2) + 6 * (p2 ** 2) - 2 * p1 * p2)
+    return t
 
 
-def get_norm(vector: list) -> float:
-    """Вычисление евклидовой нормы вектора"""
-    return sqrt(sum(x ** 2 for x in vector))
+def norm_point(point1, point2):
+    x11 = point1[0]
+    x12 = point1[1]
+    x21 = point2[0]
+    x22 = point2[1]
+    return ((x11 - x21) ** 2 + (x12 - x22) ** 2) ** 0.5
 
 
-def scalar_mult(scalar: float, vector: list) -> list:
-    return [scalar * x for x in vector]
+def norm_func(point1, point2):
+    def f(x1, x2):
+        return x1 ** 2 + 4 * x2 ** 2 - x1 * x2 + x1
+
+    f1 = f(point1[0], point1[1])
+    f2 = f(point2[0], point2[1])
+    return abs(f1 - f2)
 
 
-def vector_sub(v1: list, v2: list) -> list:
-    return [x - y for x, y in zip(v1, v2)]
-
-
-def optimize(x0: list, eps1: float = 0.1, eps2: float = 0.15, max_iter: int = 100) -> list:
-    xk = x0.copy()
-    k = 0
-    prev_f = f(xk)
-
-    while k < max_iter:
-        grad = get_gradient(xk)
-        grad_norm = get_norm(grad)
-
-        # Критерий остановки по норме градиента
-        if grad_norm < eps1:
-            print(f'Остановка: норма градиента {grad_norm:.4f} < {eps1}')
-            break
-
-        # Вычисляем t_k = (g^T g) / (g^T Q g), где Q - матрица Гессе
-        Qg = [
-            2 * grad[0] - grad[1],  # Q[0][0]*g[0] + Q[0][1]*g[1]
-            -grad[0] + 8 * grad[1]  # Q[1][0]*g[0] + Q[1][1]*g[1]
-        ]
-        numerator = sum(g ** 2 for g in grad)
-        denominator = sum(g * qg for g, qg in zip(grad, Qg))
-        t_k = numerator / denominator
-
-        xk_new = vector_sub(xk, scalar_mult(t_k, grad))
-        current_f = f(xk_new)
-
-        delta_x = get_norm(vector_sub(xk_new, xk))
-        delta_f = abs(current_f - prev_f)
-
-        if delta_x < eps2 and delta_f < eps2:
-            print(f"k={k}")
-            print(f'Остановка: изменения стали меньше eps2')
-            break
-        print(
-            f'Итерация {k}: x = {[round(val, 4) for val in xk]}, f(x) = {current_f:.4f}, ||∇f|| = {grad_norm:.4f}')
-
-        xk = xk_new
-        prev_f = current_f
+def Grad(point, maxiter, e1, e2):
+    k = -1
+    last = False
+    while True:
         k += 1
+        grad_f = der_f(point[0], point[1])
+        if ((grad_f[0] ** 2 + grad_f[1] ** 2) ** 0.5) < e1:
+            print("Количество итераций: ", k + 1)
+            print("Норма градиента меньше е1")
+            return point[0], point[1]
+        if k >= maxiter:
+            print("Количество итераций: ", k + 1)
+            print("Превышено количество итераций")
+            return point[0], point[1]
+        last_point = point
+        t = tk(point[0], point[1])
 
-    return xk
+        point = [point[0] - t * der_f(point[0], point[1])[0], point[1] - t * der_f(point[0], point[1])[1]]
+
+        if (norm_point(point, last_point)) < e2 and (norm_func(point, last_point)) < e2 and last:
+            print("Количество итераций: ", k + 1)
+            print("Норма точек и модуль функций на шагах к и к-1 меньше е2")
+            return point[0], point[1]
+        elif (norm_point(point, last_point)) < e2 and norm_func(point, last_point) < e2:
+            last = True
 
 
-eps1 = 0.1
-eps2 = 0.15
-max_iter = 100
-x0 = [3, 1]
-
-result = optimize(x0, eps1, eps2, max_iter)
-print(f'\nРезультат: x* = {[round(val, 4) for val in result]}, f(x*) = {f(result):.4f}')
+res = Grad([3, 1], 10, 0.1, 0.15)
+print("x*= ", res)
+print("f(x*)= ", f(res[0], res[1]))

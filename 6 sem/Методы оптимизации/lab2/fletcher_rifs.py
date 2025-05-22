@@ -1,123 +1,96 @@
-from math import sqrt
+def f(x1, x2):
+    return x1 ** 2 + 4 * x2 ** 2 - x1 * x2 + x1
 
 
-def f(point: list | tuple) -> float:
-    if len(point) != 2:
-        raise Exception('Координаты точки не соответствуют x1 и x2')
-    return point[0]**2 + 4 * point[1]**2 - point[0] * point[1] + point[0]
+def der_f(x1, x2):
+    return 2 * x1 - x2 + 1, 8 * x2 - x1
 
 
-def getGradient(xk: list | tuple) -> list:
-    return [
-        2 * xk[0] - xk[1] + 1,
-        -xk[0] + 8 * xk[1]
-    ]
+def Dihotomia(a0, b0, eps, l, x, d):
+    def f(t):
+        x1 = x[0] + t * d[0]
+        x2 = x[1] + t * d[1]
+        return x1 ** 2 + 4 * x2 ** 2 - x1 * x2 + x1
 
-
-def getNorma(vector: list) -> float:
-    return sqrt(sum(x ** 2 for x in vector))
-
-
-def scalar_mult(scalar: float, vector: list) -> list:
-    return [scalar * x for x in vector]
-
-
-def vector_add(v1: list, v2: list) -> list:
-    return [x + y for x, y in zip(v1, v2)]
-
-
-def vector_sub(v1: list, v2: list) -> list:
-    return [x - y for x, y in zip(v1, v2)]
-
-
-def dot_product(v1: list, v2: list) -> float:
-    return sum(x * y for x, y in zip(v1, v2))
-
-
-def line_search(f, xk, dk, max_iter=100, tol=1e-6):
-    """Метод золотого сечения для поиска оптимального шага"""
-    a, b = 0, 1
-    gr = (sqrt(5) + 1) / 2
-
-    c = b - (b - a) / gr
-    d = a + (b - a) / gr
-
-    for _ in range(max_iter):
-        if f(vector_add(xk, scalar_mult(c, dk))) < f(vector_add(xk, scalar_mult(d, dk))):
-            b = d
-        else:
-            a = c
-
-        c = b - (b - a) / gr
-        d = a + (b - a) / gr
-
-        if abs(b - a) < tol:
-            break
-
-    return (a + b) / 2
-
-
-def fletcher_reeves(f, x0, eps1=0.1, eps2=0.15, M=10):
-    xk = x0.copy()
     k = 0
-    grad_prev = None
-    dk_prev = None
-
-    while True:
-        # Вычислить градиент
-        grad = getGradient(xk)
-
-        # Проверить критерий окончания по градиенту
-        if getNorma(grad) < eps1:
-            print(f'Критерий остановки 1: ∇f = {getNorma(grad):.4f} < {eps1}')
-            return xk
-
-        # Проверить максимальное число итераций
-        if k >= M:
-            print(f'Критерий остановки 2: достигнут максимум итераций {M}')
-            return xk
-
-        # Первая итерация - метод наискорейшего спуска
-        if k == 0:
-            dk = scalar_mult(-1, grad)
+    a = a0
+    b = b0
+    y0 = (a + b - eps) / 2
+    z0 = (a + b + eps) / 2
+    while (True):
+        if (f(y0) <= f(z0)):
+            b = z0
         else:
-            # Вычислить β по Флетчеру-Ривсу
-            beta = dot_product(grad, grad) / dot_product(grad_prev, grad_prev)
+            a = y0
+        if (abs(a - b) < l):
+            return [round(a, 5), round(b, 5)]
+        else:
+            y0 = (a + b - eps) / 2
+            z0 = (a + b + eps) / 2
+            k = k + 1
 
-            # Новое направление
-            dk = vector_add(scalar_mult(-1, grad), scalar_mult(beta, dk_prev))
 
-        # Найти оптимальный шаг
-        tk = line_search(f, xk, dk)
+def mult(m1, m2):
+    o1 = -(m1[0][0] * m2[0] + m1[0][1] * m2[1])
+    o2 = -(m1[1][0] * m2[0] + m1[1][1] * m2[1])
+    return o1, o2
 
-        # Сохранить предыдущие значения
-        xk_prev = xk.copy()
-        grad_prev = grad.copy()
-        dk_prev = dk.copy()
 
-        # Обновить точку
-        xk = vector_add(xk, scalar_mult(tk, dk))
+def norm_point(point1, point2):
+    x11 = point1[0]
+    x12 = point1[1]
+    x21 = point2[0]
+    x22 = point2[1]
+    return ((x11 - x21) ** 2 + (x12 - x22) ** 2) ** 0.5
 
-        # Проверить дополнительные критерии остановки
-        delta_x = vector_sub(xk, xk_prev)
-        delta_f = abs(f(xk) - f(xk_prev))
 
-        if getNorma(delta_x) < eps2 and delta_f < eps2:
-            print(f'Критерий остановки 3: изменения стали меньше {eps2}')
-            return xk
+def norm_func(point1, point2):
+    def f(x1, x2):
+        return x1 ** 2 + 4 * x2 ** 2 - x1 * x2 + x1
 
-        print(
-            f'Итерация {k}: x = {[round(val, 4) for val in xk]}, f(x) = {round(f(xk), 4)}, ∇f = {round(getNorma(grad), 4)}')
+    f1 = f(point1[0], point1[1])
+    f2 = f(point2[0], point2[1])
+    return abs(f1 - f2)
+
+
+def flr(point, maxiter, e1, e2):
+    k = -1
+    last = False
+    d = [0, 0]
+    last_d = d
+    last_point = point
+    while True:
         k += 1
+        grad_f = der_f(point[0], point[1])
+        if ((grad_f[0] ** 2 + grad_f[1] ** 2) ** 0.5) < e1:
+            print("Количество итераций: ", k + 1)
+            print("Норма градиента меньше е1")
+            return point[0], point[1]
+        if k >= maxiter:
+            print("Количество итераций: ", k + 1)
+            print("Превышено количество итераций")
+            return point[0], point[1]
+        if k == 0:
+            d = [-grad_f[0], -grad_f[1]]
+        else:
+            grad_min_1 = der_f(last_point[0], last_point[1])
+            beta = (grad_f[0] ** 2 + grad_f[1] ** 2) / (grad_min_1[0] ** 2 + grad_min_1[1] ** 2)
+            last_d = d
+            d = [-grad_f[0] + beta * last_d[0], -grad_f[1] + beta * last_d[1]]
+        answer = Dihotomia(0, 10, 0.2, 0.5, point, d)
+        result = (answer[0] + answer[1]) / 2
+        t = result
+        last_point = point
+        point = [point[0] + t * d[0], point[1] + t * d[1]]
+
+        if (norm_point(point, last_point)) < e2 and (norm_func(point, last_point)) < e2 and last:
+            print("Количество итераций: ", k + 1)
+            print("Норма точек и модуль функций на шагах к и к-1 меньше е2")
+            return point[0], point[1]
+        elif (norm_point(point, last_point)) < e2 and norm_func(point, last_point) < e2:
+            last = True
 
 
-# Параметры
-eps1 = 0.1
-eps2 = 0.15
-M = 10
-x0 = [3, 1]
-
-# Запуск метода
-print("Метод Флетчера-Ривса:")
-result = fletcher_reeves(f, x0, eps1, eps2, M)
-print(f'\nРезультат: x* = {[round(val, 4) for val in result]}, f(x*) = {round(f(result), 4)}')
+res = flr([3,1], 10, 0.1, 0.15)
+print("x*= ", res)
+print("f(x*)= ", f(res[0], res[1]))

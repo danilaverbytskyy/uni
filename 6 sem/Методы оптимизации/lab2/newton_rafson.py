@@ -1,109 +1,125 @@
-from math import sqrt
-
-
-def f(point: list | tuple) -> float:
-    if len(point) != 2:
-        raise ValueError("Координаты точки должны быть двумерными.")
-    x1, x2 = point
+def f(x1, x2):
     return x1 ** 2 + 4 * x2 ** 2 - x1 * x2 + x1
 
 
-def get_gradient(point: list | tuple) -> list:
-    x1, x2 = point
-    return [2 * x1 - x2 + 1, -x1 + 8 * x2]
+def H():
+    return [[2, -1], [-1, 8]]
 
 
-def get_hessian() -> list[list]:
-    return [
-        [2, -1],
-        [-1, 8]
-    ]
+def rev_Hesse(m):
+    d = m[0][0] * m[1][1] - m[0][1] * m[1][0]
+    rev_m = [[0, 0], [0, 0]]
+    for i in range(2):
+        for j in range(2):
+            rev_m[i][j] = m[2 - i - 1][2 - j - 1] * (-1) ** (i + 1 + j + 1)
+            rev_m[i][j] /= d
+    return rev_m
 
 
-def get_inverse_hessian() -> list[list]:
-    hessian = get_hessian()
-    det = hessian[0][0] * hessian[1][1] - hessian[0][1] * hessian[1][0]
-    return [
-        [hessian[1][1] / det, -hessian[0][1] / det],
-        [-hessian[1][0] / det, hessian[0][0] / det]
-    ]
+def m_def_true(m):
+    a11 = m[0][0]
+    d = m[0][0] * m[1][1] - m[0][1] * m[1][0]
+    return a11 > 0 and d > 0
 
 
-def vector_norm(vector: list) -> float:
-    return sqrt(sum(x ** 2 for x in vector))
+def Dihotomia(a0, b0, eps, l, x, d):
+    def f(t):
+        x1 = x[0] + t * d[0]
+        x2 = x[1] + t * d[1]
+        return x1 ** 2 + 4 * x2 ** 2 - x1 * x2 + x1
 
-
-def matrix_vector_mult(matrix: list[list], vector: list) -> list:
-    return [sum(m * v for m, v in zip(row, vector)) for row in matrix]
-
-
-def vector_add(v1: list, v2: list) -> list:
-    return [x + y for x, y in zip(v1, v2)]
-
-
-def scalar_mult(scalar: float, vector: list) -> list:
-    return [scalar * x for x in vector]
-
-
-def line_search(f, xk: list, dk: list, max_iter=100, tol=1e-6) -> float:
-    """Метод золотого сечения для поиска оптимального шага t_k."""
-    a, b = 0, 1
-    phi = (1 + sqrt(5)) / 2
-    c = b - (b - a) / phi
-    d = a + (b - a) / phi
-
-    for _ in range(max_iter):
-        if abs(c - d) < tol:
-            break
-        if f(vector_add(xk, scalar_mult(c, dk))) < f(vector_add(xk, scalar_mult(d, dk))):
-            b = d
-        else:
-            a = c
-        c = b - (b - a) / phi
-        d = a + (b - a) / phi
-
-    return (a + b) / 2
-
-
-def newton_raphson(f, x0: list, eps1=0.1, eps2=0.15, max_iter=10) -> list:
-    xk = x0.copy()
     k = 0
+    a = a0
+    b = b0
+    y0 = (a + b - eps) / 2
+    z0 = (a + b + eps) / 2
+    while (True):
+        if (f(y0) <= f(z0)):
+            b = z0
+        else:
+            a = y0
+        if (abs(a - b) < l):
+            return [round(a, 5), round(b, 5)]
+        else:
+            y0 = (a + b - eps) / 2
+            z0 = (a + b + eps) / 2
+            k = k + 1
 
-    while k < max_iter:
-        grad = get_gradient(xk)
-        grad_norm = vector_norm(grad)
 
-        if grad_norm <= eps1:
-            print(f"Критерий остановки 1: ||∇f|| = {grad_norm:.4f} <= {eps1}")
-            break
+rev_Hesse(H())
 
-        H_inv = get_inverse_hessian()
-        dk = scalar_mult(-1, matrix_vector_mult(H_inv, grad))
 
-        tk = line_search(f, xk, dk)
+def der_f(x1, x2):
+    return 2 * x1 - x2 + 1, 8 * x2 - x1
 
-        xk_new = vector_add(xk, scalar_mult(tk, dk))
 
-        delta_x = vector_norm([xk_new[0] - xk[0], xk_new[1] - xk[1]])
-        delta_f = abs(f(xk_new) - f(xk))
+def mult(m1, m2):
+    o1 = -(m1[0][0] * m2[0] + m1[0][1] * m2[1])
+    o2 = -(m1[1][0] * m2[0] + m1[1][1] * m2[1])
+    return o1, o2
 
-        if delta_x < eps2 and delta_f < eps2:
-            print(f"Критерий остановки 2: Δx = {delta_x:.4f} < {eps2} и Δf = {delta_f:.4f} < {eps2}")
-            break
 
-        xk = xk_new
+def tk(x1, x2):
+    p1 = der_f(x1, x2)[0]
+    p2 = der_f(x1, x2)[1]
+    t = (p1 ** 2 + p2 ** 2) / (4 * (p1 ** 2) + 6 * (p2 ** 2) - 2 * p1 * p2)
+    return t
+
+
+def norm_point(point1, point2):
+    x11 = point1[0]
+    x12 = point1[1]
+    x21 = point2[0]
+    x22 = point2[1]
+    return ((x11 - x21) ** 2 + (x12 - x22) ** 2) ** 0.5
+
+
+def norm_func(point1, point2):
+    def f(x1, x2):
+        return x1 ** 2 + 4 * x2 ** 2 - x1 * x2 + x1
+
+    f1 = f(point1[0], point1[1])
+    f2 = f(point2[0], point2[1])
+    return abs(f1 - f2)
+
+
+def newton_rafson(point, maxiter, e1, e2):
+    k = -1
+    last = False
+    while True:
         k += 1
-        print(f"Итерация {k}: x = {[round(val, 4) for val in xk]}, f(x) = {f(xk):.4f}, ||∇f|| = {grad_norm:.4f}")
+        grad_f = der_f(point[0], point[1])
+        if ((grad_f[0] ** 2 + grad_f[1] ** 2) ** 0.5) < e1:
+            print("Количество итераций: ", k + 1)
+            print("Норма градиента меньше е1")
+            return point[0], point[1]
 
-    return xk
+        if k >= maxiter:
+            print("Количество итераций: ", k + 1)
+            print("Превышено количество итераций")
+            return point[0], point[1]
+
+        last_point = point
+
+        if m_def_true(H()):
+            d = mult(rev_Hesse(H()), grad_f)
+            answer = Dihotomia(0, 10, 0.2, 0.5, point, d)
+            result = (answer[0] + answer[1]) / 2
+            t = result
+            point = [point[0] + t * d[0], point[1] + t * d[1]]
+        else:
+            d = [-grad_f[0], -grad_f[1]]
+            t = tk(point[0], point[1])
+            point = [point[0] + t * d[0], point[1] + t * d[1]]
+
+        if (norm_point(point, last_point)) < e2 and (norm_func(point, last_point)) < e2 and last:
+            print("Количество итераций: ", k + 1)
+            print("Норма точек и модуль функций на шагах к и к-1 меньше е2")
+            return point[0], point[1]
+        elif (norm_point(point, last_point)) < e2 and norm_func(point, last_point) < e2:
+            last = True
 
 
-# Параметры
-x0 = [3, 1]
-eps1 = 0.1
-eps2 = 0.15
-max_iter = 10
-
-# Запуск метода
-result = newton_raphson(f, x0, eps1, eps2, max_iter)
-print(f"\nРезультат: x* = {[round(val, 4) for val in result]}, f(x*) = {f(result):.4f}")
+res = newton_rafson([3, 1], 10, 0.1, 0.15)
+print("x*= ", res)
+print("f(x*)= ", f(res[0], res[1]))
