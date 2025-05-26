@@ -9,7 +9,7 @@ def der_f(x1, x2):
 def tk(x1, x2):
     p1 = der_f(x1, x2)[0]
     p2 = der_f(x1, x2)[1]
-    t = (p1 ** 2 + p2 ** 2) / (4 * (p1 ** 2) + 6 * (p2 ** 2) - 2 * p1 * p2)
+    t = (p1 ** 2 + p2 ** 2) / (2 * (p1 ** 2) + 8 * (p2 ** 2) - 2 * p1 * p2)
     return t
 
 
@@ -22,15 +22,12 @@ def norm_point(point1, point2):
 
 
 def norm_func(point1, point2):
-    def f(x1, x2):
-        return x1 ** 2 + 4 * x2 ** 2 - x1 * x2 + x1
-
     f1 = f(point1[0], point1[1])
     f2 = f(point2[0], point2[1])
     return abs(f1 - f2)
 
 
-def Grad(point, maxiter, e1, e2):
+def Grad(point, M, e1, e2):
     k = -1
     last = False
     while True:
@@ -40,9 +37,9 @@ def Grad(point, maxiter, e1, e2):
             print("Количество итераций: ", k + 1)
             print("Норма градиента меньше е1")
             return point[0], point[1]
-        if k >= maxiter:
+        if k >= M:
             print("Количество итераций: ", k + 1)
-            print("Превышено количество итераций")
+            print("k стало больше M")
             return point[0], point[1]
         last_point = point
         t = tk(point[0], point[1])
