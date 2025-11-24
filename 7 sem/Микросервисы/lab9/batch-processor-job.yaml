@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: batch-processor
+spec:
+  completions: 8
+  parallelism: 3
+  template:
+    spec:
+      containers:
+      - name: worker
+        image: busybox
+        command:
+        - sh
+        - -c
+        - |
+          echo "Обрабатываю задачу в Pod $HOSTNAME"
+          sleep 10
+      restartPolicy: Never

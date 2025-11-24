@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="top">Bootstrap task</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <header class="header text-center mt-5" id="elem-border">
+        <div class="container-lg">
+          <img class="mt-1" src="logo.jpg" alt="logo" class="img-fluid">
+            <h1 class="h3 mb-3 mt-3 font-weight-normal">Bootstrap task</h1>
+        </div>
+      </header>
+</div>
+
+    <!-- Navigation -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#task1">Список ссылок</a>
+                <a class="nav-item nav-link" href="#table">Таблица</a>
+                <a class="nav-item nav-link" href="#form">Форма</a>
+            </div>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="main container">
+            <div class="main_list" id="elem_border">
+
+                <h1 class="bordered">Список ссылок:</h1>
+                <p><a id="task1">Task 1</a></p>
+                <ul>
+                    <li><a id="link1" href="http://www.kubsu.ru/ru">1.КубГУ1</a></li>
+                    <li><a href="https://www.kubsu.ru/ru">2.КубГУ2</a></li>
+                    <li><a href="https://www.kubsu.ru/ru"><img src="image.jpg" width="200" height="200" alt="flower"></a></li>
+                    <li><a href="/second-page">4.Сокращенная ссылка</a></li>
+                     </ul>
+            </div>
+            <div class="main_table" id="elem_border">
+                <table class="bordered">
+                    <h2 class="bordered" id="table">Таблица</h2>
+
+                        <tr class="first">
+                            <th>Колонка 1 </th>
+                            <th>Колонка 2 </th>
+                            <th>Колонка 3 </th>
+                            <th>Колонка 4 </th>
+                        </tr>
+                        <tr class="second">
+                            <td colspan="2">Ячейка 11 объединенная с 12</td>
+                            <td>Ячейка 13</td>
+                            <td>Ячейка 14</td>
+                        </tr>
+                        <tr class="first">
+                            <td>Ячейка 21</td>
+                            <td>Ячейка 22</td>
+                            <td colspan="2">Ячейка 23 объединенная с 24</td>
+                        </tr>
+                        <tr class="second">
+                            <td>Ячейка 31</td>
+                            <td colspan="3">Ячейка 32 объединенная с 33 и 34</td>
+
+                        </tr>
+                        <tr class="first">
+                            <td colspan="2">Ячейка 41 объединенная с 42</td>
+                            <td>Ячейка 43</td>
+                            <td>Ячейка 44</td>
+                        </tr>
+                        <tr class="second">
+                            <td>Ячейка 51</td>
+                            <td>Ячейка 52</td>
+                            <td rowspan="2">Ячейка 53 объединенная с 63</td>
+                            <td>Ячейка 54</td>
+                        </tr>
+                        <tr class="first">
+                            <td>Ячейка 61</td>
+                            <td>Ячейка 62</td>
+                            <td>Ячейка 64</td>
+                        </tr>
+                    </table>
+
+            </div>
+            <div class="main_form" id="elem_border">
+                <h1 class="centr" id="form" class="bordered">Форма</h1>
+                <form method="POST" class="container mt-4">
+                    <!-- Однострочное текстовое поле -->
+                    <div class="mb-3">
+                        <label class="form-label">Однострочное текстовое поле:</label>
+                        <input name="title" type="text" class="form-control" value="начальное значение">
+                    </div>
+
+                    <!-- Текстовое поле email -->
+                    <div class="mb-3">
+                        <label class="form-label">Текстовое поле email:</label>
+                        <input name="email" type="email" class="form-control" placeholder="Введите вашу почту">
+                    </div>
+
+                    <!-- Текстовое поле даты -->
+                    <div class="mb-3">
+                        <label class="form-label">Текстовое поле даты:</label>
+                        <input name="date" id="datePicker" type="date" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Многострочное текстовое поле:</label>
+                        <textarea name="content" class="form-control" rows="3">начальное значение</textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Список (combobox):</label>
+                        <select name="select" class="form-select">
+                            <option>Метка1</option>
+                            <option selected>Метка2</option>
+                            <option>Метка3</option>
+                        </select>
+                    </div>
+
+                    <!-- Список (listbox с множественным выбором) -->
+                    <div class="mb-3">
+                        <label class="form-label">Список (listbox с множественным выбором):</label>
+                        <select name="select-multiple" class="form-select" multiple size="3">
+                            <option>Метка1</option>
+                            <option>Метка2</option>
+                            <option>Метка3</option>
+                        </select>
+                    </div>
+
+                    <!-- Радиокнопки -->
+                    <div class="mb-3">
+                        <label class="form-label">Пол:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" value="M" type="radio" name="radioGroup" id="radio1" checked>
+                            <label class="form-check-label" for="radio1">М</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" value="F" type="radio" name="radioGroup" id="radio2">
+                            <label class="form-check-label" for="radio2">Ж</label>
+                        </div>
+                    </div>
+
+                    <!-- Чекбокс -->
+                    <div class="mb-3 form-check">
+                        <input name="checkbox" type="checkbox" class="form-check-input" id="checkbox1" checked>
+                        <label class="form-check-label" for="checkbox1">Согласие с политикой безопасности</label>
+                    </div>
+
+                    <!-- Кнопка отправки -->
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 Efooter">
+        <div class="container text-center">
+            <span>&copy; Danila Verbytskyy 2025</span>
+        </div>
+    </footer>
+
+    <!-- bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

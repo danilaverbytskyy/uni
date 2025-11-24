@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bad-key-pod
+spec:
+  containers:
+  - name: test-container
+    image: busybox
+    command: ["sh", "-c", "sleep 3600"]
+    env:
+    - name: WRONG
+      valueFrom:
+        configMapKeyRef:
+          name: bad-config
+          key: missing-key
+  restartPolicy: Never

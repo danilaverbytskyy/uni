@@ -1,0 +1,6 @@
+apiVersion: v2 # Версия Chart API (v2 для Helm 3)
+name: demo-chart # Имя Chart (обязательное поле)
+description: A Helm chart for Kubernetes # Описание Chart
+type: application # Тип: application или library
+version: 0.1.0 # Версия Chart (семантическое версионирование)
+appVersion: "1.0.0" # Версия приложения (строка)

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: liveness-exec
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: liveness-exec
+  template:
+    metadata:
+      labels:
+        app: liveness-exec
+    spec:
+      containers:
+      - name: app
+        image: alpine
+        command:
+        - sh
+        - -c
+        - "touch /tmp/healthy; sleep 30; rm -f /tmp/healthy; sleep 600"
+        livenessProbe:
+          exec:
+            command:
+            - sh
+            - -c
+            - test -f /tmp/healthy
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          timeoutSeconds: 1
+          failureThreshold: 3

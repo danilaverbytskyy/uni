@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-8080
+  labels:
+    app: app-8080
+spec:
+  containers:
+  - name: app
+    image: httpd:2.4-alpine
+    ports:
+    - containerPort: 8080

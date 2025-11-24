@@ -1,0 +1,10 @@
+D:\Danila Verbytskyy\35_2_Verbytskyy_Danila\obj\Debug\35_2_Verbytskyy_Danila.csproj.AssemblyReference.cache
+D:\Danila Verbytskyy\35_2_Verbytskyy_Danila\obj\Debug\_35_2_Verbytskyy_Danila.Form1.resources
+D:\Danila Verbytskyy\35_2_Verbytskyy_Danila\obj\Debug\35_2_Verbytskyy_Danila.csproj.GenerateResource.cache
+D:\Danila Verbytskyy\35_2_Verbytskyy_Danila\obj\Debug\35_2_Verbytskyy_Danila.csproj.CoreCompileInputs.cache
+D:\Danila Verbytskyy\35_2_Verbytskyy_Danila\bin\Debug\35_2_Verbytskyy_Danila.exe.config
+D:\Danila Verbytskyy\35_2_Verbytskyy_Danila\bin\Debug\35_2_Verbytskyy_Danila.exe
+D:\Danila Verbytskyy\35_2_Verbytskyy_Danila\bin\Debug\35_2_Verbytskyy_Danila.pdb
+D:\Danila Verbytskyy\35_2_Verbytskyy_Danila\obj\Debug\_35_2_Verbytskyy_Danila.Properties.Resources.resources
+D:\Danila Verbytskyy\35_2_Verbytskyy_Danila\obj\Debug\35_2_Verbytskyy_Danila.exe
+D:\Danila Verbytskyy\35_2_Verbytskyy_Danila\obj\Debug\35_2_Verbytskyy_Danila.pdb

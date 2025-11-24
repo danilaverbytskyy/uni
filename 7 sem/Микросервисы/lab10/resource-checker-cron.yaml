@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: resource-checker-cron
+spec:
+  schedule: "*/3 * * * *"
+  jobTemplate:
+    spec:
+      activeDeadlineSeconds: 45
+      backoffLimit: 2
+      template:
+        spec:
+          containers:
+          - name: resource-checker
+            image: busybox
+            imagePullPolicy: IfNotPresent
+            command:
+            - /bin/sh
+            - -c
+            - sleep $((RANDOM % 60 + 30))
+          restartPolicy: OnFailure

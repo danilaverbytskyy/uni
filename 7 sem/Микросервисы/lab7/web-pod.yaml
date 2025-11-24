@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-pod
+spec:
+  containers:
+  - name: web-container
+    image: busybox
+    command: ["sh", "-c", "sleep 3600"]
+    env:
+    - name: COLOR
+      valueFrom:
+        configMapKeyRef:
+          name: web-config
+          key: APP_COLOR
+    - name: ENVIRONMENT
+      valueFrom:
+        configMapKeyRef:
+          name: web-config
+          key: APP_ENV
+  restartPolicy: Never

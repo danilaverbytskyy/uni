@@ -1,0 +1,36 @@
+.DATA
+ RESULT DD 0
+ A      DW 25
+ B      DD 196
+ CC      DW 4
+
+.CODE
+START:
+    XOR EBX,EBX
+    MOV BX,CC
+    MOV ECX,100
+    SUB ECX,EBX
+
+    MOV EAX,B
+    CDQ ; change double to quadro. Расширили 32 в 64
+    IDIV ECX
+    MOV ESI,EAX
+
+    XOR EAX,EAX
+    MOV AX,A
+    ADD EAX,108
+    SUB EAX,ESI
+    MOV RESULT,EAX
+
+    MOV EAX,RESULT
+    TEST EAX,10H
+    JZ BIT_IS_ZERO
+
+    MOV RESULT,0
+    JMP AFTER_LOGIC
+
+BIT_IS_ZERO:
+    MOV RESULT,1
+
+AFTER_LOGIC:
+END START

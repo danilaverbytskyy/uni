@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multi-service-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: multi-service-app
+  template:
+    metadata:
+      labels:
+        app: multi-service-app
+    spec:
+      containers:
+      - name: frontend
+        image: nginx:1.25-alpine
+        ports:
+        - containerPort: 80
+      - name: backend
+        image: httpd:2.4-alpine
+        ports:
+        - containerPort: 8080

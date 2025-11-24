@@ -1,0 +1,7 @@
+﻿  Task2.cpp
+D:\uni\7 sem\Mikov\Task2\Task2.cpp(113,67): warning C4267: аргумент: преобразование из "size_t" в "_Ty"; возможна потеря данных
+D:\uni\7 sem\Mikov\Task2\Task2.cpp(113,67): warning C4267:         with
+D:\uni\7 sem\Mikov\Task2\Task2.cpp(113,67): warning C4267:         [
+D:\uni\7 sem\Mikov\Task2\Task2.cpp(113,67): warning C4267:             _Ty=int
+D:\uni\7 sem\Mikov\Task2\Task2.cpp(113,67): warning C4267:         ]
+  Task2.vcxproj -> D:\uni\7 sem\Mikov\Task2\x64\Debug\Task2.exe

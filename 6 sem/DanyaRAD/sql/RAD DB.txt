@@ -1,0 +1,5 @@
+Заказы: id, client_id, total_price, date
+Товары: id, title, единицы изм текст
+Заказы_Товары: id, order_id, product_id, price, кол-во,доставлено да/нет
+Клиенты: id, name, address, phone
+

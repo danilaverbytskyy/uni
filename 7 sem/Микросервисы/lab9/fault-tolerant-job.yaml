@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: fault-tolerant-job
+spec:
+  backoffLimit: 4
+  template:
+    spec:
+      containers:
+      - name: worker
+        image: busybox
+        command:
+        - sh
+        - -c
+        - |
+          VALUE=$((RANDOM % 2))
+          echo "Случайное значение: $VALUE"
+          if [ "$VALUE" -eq 0 ]; then
+            echo "Успешная попытка"
+            exit 0
+          else
+            echo "Имитация сбоя"
+            exit 1
+          fi
+      restartPolicy: OnFailure

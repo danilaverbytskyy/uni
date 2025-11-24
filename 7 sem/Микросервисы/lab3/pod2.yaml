@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug-pod
+  labels:
+    env: test
+    app: debug
+spec:
+  containers:
+  - name: container-nginx
+    image: nginx:alpine
+    ports:
+      - containerPort: 80
+    volumeMounts:
+      - name: shared-logs
+        mountPath: /usr/share/nginx/html/logs
+
+  - name: container-busybox
+    image: busybox:latest
+    command: ["sh", "-c", "while true; do echo $(date) >> /shared/log.txt; sleep 5; done"]
+    volumeMounts:
+      - name: shared-logs
+        mountPath: /shared
+
+  volumes:
+  - name: shared-logs
+    emptyDir: {}
+

@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: file-generator-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: file-generator
+        image: busybox
+        command:
+        - sh
+        - -c
+        - |
+          mkdir -p /output
+          > /output/numbers.txt
+          i=0
+          while [ "$i" -lt 10 ]; do
+            echo $RANDOM >> /output/numbers.txt
+            i=$((i+1))
+          done
+          echo "Сгенерированные числа:"
+          cat /output/numbers.txt
+      restartPolicy: Never

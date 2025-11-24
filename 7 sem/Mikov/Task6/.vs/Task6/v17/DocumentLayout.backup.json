@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\uni\\7 sem\\Mikov\\Task6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7F668B47-2311-47C9-B48C-B4856A13C33B}|Task6.vcxproj|D:\\uni\\7 sem\\Mikov\\Task6\\Task6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7F668B47-2311-47C9-B48C-B4856A13C33B}|Task6.vcxproj|solutionrelative:Task6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Task6.cpp",
+              "DocumentMoniker": "D:\\uni\\7 sem\\Mikov\\Task6\\Task6.cpp",
+              "RelativeDocumentMoniker": "Task6.cpp",
+              "ToolTip": "D:\\uni\\7 sem\\Mikov\\Task6\\Task6.cpp*",
+              "RelativeToolTip": "Task6.cpp*",
+              "ViewState": "AgIAAEgBAAAAAAAAAAAQwF4BAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-15T10:47:42.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

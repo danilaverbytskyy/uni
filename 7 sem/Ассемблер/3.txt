@@ -1,0 +1,4 @@
+AX там храним всё
+BX base
+CX counter
+DX data
