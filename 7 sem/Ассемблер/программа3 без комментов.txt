@@ -1,0 +1,48 @@
+.data
+ A dw 1,2,3,4,5,6,7,8,9,10,
+    11,12,13,14,15,16,17,18,19,20
+ B dw 21,22,23,24,25,26,27,28,29,30,
+    31,32,33,34,35,36,37,38,39,40
+
+.code
+start:
+    mov ebx, 20
+
+L1: 
+    mov esi, offset A        
+    mov ax, [esi]            
+    mov edi, esi             
+    mov ecx, 19
+L2:
+    add esi, 2               
+    mov dx, [esi]            
+    cmp dx, ax               
+    jge L3                   
+    mov ax, dx               
+    mov edi, esi             
+L3:
+    loop L2
+    
+    mov esi, offset B        
+    mov dx, [esi]            
+    mov ebp, esi             
+    mov ecx, 19
+
+L4:
+    add esi, 2               
+    mov ax, [esi]
+    cmp ax, dx               
+    jle L5                   
+    mov dx, ax               
+    mov ebp, esi             
+L5:
+    loop L4
+
+    mov ax, [edi]            
+    mov [edi], dx            
+    mov [ebp], ax            
+
+    dec ebx
+    jnz L1                   
+
+end start
