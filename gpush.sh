@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e  # останавливаемся при первой ошибке
+set -e
 
 git status
 git add .
