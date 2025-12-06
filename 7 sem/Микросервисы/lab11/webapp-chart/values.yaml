@@ -1,0 +1,88 @@
+repliciCount: 3 #ошибка
+
+image:
+  repository: nginx
+  tag: "1.23"
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+podLabels: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+service:
+  type: ClusterIP
+  port: 8080
+  targetPort: 80
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+
+httpRoute:
+  enabled: false
+  parentRefs: []
+  hostnames: []
+  rules: []
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+
+topologySpreadConstraints: []
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+labels:
+  environment: production
+  team: backend
+
+annotations: {}
+
+enableExtraLabels: true
+
+extraLabels:
+  project: "university"
+  course: "kubernetes"
+  semester: "spring"
+
+environmentVariables:
+  - name: "APP_ENV"
+    value: "production"
+  - name: "APP_DEBUG"
+    value: "false"
+  - name: "LOG_LEVEL"
+    value: "info"

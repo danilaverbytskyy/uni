@@ -1,0 +1,11 @@
+replicaCount: 3
+
+labels:
+  environment: production
+  team: backend
+
+config:
+  app:
+    logLevel: "info"
+    debug: false
+    environment: "production"

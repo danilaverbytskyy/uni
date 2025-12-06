@@ -1,0 +1,11 @@
+replicaCount: 1
+
+labels:
+  environment: development
+  team: backend
+
+config:
+  app:
+    logLevel: "debug"
+    debug: true
+    environment: "development"
