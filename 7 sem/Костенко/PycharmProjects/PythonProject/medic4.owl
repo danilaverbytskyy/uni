@@ -1,0 +1,1951 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user1/ontologies/2025/8/med"
+     xml:base="http://www.semanticweb.org/user1/ontologies/2025/8/med"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:med="http://www.semanticweb.org/user1/ontologies/2025/8/med#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ОписаниеЗаболевания -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ОписаниеЗаболевания"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ДляЗаболевания -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ДляЗаболевания">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Исследовалась -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Исследовалась">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Исследовалось -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Исследовалось">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#НазначениеЛекарства -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#НазначениеЛекарства">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#НазначениеМК -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#НазначениеМК">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ПрименениеЛекарства -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ПрименениеЛекарства">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#основноеЗаболеваниеПриОбращении -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#основноеЗаболеваниеПриОбращении">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#принадлежитПациенту -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#принадлежитПациенту">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ВесКГ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ВесКГ">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ГруппаЗаболевания -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ГруппаЗаболевания">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ГруппаКрови -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ГруппаКрови">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ДатаОбращения -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ДатаОбращения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ДатаРождения -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ДатаРождения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Дополнительные_замечания -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Дополнительные_замечания">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЕдиницаИзмеренияДозы -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЕдиницаИзмеренияДозы">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗаметкиДиагноза -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗаметкиДиагноза">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗаметкиИспытаний -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗаметкиИспытаний">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗаметкиЛечения -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗаметкиЛечения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗаметкиНазначения -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗаметкиНазначения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ИмеетПротивопоказание -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ИмеетПротивопоказание">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ИнформацияОбАллергиях -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ИнформацияОбАллергиях">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ИсточникДанных -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ИсточникДанных">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#КодМКБ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#КодМКБ">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Название_лекарства -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Название_лекарства">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#НазваниеЗаболевания -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#НазваниеЗаболевания">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#НазваниеСимптома -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#НазваниеСимптома">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#НазначеиеЗаметки -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#НазначеиеЗаметки"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#НазначениеДата -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#НазначениеДата">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#НазначениеДозировки -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#НазначениеДозировки">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#НазначениеЛекарственнойФормы -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#НазначениеЛекарственнойФормы">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#НазначениеПериода -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#НазначениеПериода">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Общее_имя -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Общее_имя">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ОбщиеПобочныеЭффекты -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ОбщиеПобочныеЭффекты">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ОписаниеСимптома -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ОписаниеСимптома">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ОсновнаяЖалоба -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ОсновнаяЖалоба">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ПоказательБезопасности -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ПоказательБезопасности">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ПоказательФункцииПечени -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ПоказательФункцииПечени">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ПоказательФункцииПочек -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ПоказательФункцииПочек">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ПоказательЭффективности -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ПоказательЭффективности">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Пол -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пол">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ru">Пол</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Производитель -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Производитель">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ru">Производитель</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#РекомендованнаяДозировка -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#РекомендованнаяДозировка">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#РостСМ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#РостСМ">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#СтатусБеременности -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#СтатусБеременности">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ТипичныеСимптомы -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ТипичныеСимптомы">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ФИО -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ФИО">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="ru">ФИО</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ФармакологическаяГруппа -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ФармакологическаяГруппа">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ФормаВыпуска -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ФормаВыпуска">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Частота -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Частота">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_1"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_10"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Часто давящая боль в висках</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_6"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_10"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Пульсирующая боль, часто с одной стороны</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_6"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_40"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Часто сопровождается головной болью</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_5"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_40"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Иногда с рвотой</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_5"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_10"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Редко, но может быть как симптом</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_8"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_45"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Боль может отдавать в нижнюю часть туловища</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_8"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_25"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Температура может быть высокой</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_8"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_35"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Связано с интоксикацией</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_9"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_50"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Основной симптом</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_9"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_31"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Одышка при незначительной нагрузке</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_10"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_50"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Общая слабость и утомляемость</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_1"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_15"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Отеки к вечеру</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_10"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_15"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Отечность лица, особенно утром</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_1"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_22"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Сухой кашель, иногда при кризах давления</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_4"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_22"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Влажный кашель с мокротой, но может быть и сухой</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_4"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_25"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Температура может быть высокой (39-40 °C)</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_4"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_30"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Боль может усиливаться при глубоком вдохе</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_4"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_31"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Одышка при нагрузке или в покое</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_2"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_35"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Постоянная жажда, особенно после еды</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ЗС_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_cимптом"/>
+        <med:Заболевание rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_2"/>
+        <med:Симптом rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_50"/>
+        <med:Дополнительные_замечания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Связана с гипергликемией</med:Дополнительные_замечания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+        <med:ГруппаЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Сердечно-сосудистые</med:ГруппаЗаболевания>
+        <med:КодМКБ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I10</med:КодМКБ>
+        <med:НазваниеЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Артериальная гипертензия</med:НазваниеЗаболевания>
+        <med:ТипичныеСимптомы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Повышенное АД, головная боль, отеки</med:ТипичныеСимптомы>
+        <med:ОписаниеЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Повышенное АД, головная боль, отеки</med:ОписаниеЗаболевания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+        <med:ГруппаЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Эндокринные</med:ГруппаЗаболевания>
+        <med:КодМКБ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E03</med:КодМКБ>
+        <med:НазваниеЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Гипотиреоз</med:НазваниеЗаболевания>
+        <med:ТипичныеСимптомы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Утомляемость, сонливость, сухость кожи, набор веса, озноб</med:ТипичныеСимптомы>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+        <med:ГруппаЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Эндокринные</med:ГруппаЗаболевания>
+        <med:КодМКБ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E11</med:КодМКБ>
+        <med:НазваниеЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Сахарный диабет 2 типа</med:НазваниеЗаболевания>
+        <med:ТипичныеСимптомы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Жажда, частое мочеиспускание, слабость, плохое заживление ран</med:ТипичныеСимптомы>
+        <med:ОписаниеЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Жажда, слабость, плохое заживление ран</med:ОписаниеЗаболевания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+        <med:ГруппаЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Сердечно-сосудистые</med:ГруппаЗаболевания>
+        <med:КодМКБ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I25</med:КодМКБ>
+        <med:НазваниеЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ишемическая болезнь сердца</med:НазваниеЗаболевания>
+        <med:ТипичныеСимптомы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Боль в груди (стенокардия), одышка, холодный пот</med:ТипичныеСимптомы>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+        <med:ГруппаЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Респираторные</med:ГруппаЗаболевания>
+        <med:КодМКБ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J18</med:КодМКБ>
+        <med:НазваниеЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Пневмония</med:НазваниеЗаболевания>
+        <med:ТипичныеСимптомы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Кашель (с мокротой или сухой), высокая температура, одышка, боль в груди</med:ТипичныеСимптомы>
+        <med:ОписаниеЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Кашель, высокая температура, одышка, боль в груди</med:ОписаниеЗаболевания>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+        <med:ГруппаЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ЖКТ</med:ГруппаЗаболевания>
+        <med:КодМКБ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K29</med:КодМКБ>
+        <med:НазваниеЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Гастрит</med:НазваниеЗаболевания>
+        <med:ТипичныеСимптомы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Боль в верхней части живота, тошнота, изжога, отрыжка</med:ТипичныеСимптомы>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+        <med:ГруппаЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Неврологические</med:ГруппаЗаболевания>
+        <med:КодМКБ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G43</med:КодМКБ>
+        <med:НазваниеЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Мигрень</med:НазваниеЗаболевания>
+        <med:ТипичныеСимптомы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Сильная пульсирующая головная боль (чаще с одной стороны), тошнота, светобоязнь</med:ТипичныеСимптомы>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+        <med:ГруппаЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Опорно-двигательный</med:ГруппаЗаболевания>
+        <med:КодМКБ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M06</med:КодМКБ>
+        <med:НазваниеЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Артрит</med:НазваниеЗаболевания>
+        <med:ТипичныеСимптомы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Боль в суставах, скованность, отек, покраснение</med:ТипичныеСимптомы>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+        <med:ГруппаЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Мочевыделительная</med:ГруппаЗаболевания>
+        <med:КодМКБ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N10</med:КодМКБ>
+        <med:НазваниеЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Пиелонефрит</med:НазваниеЗаболевания>
+        <med:ТипичныеСимптомы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Боль в пояснице, высокая температура, озноб, болезненное мочеиспускание</med:ТипичныеСимптомы>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание"/>
+        <med:ГруппаЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Кроветворная</med:ГруппаЗаболевания>
+        <med:КодМКБ rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D64</med:КодМКБ>
+        <med:НазваниеЗаболевания rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Анемия</med:НазваниеЗаболевания>
+        <med:ТипичныеСимптомы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Слабость, бледность, одышка, головокружение</med:ТипичныеСимптомы>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <med:ЕдиницаИзмеренияДозы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg</med:ЕдиницаИзмеренияДозы>
+        <med:Название_лекарства rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Лизиноприл</med:Название_лекарства>
+        <med:Общее_имя rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Лизиноприл</med:Общее_имя>
+        <med:Производитель rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ФармСтандарт</med:Производитель>
+        <med:ФармакологическаяГруппа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ингибитор АПФ</med:ФармакологическаяГруппа>
+        <med:ФормаВыпуска rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Таблетки</med:ФормаВыпуска>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <med:ЕдиницаИзмеренияДозы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mcg</med:ЕдиницаИзмеренияДозы>
+        <med:Название_лекарства rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Левотироксин</med:Название_лекарства>
+        <med:Общее_имя rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Левотироксин натрия</med:Общее_имя>
+        <med:Производитель rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berlin-Chemie</med:Производитель>
+        <med:ФармакологическаяГруппа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Гормон щитовидной железы</med:ФармакологическаяГруппа>
+        <med:ФормаВыпуска rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Таблетки</med:ФормаВыпуска>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <med:ЕдиницаИзмеренияДозы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg</med:ЕдиницаИзмеренияДозы>
+        <med:ИмеетПротивопоказание rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Может назначаться беременным только по строгим показаниям</med:ИмеетПротивопоказание>
+        <med:ИмеетПротивопоказание rdf:datatype="http://www.w3.org/2001/XMLSchema#string">С осторожностью при гипертонии, мониторинг АД</med:ИмеетПротивопоказание>
+        <med:Название_лекарства rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Метформин</med:Название_лекарства>
+        <med:Общее_имя rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Метформин</med:Общее_имя>
+        <med:Производитель rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berlin-Chemie</med:Производитель>
+        <med:ФармакологическаяГруппа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Бигуаниды</med:ФармакологическаяГруппа>
+        <med:ФормаВыпуска rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Таблетки</med:ФормаВыпуска>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <med:ЕдиницаИзмеренияДозы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg</med:ЕдиницаИзмеренияДозы>
+        <med:Название_лекарства rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Аспирин Кардио</med:Название_лекарства>
+        <med:Общее_имя rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ацетилсалициловая к-та</med:Общее_имя>
+        <med:Производитель rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bayer</med:Производитель>
+        <med:ФармакологическаяГруппа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Антиагреганты</med:ФармакологическаяГруппа>
+        <med:ФормаВыпуска rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Таблетки</med:ФормаВыпуска>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <med:ЕдиницаИзмеренияДозы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g</med:ЕдиницаИзмеренияДозы>
+        <med:Название_лекарства rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Цефтриаксон</med:Название_лекарства>
+        <med:Общее_имя rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Цефтриаксон</med:Общее_имя>
+        <med:Производитель rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ФармСтандарт</med:Производитель>
+        <med:ФармакологическаяГруппа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Цефалоспорин (3-е поколение)</med:ФармакологическаяГруппа>
+        <med:ФормаВыпуска rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Порошок для инъекций</med:ФормаВыпуска>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <med:ЕдиницаИзмеренияДозы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg</med:ЕдиницаИзмеренияДозы>
+        <med:Название_лекарства rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Амлодипин</med:Название_лекарства>
+        <med:Общее_имя rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Амлодипин</med:Общее_имя>
+        <med:Производитель rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novartis</med:Производитель>
+        <med:ФармакологическаяГруппа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Блокатор кальциевых каналов</med:ФармакологическаяГруппа>
+        <med:ФормаВыпуска rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Таблетки</med:ФормаВыпуска>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <med:ЕдиницаИзмеренияДозы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg</med:ЕдиницаИзмеренияДозы>
+        <med:ИмеетПротивопоказание rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Противопоказано до 18 лет</med:ИмеетПротивопоказание>
+        <med:Название_лекарства rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Суматриптан</med:Название_лекарства>
+        <med:Общее_имя rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Суматриптан</med:Общее_имя>
+        <med:Производитель rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GSK</med:Производитель>
+        <med:ФармакологическаяГруппа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Селективный агонист 5-HT1</med:ФармакологическаяГруппа>
+        <med:ФормаВыпуска rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Таблетки</med:ФормаВыпуска>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <med:ЕдиницаИзмеренияДозы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg</med:ЕдиницаИзмеренияДозы>
+        <med:ИмеетПротивопоказание rdf:datatype="http://www.w3.org/2001/XMLSchema#string">С осторожностью, возможна перекрестная аллергия</med:ИмеетПротивопоказание>
+        <med:Название_лекарства rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ибупрофен</med:Название_лекарства>
+        <med:Общее_имя rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ибупрофен</med:Общее_имя>
+        <med:Производитель rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Алси фарма</med:Производитель>
+        <med:ФармакологическаяГруппа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">НПВС</med:ФармакологическаяГруппа>
+        <med:ФормаВыпуска rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Таблетки</med:ФормаВыпуска>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <med:ЕдиницаИзмеренияДозы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg</med:ЕдиницаИзмеренияДозы>
+        <med:Название_лекарства rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Амоксициллин</med:Название_лекарства>
+        <med:Общее_имя rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Амоксициллин</med:Общее_имя>
+        <med:Производитель rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Оболенское</med:Производитель>
+        <med:ФармакологическаяГруппа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Пенициллин</med:ФармакологическаяГруппа>
+        <med:ФормаВыпуска rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Капсулы</med:ФормаВыпуска>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Лекарство"/>
+        <med:ЕдиницаИзмеренияДозы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mg</med:ЕдиницаИзмеренияДозы>
+        <med:Название_лекарства rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Рифампицин</med:Название_лекарства>
+        <med:Общее_имя rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Рифампицин</med:Общее_имя>
+        <med:Производитель rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ФармСтандарт</med:Производитель>
+        <med:ФармакологическаяГруппа rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Антибиотик (рифамицин)</med:ФармакологическаяГруппа>
+        <med:ФормаВыпуска rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Капсулы</med:ФормаВыпуска>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <med:основноеЗаболеваниеПриОбращении rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_10"/>
+        <med:принадлежитПациенту rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#П_8"/>
+        <med:ДатаОбращения rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-10T16:00:00Z</med:ДатаОбращения>
+        <med:ОсновнаяЖалоба rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Утомляемость, сухость кожи, набор веса</med:ОсновнаяЖалоба>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <med:основноеЗаболеваниеПриОбращении rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_4"/>
+        <med:принадлежитПациенту rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент_1"/>
+        <med:ДатаОбращения rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-05-10T14:30:00Z</med:ДатаОбращения>
+        <med:ОсновнаяЖалоба rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Высокая температура, кашель, одышка</med:ОсновнаяЖалоба>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <med:основноеЗаболеваниеПриОбращении rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_4"/>
+        <med:принадлежитПациенту rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент_1"/>
+        <med:ДатаОбращения rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-01T09:00:00Z</med:ДатаОбращения>
+        <med:ОсновнаяЖалоба rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Плановый осмотр, повышен сахар, утомляемость</med:ОсновнаяЖалоба>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <med:основноеЗаболеваниеПриОбращении rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_1"/>
+        <med:принадлежитПациенту rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент_2"/>
+        <med:ДатаОбращения rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-15T11:00:00Z</med:ДатаОбращения>
+        <med:ОсновнаяЖалоба rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Плановый осмотр при беременности, отеки ног</med:ОсновнаяЖалоба>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <med:основноеЗаболеваниеПриОбращении rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_3"/>
+        <med:принадлежитПациенту rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент_3"/>
+        <med:ДатаОбращения rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-01T15:00:00Z</med:ДатаОбращения>
+        <med:ОсновнаяЖалоба rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Боль в груди, одышка</med:ОсновнаяЖалоба>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <med:основноеЗаболеваниеПриОбращении rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_6"/>
+        <med:принадлежитПациенту rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент_3"/>
+        <med:ДатаОбращения rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-20T09:30:00Z</med:ДатаОбращения>
+        <med:ОсновнаяЖалоба rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Головная боль, тошнота, светобоязнь</med:ОсновнаяЖалоба>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <med:основноеЗаболеваниеПриОбращении rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_5"/>
+        <med:принадлежитПациенту rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#П_4"/>
+        <med:ДатаОбращения rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-01T14:00:00Z</med:ДатаОбращения>
+        <med:ОсновнаяЖалоба rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Боль в верхней части живота, изжога</med:ОсновнаяЖалоба>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <med:основноеЗаболеваниеПриОбращении rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_9"/>
+        <med:принадлежитПациенту rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#П_6"/>
+        <med:ДатаОбращения rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-25T10:00:00Z</med:ДатаОбращения>
+        <med:ОсновнаяЖалоба rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Слабость, бледность</med:ОсновнаяЖалоба>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <med:основноеЗаболеваниеПриОбращении rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_8"/>
+        <med:принадлежитПациенту rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#П_7"/>
+        <med:ДатаОбращения rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-08-15T13:00:00Z</med:ДатаОбращения>
+        <med:ОсновнаяЖалоба rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Боль в пояснице, высокая температура</med:ОсновнаяЖалоба>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_Карта_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_Карта_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_карта_запись"/>
+        <med:основноеЗаболеваниеПриОбращении rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_1"/>
+        <med:принадлежитПациенту rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент_1"/>
+        <med:ДатаОбращения rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-26T10:00:00Z</med:ДатаОбращения>
+        <med:ЗаметкиДиагноза rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Первично диагностирована гипертензия</med:ЗаметкиДиагноза>
+        <med:ЗаметкиЛечения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Назначены Лизиноприл и Амлодипин</med:ЗаметкиЛечения>
+        <med:ОсновнаяЖалоба rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Повышенное давление, отеки, головная боль</med:ОсновнаяЖалоба>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <med:НазначениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_1"/>
+        <med:НазначениеМК rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_Карта_1"/>
+        <med:НазначеиеЗаметки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Утром</med:НазначеиеЗаметки>
+        <med:НазначениеДата rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-26</med:НазначениеДата>
+        <med:НазначениеДозировки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10 mg</med:НазначениеДозировки>
+        <med:НазначениеЛекарственнойФормы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Таблетки</med:НазначениеЛекарственнойФормы>
+        <med:НазначениеПериода rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Постоянно</med:НазначениеПериода>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <med:НазначениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_8"/>
+        <med:НазначениеМК rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_9"/>
+        <med:НазначеиеЗаметки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">В/в кап. 2 раза в день</med:НазначеиеЗаметки>
+        <med:НазначениеДата rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-08-15</med:НазначениеДата>
+        <med:НазначениеДозировки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.5 g</med:НазначениеДозировки>
+        <med:НазначениеЛекарственнойФормы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Порошок для инъекций</med:НазначениеЛекарственнойФормы>
+        <med:НазначениеПериода rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10 дней</med:НазначениеПериода>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <med:НазначениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_10"/>
+        <med:НазначениеМК rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_10"/>
+        <med:НазначеиеЗаметки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Утро</med:НазначеиеЗаметки>
+        <med:НазначениеДата rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-10</med:НазначениеДата>
+        <med:НазначениеДозировки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75 mcg</med:НазначениеДозировки>
+        <med:НазначениеЛекарственнойФормы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Таблетки</med:НазначениеЛекарственнойФормы>
+        <med:НазначениеПериода rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Постоянно</med:НазначениеПериода>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <med:НазначениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_5"/>
+        <med:НазначениеМК rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Медицинская_Карта_1"/>
+        <med:НазначеиеЗаметки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Вечером</med:НазначеиеЗаметки>
+        <med:НазначениеДата rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-26</med:НазначениеДата>
+        <med:НазначениеДозировки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5 mg</med:НазначениеДозировки>
+        <med:НазначениеЛекарственнойФормы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Таблетки</med:НазначениеЛекарственнойФормы>
+        <med:НазначениеПериода rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Постоянно</med:НазначениеПериода>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <med:НазначениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_4"/>
+        <med:НазначениеМК rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_2"/>
+        <med:НазначеиеЗаметки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">В/м 1 раз в день</med:НазначеиеЗаметки>
+        <med:НазначениеДата rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-05-10</med:НазначениеДата>
+        <med:НазначениеДозировки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 g</med:НазначениеДозировки>
+        <med:НазначениеЛекарственнойФормы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Порошок для инъекций</med:НазначениеЛекарственнойФормы>
+        <med:НазначениеПериода rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7 дней</med:НазначениеПериода>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <med:НазначениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_2"/>
+        <med:НазначениеМК rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_3"/>
+        <med:НазначеиеЗаметки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2 раза в день, после еды</med:НазначеиеЗаметки>
+        <med:НазначениеДата rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-11-01</med:НазначениеДата>
+        <med:НазначениеДозировки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1000 mg</med:НазначениеДозировки>
+        <med:НазначениеЛекарственнойФормы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Таблетки</med:НазначениеЛекарственнойФормы>
+        <med:НазначениеПериода rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Постоянно</med:НазначениеПериода>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <med:НазначениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_1"/>
+        <med:НазначениеМК rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_4"/>
+        <med:НазначеиеЗаметки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Утром (для беременных)</med:НазначеиеЗаметки>
+        <med:НазначениеДата rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-15</med:НазначениеДата>
+        <med:НазначениеДозировки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5 mg</med:НазначениеДозировки>
+        <med:НазначениеЛекарственнойФормы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Таблетки</med:НазначениеЛекарственнойФормы>
+        <med:НазначениеПериода rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Постоянно</med:НазначениеПериода>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <med:НазначениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_1"/>
+        <med:НазначениеМК rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_5"/>
+        <med:НазначеиеЗаметки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Утро</med:НазначеиеЗаметки>
+        <med:НазначениеДата rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-01</med:НазначениеДата>
+        <med:НазначениеДозировки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10 mg</med:НазначениеДозировки>
+        <med:НазначениеЛекарственнойФормы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Таблетки</med:НазначениеЛекарственнойФормы>
+        <med:НазначениеПериода rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Постоянно</med:НазначениеПериода>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <med:НазначениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_6"/>
+        <med:НазначениеМК rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_6"/>
+        <med:НазначеиеЗаметки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Во время приступа</med:НазначеиеЗаметки>
+        <med:НазначениеДата rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-20</med:НазначениеДата>
+        <med:НазначениеДозировки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50 mg</med:НазначениеДозировки>
+        <med:НазначениеЛекарственнойФормы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Таблетки</med:НазначениеЛекарственнойФормы>
+        <med:НазначениеПериода rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3 раза в день</med:НазначениеПериода>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <med:НазначениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_7"/>
+        <med:НазначениеМК rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_7"/>
+        <med:НазначеиеЗаметки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2 раза в день</med:НазначеиеЗаметки>
+        <med:НазначениеДата rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-09-01</med:НазначениеДата>
+        <med:НазначениеДозировки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40 mg</med:НазначениеДозировки>
+        <med:НазначениеЛекарственнойФормы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Капсулы</med:НазначениеЛекарственнойФормы>
+        <med:НазначениеПериода rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14 дней</med:НазначениеПериода>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Н_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Назначения_в_медицинской_карте"/>
+        <med:НазначениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_9"/>
+        <med:НазначениеМК rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#МК_8"/>
+        <med:НазначеиеЗаметки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 раз в день</med:НазначеиеЗаметки>
+        <med:НазначениеДата rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-10</med:НазначениеДата>
+        <med:НазначениеДозировки rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20 mg</med:НазначениеДозировки>
+        <med:НазначениеЛекарственнойФормы rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Таблетки</med:НазначениеЛекарственнойФормы>
+        <med:НазначениеПериода rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 месяц</med:НазначениеПериода>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#П_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#П_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <med:ВесКГ rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65.0</med:ВесКГ>
+        <med:ГруппаКрови rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A+</med:ГруппаКрови>
+        <med:ДатаОбращения rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-08-08</med:ДатаОбращения>
+        <med:ИнформацияОбАллергиях rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Нет</med:ИнформацияОбАллергиях>
+        <med:ПоказательФункцииПечени rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">92.0</med:ПоказательФункцииПечени>
+        <med:ПоказательФункцииПочек rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90.0</med:ПоказательФункцииПочек>
+        <med:Пол rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Женский</med:Пол>
+        <med:РостСМ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</med:РостСМ>
+        <med:СтатусБеременности rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Беременна</med:СтатусБеременности>
+        <med:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Морозова Наталья Викторовна</med:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#П_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#П_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <med:ВесКГ rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">58.0</med:ВесКГ>
+        <med:ГруппаКрови rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AB+</med:ГруппаКрови>
+        <med:ДатаРождения rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-01-30</med:ДатаРождения>
+        <med:ИнформацияОбАллергиях rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Сульфаниламиды</med:ИнформацияОбАллергиях>
+        <med:ПоказательФункцииПечени rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">95.0</med:ПоказательФункцииПечени>
+        <med:ПоказательФункцииПочек rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">92.0</med:ПоказательФункцииПочек>
+        <med:Пол rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Женский</med:Пол>
+        <med:РостСМ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">172</med:РостСМ>
+        <med:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Смирнова Елена Викторовна</med:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#П_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#П_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <med:ГруппаКрови rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O+</med:ГруппаКрови>
+        <med:ДатаРождения rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1968-09-12</med:ДатаРождения>
+        <med:ИнформацияОбАллергиях rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Нет</med:ИнформацияОбАллергиях>
+        <med:ПоказательФункцииПечени rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.0</med:ПоказательФункцииПечени>
+        <med:ПоказательФункцииПочек rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</med:ПоказательФункцииПочек>
+        <med:Пол rdf:datatype="http://www.w3.org/2001/XMLSchema#date">Мужской</med:Пол>
+        <med:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Кузнецов Дмитрий Иванович</med:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#П_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#П_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <med:ГруппаКрови rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A-</med:ГруппаКрови>
+        <med:ДатаРождения rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-04-05</med:ДатаРождения>
+        <med:ПоказательФункцииПечени rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">98.0</med:ПоказательФункцииПечени>
+        <med:ПоказательФункцииПочек rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">95.0</med:ПоказательФункцииПочек>
+        <med:Пол rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Женский</med:Пол>
+        <med:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Васильева Анна Васильевна</med:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#П_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#П_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <med:ГруппаКрови rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B+</med:ГруппаКрови>
+        <med:ДатаРождения rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1978-12-20</med:ДатаРождения>
+        <med:ПоказательФункцииПечени rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">88.0</med:ПоказательФункцииПечени>
+        <med:ПоказательФункцииПочек rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.0</med:ПоказательФункцииПочек>
+        <med:Пол rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Мужской</med:Пол>
+        <med:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Попов Сергей Сергеевич</med:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#П_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#П_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <med:ГруппаКрови rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O-</med:ГруппаКрови>
+        <med:ДатаРождения rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1982-06-18</med:ДатаРождения>
+        <med:ПоказательФункцииПечени rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">82.0</med:ПоказательФункцииПечени>
+        <med:ПоказательФункцииПочек rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.0</med:ПоказательФункцииПочек>
+        <med:Пол rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Женский</med:Пол>
+        <med:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Козлова Ольга Викторовна</med:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#П_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#П_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <med:ГруппаКрови rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AB-</med:ГруппаКрови>
+        <med:ДатаРождения rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1955-02-25</med:ДатаРождения>
+        <med:ПоказательФункцииПечени rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65.0</med:ПоказательФункцииПечени>
+        <med:ПоказательФункцииПочек rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45.0</med:ПоказательФункцииПочек>
+        <med:Пол rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Мужской</med:Пол>
+        <med:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Новиков Виктор Иванович</med:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+        <med:ДляЗаболевания rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_1"/>
+        <med:ПрименениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_1"/>
+        <med:ЗаметкиНазначения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Для лечения артериальной гипертензии</med:ЗаметкиНазначения>
+        <med:РекомендованнаяДозировка rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10 mg один раз</med:РекомендованнаяДозировка>
+        <med:Частота rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Постоянно</med:Частота>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+        <med:ДляЗаболевания rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_7"/>
+        <med:ПрименениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_7"/>
+        <med:ЗаметкиНазначения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">При болях в суставах</med:ЗаметкиНазначения>
+        <med:РекомендованнаяДозировка rdf:datatype="http://www.w3.org/2001/XMLSchema#string">400 mg 3 раза</med:РекомендованнаяДозировка>
+        <med:Частота rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10 дней</med:Частота>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+        <med:ДляЗаболевания rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_3"/>
+        <med:ПрименениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_1"/>
+        <med:ЗаметкиНазначения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">В составе комплексной терапии после ИМ</med:ЗаметкиНазначения>
+        <med:РекомендованнаяДозировка rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5 mg один раз</med:РекомендованнаяДозировка>
+        <med:Частота rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Постоянно</med:Частота>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+        <med:ДляЗаболевания rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_1"/>
+        <med:ПрименениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_5"/>
+        <med:ЗаметкиНазначения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">В комбинации с ингибиторами АПФ</med:ЗаметкиНазначения>
+        <med:РекомендованнаяДозировка rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5 mg один раз</med:РекомендованнаяДозировка>
+        <med:Частота rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Постоянно</med:Частота>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+        <med:ДляЗаболевания rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_4"/>
+        <med:ПрименениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_4"/>
+        <med:ЗаметкиНазначения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">При внебольничной пневмонии</med:ЗаметкиНазначения>
+        <med:РекомендованнаяДозировка rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 g в/м 1 раз/сутки</med:РекомендованнаяДозировка>
+        <med:Частота rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7 дней</med:Частота>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+        <med:ДляЗаболевания rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_4"/>
+        <med:ПрименениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_8"/>
+        <med:ЗаметкиНазначения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">При легкой и средней степени тяжести пневмонии</med:ЗаметкиНазначения>
+        <med:РекомендованнаяДозировка rdf:datatype="http://www.w3.org/2001/XMLSchema#string">500 mg 3 раза</med:РекомендованнаяДозировка>
+        <med:Частота rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7 дней</med:Частота>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+        <med:ДляЗаболевания rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_6"/>
+        <med:ПрименениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_6"/>
+        <med:ЗаметкиНазначения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">При приступе мигрени</med:ЗаметкиНазначения>
+        <med:РекомендованнаяДозировка rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50 mg</med:РекомендованнаяДозировка>
+        <med:Частота rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Разово</med:Частота>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+        <med:ДляЗаболевания rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_2"/>
+        <med:ПрименениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_2"/>
+        <med:ЗаметкиНазначения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">При СД 2 типа, когда диета неэффективна</med:ЗаметкиНазначения>
+        <med:РекомендованнаяДозировка rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1000 mg 2 раза</med:РекомендованнаяДозировка>
+        <med:Частота rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Постоянно</med:Частота>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+        <med:ДляЗаболевания rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_10"/>
+        <med:ПрименениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_10"/>
+        <med:ЗаметкиНазначения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Заместительная терапия</med:ЗаметкиНазначения>
+        <med:РекомендованнаяДозировка rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75 mcg один раз</med:РекомендованнаяДозировка>
+        <med:Частота rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Постоянно</med:Частота>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#ПП_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Показания_к_применению"/>
+        <med:ДляЗаболевания rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_4"/>
+        <med:ПрименениеЛекарства rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_9"/>
+        <med:ЗаметкиНазначения rdf:datatype="http://www.w3.org/2001/XMLSchema#string">При туберкулезе легких (лечение)</med:ЗаметкиНазначения>
+        <med:РекомендованнаяДозировка rdf:datatype="http://www.w3.org/2001/XMLSchema#string">600 mg 1 раз/сутки</med:РекомендованнаяДозировка>
+        <med:Частота rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6 месяцев</med:Частота>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <med:ВесКГ rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">85.5</med:ВесКГ>
+        <med:ГруппаКрови rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A+</med:ГруппаКрови>
+        <med:ДатаРождения rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1975-03-15</med:ДатаРождения>
+        <med:ИнформацияОбАллергиях rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Пенициллин, Аспирин</med:ИнформацияОбАллергиях>
+        <med:ПоказательФункцииПечени rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90.0</med:ПоказательФункцииПечени>
+        <med:ПоказательФункцииПочек rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75.0</med:ПоказательФункцииПочек>
+        <med:Пол rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Мужской</med:Пол>
+        <med:РостСМ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</med:РостСМ>
+        <med:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Иванов Иван Иванович</med:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <med:ВесКГ rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">62.0</med:ВесКГ>
+        <med:ГруппаКрови rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O-</med:ГруппаКрови>
+        <med:ДатаРождения rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1988-07-22</med:ДатаРождения>
+        <med:ИнформацияОбАллергиях rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Нет</med:ИнформацияОбАллергиях>
+        <med:ПоказательФункцииПечени rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">85.0</med:ПоказательФункцииПечени>
+        <med:ПоказательФункцииПочек rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">88.0</med:ПоказательФункцииПочек>
+        <med:Пол rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Женский</med:Пол>
+        <med:РостСМ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">165</med:РостСМ>
+        <med:СтатусБеременности rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Беременна</med:СтатусБеременности>
+        <med:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Петрова Мария Ивановна</med:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Пациент"/>
+        <med:ВесКГ rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">95.0</med:ВесКГ>
+        <med:ГруппаКрови rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B-</med:ГруппаКрови>
+        <med:ДатаРождения rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1988-07-22</med:ДатаРождения>
+        <med:ИнформацияОбАллергиях rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Нет</med:ИнформацияОбАллергиях>
+        <med:ПоказательФункцииПечени rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.0</med:ПоказательФункцииПечени>
+        <med:ПоказательФункцииПочек rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">55.0</med:ПоказательФункцииПочек>
+        <med:Пол rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Мужской</med:Пол>
+        <med:РостСМ rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</med:РостСМ>
+        <med:ФИО rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Иванов Алексей Иванович</med:ФИО>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <med:Исследовалась rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_1"/>
+        <med:Исследовалось rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_1"/>
+        <med:ЗаметкиИспытаний rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Отличная переносимость</med:ЗаметкиИспытаний>
+        <med:ИсточникДанных rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Гипертония 1-2 ст., мужчины/женщины 30-65 лет, без диабета</med:ИсточникДанных>
+        <med:ОбщиеПобочныеЭффекты rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Головокружение</med:ОбщиеПобочныеЭффекты>
+        <med:ОбщиеПобочныеЭффекты rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Кашель</med:ОбщиеПобочныеЭффекты>
+        <med:ПоказательБезопасности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9</med:ПоказательБезопасности>
+        <med:ПоказательЭффективности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.85</med:ПоказательЭффективности>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <med:Исследовалась rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_7"/>
+        <med:Исследовалось rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_7"/>
+        <med:ЗаметкиИспытаний rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Облегчает боль и воспаление</med:ЗаметкиИспытаний>
+        <med:ИсточникДанных rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Пациенты с артритом (ревматоидный, остеоартрит)</med:ИсточникДанных>
+        <med:ОбщиеПобочныеЭффекты rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Боль в эпигастрии</med:ОбщиеПобочныеЭффекты>
+        <med:ПоказательБезопасности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.85</med:ПоказательБезопасности>
+        <med:ПоказательЭффективности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.78</med:ПоказательЭффективности>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <med:Исследовалась rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_1"/>
+        <med:Исследовалось rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_5"/>
+        <med:ЗаметкиИспытаний rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Хорошо работает в комбинации</med:ЗаметкиИспытаний>
+        <med:ИсточникДанных rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Гипертония 1-2 ст., пожилые пациенты 60-80 лет</med:ИсточникДанных>
+        <med:ОбщиеПобочныеЭффекты rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Отеки лодыжек</med:ОбщиеПобочныеЭффекты>
+        <med:ПоказательБезопасности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.88</med:ПоказательБезопасности>
+        <med:ПоказательЭффективности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.75</med:ПоказательЭффективности>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <med:Исследовалась rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_3"/>
+        <med:Исследовалось rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_1"/>
+        <med:ЗаметкиИспытаний rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Снижает риск повторных ИМ</med:ЗаметкиИспытаний>
+        <med:ИсточникДанных rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Пациенты после ИМ, 45-70 лет</med:ИсточникДанных>
+        <med:ОбщиеПобочныеЭффекты rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Сухой кашель</med:ОбщиеПобочныеЭффекты>
+        <med:ПоказательБезопасности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.95</med:ПоказательБезопасности>
+        <med:ПоказательЭффективности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.92</med:ПоказательЭффективности>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <med:Исследовалась rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_4"/>
+        <med:Исследовалось rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_4"/>
+        <med:ЗаметкиИспытаний rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Высокая эффективность</med:ЗаметкиИспытаний>
+        <med:ИсточникДанных rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Взрослые с негоспитальной пневмонией (средней тяжести)</med:ИсточникДанных>
+        <med:ПоказательБезопасности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.95</med:ПоказательБезопасности>
+        <med:ПоказательЭффективности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.92</med:ПоказательЭффективности>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <med:Исследовалась rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_4"/>
+        <med:Исследовалось rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_8"/>
+        <med:ЗаметкиИспытаний rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Хорошо переносится детьми</med:ЗаметкиИспытаний>
+        <med:ИсточникДанных rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Дети 6-12 лет с пневмонией</med:ИсточникДанных>
+        <med:ОбщиеПобочныеЭффекты rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Тошнота</med:ОбщиеПобочныеЭффекты>
+        <med:ПоказательБезопасности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.91</med:ПоказательБезопасности>
+        <med:ПоказательЭффективности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.88</med:ПоказательЭффективности>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <med:Исследовалась rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_6"/>
+        <med:Исследовалось rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_6"/>
+        <med:ЗаметкиИспытаний rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Быстрое начало действия</med:ЗаметкиИспытаний>
+        <med:ИсточникДанных rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Взрослые с мигренью (с аурой и без)</med:ИсточникДанных>
+        <med:ОбщиеПобочныеЭффекты rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Жар</med:ОбщиеПобочныеЭффекты>
+        <med:ОбщиеПобочныеЭффекты rdf:datatype="http://www.w3.org/2001/XMLSchema#string">покалывание</med:ОбщиеПобочныеЭффекты>
+        <med:ПоказательБезопасности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.92</med:ПоказательБезопасности>
+        <med:ПоказательЭффективности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.7</med:ПоказательЭффективности>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <med:Исследовалась rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_2"/>
+        <med:Исследовалось rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_2"/>
+        <med:ЗаметкиИспытаний rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Снижает HbA1c, риск кардиособытий</med:ЗаметкиИспытаний>
+        <med:ИсточникДанных rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Пациенты СД 2 типа, ИМТ &gt; 25, возраст 40-70 лет</med:ИсточникДанных>
+        <med:ОбщиеПобочныеЭффекты rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Расстройство ЖКТ</med:ОбщиеПобочныеЭффекты>
+        <med:ПоказательБезопасности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.93</med:ПоказательБезопасности>
+        <med:ПоказательЭффективности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.88</med:ПоказательЭффективности>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <med:Исследовалась rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_10"/>
+        <med:Исследовалось rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_10"/>
+        <med:ЗаметкиИспытаний rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Эффективная заместительная терапия</med:ЗаметкиИспытаний>
+        <med:ИсточникДанных rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Пациенты с гипотиреозом, 25-60 лет</med:ИсточникДанных>
+        <med:ОбщиеПобочныеЭффекты rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Нет</med:ОбщиеПобочныеЭффекты>
+        <med:ПоказательБезопасности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.98</med:ПоказательБезопасности>
+        <med:ПоказательЭффективности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.95</med:ПоказательЭффективности>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Р_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Результаты_клинических_испытаний"/>
+        <med:Исследовалась rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Заболевание_4"/>
+        <med:Исследовалось rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Л_9"/>
+        <med:ЗаметкиИспытаний rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Необходим мониторинг функции печени</med:ЗаметкиИспытаний>
+        <med:ИсточникДанных rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Пациенты с туберкулезом легких</med:ИсточникДанных>
+        <med:ОбщиеПобочныеЭффекты rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Гепатотоксичность</med:ОбщиеПобочныеЭффекты>
+        <med:ПоказательБезопасности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.8</med:ПоказательБезопасности>
+        <med:ПоказательЭффективности rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9</med:ПоказательЭффективности>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом"/>
+        <med:НазваниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Головная боль</med:НазваниеСимптома>
+        <med:ОписаниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Боль в области головы, может быть пульсирующей или давящей</med:ОписаниеСимптома>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом"/>
+        <med:НазваниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Отеки ног</med:НазваниеСимптома>
+        <med:ОписаниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Увеличение объема ног из-за скопления жидкости</med:ОписаниеСимптома>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом"/>
+        <med:НазваниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Кашель</med:НазваниеСимптома>
+        <med:ОписаниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Рефлекторное выталкивание воздуха из легких</med:ОписаниеСимптома>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом"/>
+        <med:НазваниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Высокая температура</med:НазваниеСимптома>
+        <med:ОписаниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Повышение температуры тела выше 38.0</med:ОписаниеСимптома>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом"/>
+        <med:НазваниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Боль в груди</med:НазваниеСимптома>
+        <med:ОписаниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ощещение дискомфорта или боли за грудиной</med:ОписаниеСимптома>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_31">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом"/>
+        <med:НазваниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Одышка</med:НазваниеСимптома>
+        <med:ОписаниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Затрудненное дыхание, ощущение нехватки воздуха</med:ОписаниеСимптома>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом"/>
+        <med:НазваниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Жажда</med:НазваниеСимптома>
+        <med:ОписаниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Сильное желание пить</med:ОписаниеСимптома>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_40">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом"/>
+        <med:НазваниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Тошнота</med:НазваниеСимптома>
+        <med:ОписаниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Неприятное ощущение в желудке</med:ОписаниеСимптома>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_45">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом"/>
+        <med:НазваниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Боль в пояснице</med:НазваниеСимптома>
+        <med:ОписаниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Болевые ощущения в нижней части спины</med:ОписаниеСимптома>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом_50">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user1/ontologies/2025/8/med#Симптом"/>
+        <med:НазваниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Слабость</med:НазваниеСимптома>
+        <med:ОписаниеСимптома rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Общее ощущение упадка сил, усталость</med:ОписаниеСимптома>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

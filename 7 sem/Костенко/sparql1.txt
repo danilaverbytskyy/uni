@@ -1,0 +1,136 @@
+PREFIX ex: <http://www.semanticweb.org/user1/ontologies/2025/8/med#>
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+Общее количество пациентов:
+SELECT (COUNT(?patient) AS ?patientCount)
+WHERE {
+  ?patient a ex:Пациент.
+}
+
+Количество пациентов по полу:
+SELECT ?gender (COUNT(?patient) AS ?count)
+WHERE {
+  ?patient a ex:Пациент ;
+           ex:Пол ?gender .
+}
+GROUP BY ?gender
+
+
+Средний рост пациентов (в см):
+SELECT (AVG(?height) AS ?averageHeight)
+WHERE {
+  ?patient a ex:Пациент ;
+           ex:РостСМ ?height .
+}
+
+Заболевания сгруппированные как "Эндокринные" или "Сердечно-сосудистые":
+SELECT ?diseaseName ?group
+WHERE {
+  ?disease a ex:Заболевание ;
+           ex:НазваниеЗаболевания ?diseaseName ;
+           ex:ГруппаЗаболевания ?group .
+  FILTER (?group = "Эндокринные" || ?group = "Сердечно-сосудистые")
+}
+
+
+Пациенты с высоким показателем функции почек (выше среднего):
+SELECT ?firstName ?kidneyScore 
+WHERE {
+  ?patient a ex:Пациент ;
+           ex:ФИО ?firstName ;
+           ex:ПоказательФункцииПочек ?kidneyScore .
+  {
+    SELECT (AVG(?avgKidney) AS ?averageKidney)
+    WHERE {
+      ?p a ex:Пациент ;
+         ex:ПоказательФункцииПочек ?avgKidney .
+    }
+  }
+  FILTER (?kidneyScore > ?averageKidney)
+}
+
+
+Пациенты, у которых указана аллергия (поле allergy_info не пустое):
+SELECT ?patientName ?allergyInfo
+WHERE {
+  ?patient a ex:Пациент ;
+           ex:ФИО ?patientName ;
+           ex:ИнформацияОбАллергиях ?allergyInfo .
+  FILTER (?allergyInfo != "Нет" && ?allergyInfo != "")
+}
+
+
+Препараты, рекомендованные для лечения более одного заболевания:
+SELECT ?drugName (COUNT(DISTINCT ?disease) AS ?numberOfDiseases)
+WHERE {
+  ?indication a ex:Показания_к_применению ;
+              ex:ПрименениеЛекарства ?drug ;
+              ex:ДляЗаболевания ?disease .
+  ?drug a ex:Лекарство ;
+        ex:Название_лекарства ?drugName .
+}
+GROUP BY ?drugName
+HAVING (COUNT(DISTINCT ?disease) >1)
+
+
+Пациенты, у которых основное заболевание связанно с сердечно-сосудистой системой:
+SELECT DISTINCT ?patientName 
+WHERE {
+    ?patient a ex:Пациент ;
+	 ex:ФИО ?patientName.
+  ?record ex:принадлежитПациенту ?patient.
+  ?record ex:основноеЗаболеваниеПриОбращении ?disease.
+  ?disease ex:ГруппаЗаболевания "Сердечно-сосудистые"^^xsd:string.
+}
+
+Пациенты, родившиеся в 1988 году:
+SELECT ?patName ?dob
+WHERE {
+  ?patient a ex:Пациент ;
+           ex:ФИО ?patName ;
+           ex:ДатаРождения ?dob .
+  FILTER (REGEX(STR(?dob), "^1988"))
+}
+
+
+Медицинские записи, где главная жалоба содержит слово "боль":
+SELECT ?record ?chiefComplaint
+WHERE {
+  ?record a ex:Медицинская_Карта_запись ;
+          ex:ОсновнаяЖалоба ?chiefComplaint .
+  FILTER regex(?chiefComplaint, "боль", "i")
+}
+
+Пациенты, чья фамилия начинается на "П" или "С":
+SELECT ?name
+WHERE {
+  ?patient a ex:Пациент ;
+           ex:ФИО ?name ;
+  FILTER regex(?name, "^[ПС]", "i")
+}
+
+
+Список заболеваний, для которых существуют препараты с эффективностью > 0.9 и безопасностью > 0.9:
+
+
+Пациенты, у которых было зарегистрировано более 2 различных заболеваний в медицинских записях:
+
+
+Пациенты, чьи записи о заболеваниях содержат только заболевания "Сердечно-сосудистые" или "Эндокринные":
+
+
+Найти препараты, которые НЕ были назначены ни одному пациенту:
+
+
+Список заболеваний, чьи названия содержат "Артрит" или "Диабет", 
+и для которых средняя эффективность всех назначенных препаратов (согласно клиническим испытаниям) выше 0.8:
+
+
+Средний показатель эффективности для каждого класса препаратов:
+
+
+Среднее количество симптомов, связанных с каждым заболеванием:

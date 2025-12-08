@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Экземпляры класса Лекарство</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        tr:nth-child(even){background-color: #f2f2f2;}
+    </style>
+</head>
+<body>
+    <h1>Экземпляры класса Лекарство:</h1>
+    <table>
+        <tr>
+            <th>Название лекарства</th>
+            <th>Производитель</th>
+            <th>Форма выпуска</th>
+        </tr>
+        {% for drug in drugs %}
+        <tr>
+            <td>{{ drug.drugName }}</td>
+            <td>{{ drug.manufacturer }}</td>
+            <td>{{ drug.form }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Назад</a>
+</body>
+</html>
