@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Все пакеты услуг</h2>
+
+{% for it in items %}
+  <section class="card">
+    <h3>{{ it.name }}</h3>
+    <ul>
+      {% for t in it.tasks %}
+        <li>{{ t }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endfor %}
+
+{% endblock %}

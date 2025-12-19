@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Фильтр 5 — по слову в названии пакета</h2>
+<p>Ищет слово в названии пакета услуг (TaskList rdfs:label). Подходящие — зелёным, неподходящие — красным.</p>
+
+<form action="{{ url_for('filter5_diverse') }}" method="post" class="card">
+  <label for="keyword"><b>Ключевое слово</b></label>
+  <input type="text" name="keyword" id="keyword" value="{{ keyword }}" placeholder="например: офис, санузлы, окна, генеральная">
+  <button type="submit">Показать</button>
+</form>
+
+{% if submitted %}
+  <section class="card">
+    <h3>Результаты</h3>
+    {% if cards and cards|length > 0 %}
+      <ul class="list-reset">
+        {% for c in cards %}
+          <li class="pill {% if c.is_match %}highlight-pill{% else %}red-pill{% endif %}">
+            {{ c.name }}
+            {% if c.is_match %}
+              <span class="ok-badge">подходит</span>
+            {% else %}
+              <span class="bad-badge">не подходит</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Нет данных для отображения.</p>
+    {% endif %}
+  </section>
+{% endif %}
+
+{% endblock %}

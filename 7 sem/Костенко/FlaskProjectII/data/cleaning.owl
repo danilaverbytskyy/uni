@@ -1,0 +1,2751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns="http://example.org/cleaning#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/cleaning#definedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">определяется</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#defines"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_freq_entrance_more">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#FrequencyNorms"/>
+    <rdfs:label xml:lang="ru">Норма частоты: входная группа (чаще)</rdfs:label>
+    <configures rdf:resource="http://example.org/cleaning#ex_schedule_after_hours"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frequency</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N001844367a324ba0a8a828dec4d8bc14">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frequency</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_training_chemicals">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Training"/>
+    <rdfs:label xml:lang="ru">Инструктаж: работа с химией</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Training</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_access_before_open">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#AccessRestrictions"/>
+    <rdfs:label xml:lang="ru">Ограничение доступа: до открытия</rdfs:label>
+    <restrictsWindows rdf:resource="http://example.org/cleaning#ex_schedule_morning_weekdays"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AccessRestriction</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_chem_degreaser_kitchen">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Chemicals"/>
+    <rdfs:label xml:lang="ru">Средство: обезжириватель (кухня)</rdfs:label>
+    <requiresCompliance rdf:resource="http://example.org/cleaning#ex_safety_chemicals_handling"/>
+    <requiresDisposal rdf:resource="http://example.org/cleaning#ex_eco_chemical_disposal"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chemical</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_plan_warehouse_shift">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:label xml:lang="ru">План: посменный (склад)</rdfs:label>
+    <considers rdf:resource="http://example.org/cleaning#ex_profile_warehouse_loading"/>
+    <uses rdf:resource="http://example.org/cleaning#ex_zoning_warehouse_areas"/>
+    <defines rdf:resource="http://example.org/cleaning#ex_tasklist_industrial"/>
+    <forms rdf:resource="http://example.org/cleaning#ex_schedule_night_shift"/>
+    <allocates rdf:resource="http://example.org/cleaning#ex_res_pack_night"/>
+    <embedsMeasures rdf:resource="http://example.org/cleaning#ex_safety_electrical_rules"/>
+    <alignsWith rdf:resource="http://example.org/cleaning#ex_std_industrial_safety"/>
+    <considersLimits rdf:resource="http://example.org/cleaning#ex_budget_supplies_limit"/>
+    <usesHistory rdf:resource="http://example.org/cleaning#ex_history_log_week50"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plan</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_freq_high_touch_more">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#FrequencyNorms"/>
+    <rdfs:label xml:lang="ru">Норма частоты: контактные зоны (чаще)</rdfs:label>
+    <configures rdf:resource="http://example.org/cleaning#ex_schedule_evening_daily"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frequency</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_kpi_time_completion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#KPIAssessment"/>
+    <rdfs:label xml:lang="ru">KPI: время выполнения</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KPI</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb9550be1543549bbb3d7388357720861">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chemical</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_training_wet_floor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Training"/>
+    <rdfs:label xml:lang="ru">Инструктаж: мокрые полы и предупреждения</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Training</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_plan_weekly_office">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:label xml:lang="ru">План: недельный (офис)</rdfs:label>
+    <considers rdf:resource="http://example.org/cleaning#ex_profile_office_openspace"/>
+    <uses rdf:resource="http://example.org/cleaning#ex_zoning_office_floors"/>
+    <defines rdf:resource="http://example.org/cleaning#ex_tasklist_daily_office"/>
+    <forms rdf:resource="http://example.org/cleaning#ex_schedule_morning_weekdays"/>
+    <allocates rdf:resource="http://example.org/cleaning#ex_res_pack_morning"/>
+    <embedsMeasures rdf:resource="http://example.org/cleaning#ex_safety_general_rules"/>
+    <alignsWith rdf:resource="http://example.org/cleaning#ex_std_office_baseline"/>
+    <considersLimits rdf:resource="http://example.org/cleaning#ex_budget_monthly_office"/>
+    <usesHistory rdf:resource="http://example.org/cleaning#ex_history_log_december"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plan</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_tasklist_post_event">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#TaskList"/>
+    <rdfs:label xml:lang="ru">Перечень задач: после мероприятия</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_dry_trash_collection"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_wet_spot_cleaning"/>
+    <implementedThrough rdf:resource="http://example.org/cleaning#ex_exec_post_event_team"/>
+    <requires rdf:resource="http://example.org/cleaning#ex_res_pack_event"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TaskList</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_staff_responder_holiday">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Staff"/>
+    <rdfs:label xml:lang="ru">Дежурный сотрудник (праздники)</rdfs:label>
+    <undergoes rdf:resource="http://example.org/cleaning#ex_training_induction"/>
+    <assignedBy rdf:resource="http://example.org/cleaning#ex_schedule_holiday_mode"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Staff</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#formalizes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">оформляет</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Standard"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Checklists"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#formalizedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_exec_night_shift">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#CleaningExecution"/>
+    <rdfs:label xml:lang="ru">Выполнение: ночная смена</rdfs:label>
+    <recordedIn rdf:resource="http://example.org/cleaning#ex_history_incidents_register"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Execution</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#strengthensRequirements">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">усиливает требования</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Disinfection"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Safety"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#requirementsStrengthenedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#CleaningExecution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Выполнение уборки</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N0477e73d1c2d448eb610cda89cde7d67"/>
+    <rdfs:subClassOf rdf:nodeID="N60429b9a899544ec84ef01687d04a8f3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6dd59bad52114764ac0e1828c640c338">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Staff</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_cl_office_openspace">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Checklists"/>
+    <rdfs:label xml:lang="ru">Чек-лист: open-space</rdfs:label>
+    <usedIn rdf:resource="http://example.org/cleaning#ex_qc_weekly_audit"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Checklist</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#collectedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">собирается</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#collects"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#KPIAssessment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">KPI/оценка</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Ne32eb59e563847c7a448709af3cd2c14"/>
+    <rdfs:subClassOf rdf:nodeID="N6bc185fc0c2540b8932ede22d5fd9376"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_schedule_evening_daily">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Schedule"/>
+    <rdfs:label xml:lang="ru">Расписание: ежедневно (вечер)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schedule</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#measuresEmbeddedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">меры заложены в</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#embedsMeasures"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_plan_general_cleaning">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:label xml:lang="ru">План: генеральная уборка</rdfs:label>
+    <considers rdf:resource="http://example.org/cleaning#ex_profile_office_meeting_rooms"/>
+    <uses rdf:resource="http://example.org/cleaning#ex_zoning_office_floors"/>
+    <defines rdf:resource="http://example.org/cleaning#ex_tasklist_deep_cleaning"/>
+    <forms rdf:resource="http://example.org/cleaning#ex_schedule_weekend_deep"/>
+    <allocates rdf:resource="http://example.org/cleaning#ex_res_pack_deep"/>
+    <embedsMeasures rdf:resource="http://example.org/cleaning#ex_safety_chemicals_handling"/>
+    <alignsWith rdf:resource="http://example.org/cleaning#ex_std_office_baseline"/>
+    <considersLimits rdf:resource="http://example.org/cleaning#ex_budget_monthly_office"/>
+    <usesHistory rdf:resource="http://example.org/cleaning#ex_history_log_december"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plan</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#boundBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">привязано к</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#binds"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6bc104feabc44594950df736ec898c6c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#usedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">используется в</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#uses"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_zoning_public_lobby">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Zoning"/>
+    <rdfs:label xml:lang="ru">Зонирование: вестибюль/входная группа</rdfs:label>
+    <contains rdf:resource="http://example.org/cleaning#ex_zoneList_lobby"/>
+    <sets rdf:resource="http://example.org/cleaning#ex_prior_entrance_visibility"/>
+    <binds rdf:resource="http://example.org/cleaning#ex_tasklist_daily_office"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zoning</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#DataHistory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Данные/история</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N06eced94a41e4ed3bc52ba41558ae728"/>
+    <rdfs:subClassOf rdf:nodeID="Nea39df9ee8c9459ba9ceb1994442ca49"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_dry_sweep_concrete">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#DryCleaning"/>
+    <rdfs:label xml:lang="ru">Сухая уборка: подметание (бетон)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DryTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#measures">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">измеряет</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#QualityControl"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#KPIAssessment"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#measuredBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N36ce053c2d60486bbcf13535b93bf24e">
+    <rdf:first rdf:resource="http://example.org/cleaning#CleaningExecution"/>
+    <rdf:rest rdf:nodeID="Ndd7b951474994da49a77e961765ab46b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_profile_event_hall">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#FacilityProfile"/>
+    <rdfs:label xml:lang="ru">Профиль помещения: ивент-зал</rdfs:label>
+    <characterizedBy rdf:resource="http://example.org/cleaning#ex_traffic_peak"/>
+    <contains rdf:resource="http://example.org/cleaning#ex_material_carpet"/>
+    <has rdf:resource="http://example.org/cleaning#ex_access_before_open"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FacilityProfile</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_chem_restroom_descaler">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Chemicals"/>
+    <rdfs:label xml:lang="ru">Средство: для санузлов (удаление налёта)</rdfs:label>
+    <requiresCompliance rdf:resource="http://example.org/cleaning#ex_safety_chemicals_handling"/>
+    <requiresDisposal rdf:resource="http://example.org/cleaning#ex_eco_chemical_disposal"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chemical</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_material_concrete">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#SurfaceMaterials"/>
+    <rdfs:label xml:lang="ru">Материал: бетон</rdfs:label>
+    <influencesMethods rdf:resource="http://example.org/cleaning#ex_tasklist_industrial"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SurfaceMaterial</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_exec_weekend_team">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#CleaningExecution"/>
+    <rdfs:label xml:lang="ru">Выполнение: выходная бригада</rdfs:label>
+    <recordedIn rdf:resource="http://example.org/cleaning#ex_history_feedback_archive"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Execution</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_budget_event_cleanup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Budget"/>
+    <rdfs:label xml:lang="ru">Бюджет: уборка после мероприятия</rdfs:label>
+    <limits rdf:resource="http://example.org/cleaning#ex_res_pack_event"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Budget</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#usesChecklist">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">использует чек-лист</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#usedIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_insp_morning_walk">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Inspections"/>
+    <rdfs:label xml:lang="ru">Инспекция: утренний обход</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inspection</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N808ae48fe722469bb8dc793bbc97207b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nad1b1b33787f419b894590e48456336c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_cl_restroom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Checklists"/>
+    <rdfs:label xml:lang="ru">Чек-лист: санузлы</rdfs:label>
+    <usedIn rdf:resource="http://example.org/cleaning#ex_qc_daily_supervisor"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Checklist</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_dis_restrooms">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Disinfection"/>
+    <rdfs:label xml:lang="ru">Дезинфекция: санузлы</rdfs:label>
+    <strengthensRequirements rdf:resource="http://example.org/cleaning#ex_safety_chemicals_handling"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisinfectionTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_cl_meeting_rooms">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Checklists"/>
+    <rdfs:label xml:lang="ru">Чек-лист: переговорные</rdfs:label>
+    <usedIn rdf:resource="http://example.org/cleaning#ex_qc_weekly_audit"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Checklist</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#allocatedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">распределяется</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#allocates"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#historyUsedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">история используется в</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#usesHistory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_zoneList_office">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#ZoneList"/>
+    <rdfs:label xml:lang="ru">Список зон: офис (open-space/переговорные/кухня/санузлы)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZoneList</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_res_pack_night">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Resource"/>
+    <rdfs:label xml:lang="ru">Набор ресурсов: ночная смена</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_staff_team_gamma"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_equip_steam_cleaner"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_chem_disinfectant_quat"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resource</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#requiresCompliance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">требует соблюдения</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Chemicals"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Safety"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#complianceRequiredBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_eco_separate_collection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#EcologyDisposal"/>
+    <rdfs:label xml:lang="ru">Экология: раздельный сбор</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ecology</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_dry_dusting_desks">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#DryCleaning"/>
+    <rdfs:label xml:lang="ru">Сухая уборка: протирка пыли (столы)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DryTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_qc_daily_supervisor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#QualityControl"/>
+    <rdfs:label xml:lang="ru">Контроль: ежедневная проверка супервайзера</rdfs:label>
+    <conducts rdf:resource="http://example.org/cleaning#ex_insp_morning_walk"/>
+    <measures rdf:resource="http://example.org/cleaning#ex_kpi_clean_floor"/>
+    <collects rdf:resource="http://example.org/cleaning#ex_fb_missing_consumables"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QualityControl</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_budget_chemicals_limit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Budget"/>
+    <rdfs:label xml:lang="ru">Бюджет: лимит на химию</rdfs:label>
+    <limits rdf:resource="http://example.org/cleaning#ex_res_pack_evening"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Budget</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#adjusts">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">корректирует</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Feedback"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Planning"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#adjustedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_tasklist_industrial">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#TaskList"/>
+    <rdfs:label xml:lang="ru">Перечень задач: промышленная уборка (склад)</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_dry_sweep_concrete"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_wet_machine_scrub"/>
+    <implementedThrough rdf:resource="http://example.org/cleaning#ex_exec_night_shift"/>
+    <requires rdf:resource="http://example.org/cleaning#ex_res_pack_night"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TaskList</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_sys_office_center">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#CleaningManagementSystem"/>
+    <rdfs:label xml:lang="ru">Система: офисный бизнес-центр</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_plan_weekly_office"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_exec_morning_shift"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_qc_daily_supervisor"/>
+    <reliesOn rdf:resource="http://example.org/cleaning#ex_std_office_baseline"/>
+    <manages rdf:resource="http://example.org/cleaning#ex_res_pack_morning"/>
+    <ensures rdf:resource="http://example.org/cleaning#ex_safety_general_rules"/>
+    <compliesWith rdf:resource="http://example.org/cleaning#ex_eco_separate_collection"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_std_hygiene_high">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Standard"/>
+    <rdfs:label xml:lang="ru">Стандарт: повышенная гигиена</rdfs:label>
+    <sets rdf:resource="http://example.org/cleaning#ex_freq_high_touch_more"/>
+    <formalizes rdf:resource="http://example.org/cleaning#ex_cl_restroom"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standard</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#SIZ">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">СИЗ</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nd89c92055b5c4d87a526a6651d65920b"/>
+    <rdfs:subClassOf rdf:nodeID="N8f68df613f724099aa9c6aaa596bb8ed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_tasklist_after_classes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#TaskList"/>
+    <rdfs:label xml:lang="ru">Перечень задач: после занятий (школа)</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_dry_trash_collection"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_wet_mop_floors"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_wet_wipe_surfaces"/>
+    <implementedThrough rdf:resource="http://example.org/cleaning#ex_exec_after_classes"/>
+    <requires rdf:resource="http://example.org/cleaning#ex_res_pack_day"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TaskList</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_safety_chemicals_handling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Safety"/>
+    <rdfs:label xml:lang="ru">Безопасность: работа с химией</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_siz_goggles"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_training_chemicals"/>
+    <mandatoryFor rdf:resource="http://example.org/cleaning#ex_exec_evening_shift"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Safety</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#compliesWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">соблюдает</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#CleaningManagementSystem"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#EcologyDisposal"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#complianceFor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_siz_non_slip_shoes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#SIZ"/>
+    <rdfs:label xml:lang="ru">СИЗ: обувь с противоскользящей подошвой</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PPE</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#configuredBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">настраивается</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#configures"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_equip_cleaning_cart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Equipment"/>
+    <rdfs:label xml:lang="ru">Оборудование: тележка уборщика</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipment</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#complianceFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">соблюдается в</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#compliesWith"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4796aa4902664bfcb78202242938045d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TaskList</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N60429b9a899544ec84ef01687d04a8f3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Execution</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#recordedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">фиксируется в</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#CleaningExecution"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#DataHistory"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#records"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_zoning_event_space">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Zoning"/>
+    <rdfs:label xml:lang="ru">Зонирование: ивент-пространство</rdfs:label>
+    <contains rdf:resource="http://example.org/cleaning#ex_zoneList_event"/>
+    <sets rdf:resource="http://example.org/cleaning#ex_prior_event_fast_turnaround"/>
+    <binds rdf:resource="http://example.org/cleaning#ex_tasklist_post_event"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zoning</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nff7854fb31e742f787885bea47b1d762">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_profile_school_corridors">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#FacilityProfile"/>
+    <rdfs:label xml:lang="ru">Профиль помещения: школьные коридоры</rdfs:label>
+    <characterizedBy rdf:resource="http://example.org/cleaning#ex_traffic_high"/>
+    <contains rdf:resource="http://example.org/cleaning#ex_material_tile"/>
+    <has rdf:resource="http://example.org/cleaning#ex_access_after_19"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FacilityProfile</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_prior_school_corridors">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#ZonePriorities"/>
+    <rdfs:label xml:lang="ru">Приоритеты: коридоры и вход (школа)</rdfs:label>
+    <influences rdf:resource="http://example.org/cleaning#ex_schedule_after_hours"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZonePriority</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_prior_office_hygiene_first">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#ZonePriorities"/>
+    <rdfs:label xml:lang="ru">Приоритеты: санузлы и кухня выше (офис)</rdfs:label>
+    <influences rdf:resource="http://example.org/cleaning#ex_schedule_morning_weekdays"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZonePriority</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_tasklist_deep_cleaning">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#TaskList"/>
+    <rdfs:label xml:lang="ru">Перечень задач: генеральная уборка</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_dry_vacuum_carpets"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_wet_machine_scrub"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_dis_restrooms"/>
+    <implementedThrough rdf:resource="http://example.org/cleaning#ex_exec_weekend_team"/>
+    <requires rdf:resource="http://example.org/cleaning#ex_res_pack_deep"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TaskList</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#influencesMethods">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">влияет на методы</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#SurfaceMaterials"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#TaskList"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#methodsInfluencedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nde680ff9c88a48cdae6be586426124be">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_insp_safety_walkthrough">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Inspections"/>
+    <rdfs:label xml:lang="ru">Инспекция: обход по безопасности</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inspection</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_profile_warehouse_loading">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#FacilityProfile"/>
+    <rdfs:label xml:lang="ru">Профиль помещения: зона погрузки (склад)</rdfs:label>
+    <characterizedBy rdf:resource="http://example.org/cleaning#ex_traffic_medium"/>
+    <contains rdf:resource="http://example.org/cleaning#ex_material_concrete"/>
+    <has rdf:resource="http://example.org/cleaning#ex_access_pass_required"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FacilityProfile</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_staff_team_delta">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Staff"/>
+    <rdfs:label xml:lang="ru">Бригада «Дельта»</rdfs:label>
+    <undergoes rdf:resource="http://example.org/cleaning#ex_training_wet_floor"/>
+    <assignedBy rdf:resource="http://example.org/cleaning#ex_schedule_after_hours"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Staff</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_access_pass_required">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#AccessRestrictions"/>
+    <rdfs:label xml:lang="ru">Ограничение доступа: требуется пропуск</rdfs:label>
+    <restrictsWindows rdf:resource="http://example.org/cleaning#ex_schedule_evening_daily"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AccessRestriction</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_fb_request_more_restrooms">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Feedback"/>
+    <rdfs:label xml:lang="ru">Запрос: увеличить частоту уборки санузлов</rdfs:label>
+    <adjusts rdf:resource="http://example.org/cleaning#ex_plan_weekly_office"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feedback</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_qc_acceptance_after_deep">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#QualityControl"/>
+    <rdfs:label xml:lang="ru">Контроль: приёмка после генеральной</rdfs:label>
+    <conducts rdf:resource="http://example.org/cleaning#ex_insp_acceptance_deep"/>
+    <measures rdf:resource="http://example.org/cleaning#ex_kpi_glass_clean"/>
+    <collects rdf:resource="http://example.org/cleaning#ex_fb_praise_kitchen"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QualityControl</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#TaskList">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Перечень задач</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nb8c3ff24ace543c2bdbcb325c2bd7387"/>
+    <rdfs:subClassOf rdf:nodeID="N4796aa4902664bfcb78202242938045d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd5144d6176104e75b03498dfba4b3ba5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#configures">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">настраивает</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#FrequencyNorms"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Schedule"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#configuredBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_zoning_warehouse_areas">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Zoning"/>
+    <rdfs:label xml:lang="ru">Зонирование: склад (зоны)</rdfs:label>
+    <contains rdf:resource="http://example.org/cleaning#ex_zoneList_warehouse"/>
+    <sets rdf:resource="http://example.org/cleaning#ex_prior_warehouse_safety"/>
+    <binds rdf:resource="http://example.org/cleaning#ex_tasklist_industrial"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zoning</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_fb_missing_consumables">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Feedback"/>
+    <rdfs:label xml:lang="ru">Отзыв: не хватает расходников (бумага/мыло)</rdfs:label>
+    <adjusts rdf:resource="http://example.org/cleaning#ex_plan_weekly_office"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feedback</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_chem_eco_concentrate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Chemicals"/>
+    <rdfs:label xml:lang="ru">Средство: эко-концентрат (универсальный)</rdfs:label>
+    <requiresCompliance rdf:resource="http://example.org/cleaning#ex_safety_general_rules"/>
+    <requiresDisposal rdf:resource="http://example.org/cleaning#ex_eco_separate_collection"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chemical</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_dry_remove_dust_blinds">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#DryCleaning"/>
+    <rdfs:label xml:lang="ru">Сухая уборка: жалюзи (удаление пыли)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DryCleaning</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf0245619663f4ad9a21a5f0e17141039">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipment</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_access_quiet_hours">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#AccessRestrictions"/>
+    <rdfs:label xml:lang="ru">Ограничение доступа: тихие часы (13:00–15:00)</rdfs:label>
+    <restrictsWindows rdf:resource="http://example.org/cleaning#ex_schedule_holiday_mode"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AccessRestriction</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_res_pack_morning">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Resource"/>
+    <rdfs:label xml:lang="ru">Набор ресурсов: утренняя смена</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_staff_team_alpha"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_equip_vacuum_pro"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_chem_neutral_detergent"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resource</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#mandatedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">подчиняется требованиям</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#mandatoryFor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#CleaningManagementSystem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Система управления чистотой помещения</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nad12175972a542b1bf7b4ee2f3a17246"/>
+    <rdfs:subClassOf rdf:nodeID="N182d12e7db3d4b4caff34c46880bcd83"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#Equipment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/cleaning#Resource"/>
+    <rdfs:subClassOf rdf:nodeID="N6110f76f34a14654a4089e23a05a75b0"/>
+    <rdfs:subClassOf rdf:nodeID="Nf0245619663f4ad9a21a5f0e17141039"/>
+    <rdfs:label xml:lang="ru">Оборудование</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_eco_chemical_disposal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#EcologyDisposal"/>
+    <rdfs:label xml:lang="ru">Экология: утилизация химических остатков</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ecology</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ensures">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">обеспечивает</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#CleaningManagementSystem"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Safety"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#ensuredBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_material_metal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#SurfaceMaterials"/>
+    <rdfs:label xml:lang="ru">Материал: металл (перила/поверхности)</rdfs:label>
+    <influencesMethods rdf:resource="http://example.org/cleaning#ex_tasklist_disinfection_clinic"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SurfaceMaterial</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_fb_stains_on_floor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Feedback"/>
+    <rdfs:label xml:lang="ru">Отзыв: пятна на полу в коридоре</rdfs:label>
+    <adjusts rdf:resource="http://example.org/cleaning#ex_plan_daily_school"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feedback</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#hasStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="ru">статус</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_prior_entrance_visibility">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#ZonePriorities"/>
+    <rdfs:label xml:lang="ru">Приоритеты: видимые зоны (вход/вестибюль)</rdfs:label>
+    <influences rdf:resource="http://example.org/cleaning#ex_schedule_high_traffic_day"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZonePriority</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#includedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">входит в</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#includes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#requirementsStrengthenedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">требования усилены из-за</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#strengthensRequirements"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#usesHistory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">использует историю</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#DataHistory"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#historyUsedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_kpi_smell_air">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#KPIAssessment"/>
+    <rdfs:label xml:lang="ru">KPI: запах/воздух</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KPI</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#requiresDisposal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">требует утилизации</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Chemicals"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#EcologyDisposal"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#disposalRequiredBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_chem_neutral_detergent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Chemicals"/>
+    <rdfs:label xml:lang="ru">Средство: нейтральное моющее</rdfs:label>
+    <requiresCompliance rdf:resource="http://example.org/cleaning#ex_safety_general_rules"/>
+    <requiresDisposal rdf:resource="http://example.org/cleaning#ex_eco_general_waste"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chemical</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_plan_daily_school">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:label xml:lang="ru">План: ежедневный (школа)</rdfs:label>
+    <considers rdf:resource="http://example.org/cleaning#ex_profile_school_corridors"/>
+    <uses rdf:resource="http://example.org/cleaning#ex_zoning_school_wings"/>
+    <defines rdf:resource="http://example.org/cleaning#ex_tasklist_after_classes"/>
+    <forms rdf:resource="http://example.org/cleaning#ex_schedule_after_hours"/>
+    <allocates rdf:resource="http://example.org/cleaning#ex_res_pack_day"/>
+    <embedsMeasures rdf:resource="http://example.org/cleaning#ex_safety_wet_floor_protocol"/>
+    <alignsWith rdf:resource="http://example.org/cleaning#ex_std_public_areas"/>
+    <considersLimits rdf:resource="http://example.org/cleaning#ex_budget_quarterly_school"/>
+    <usesHistory rdf:resource="http://example.org/cleaning#ex_history_kpi_archive"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plan</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#allocates">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">распределяет</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Resource"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#allocatedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_planning_weekly_windows">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:label xml:lang="ru">План: еженедельные окна и зеркала</rdfs:label>
+    <defines rdf:resource="http://example.org/cleaning#ex_tasklist_weekly_windows"/>
+    <forms rdf:resource="http://example.org/cleaning#ex_schedule_holiday_mode"/>
+    <allocates rdf:resource="http://example.org/cleaning#ex_res_pack_morning"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Planning</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_sys_school">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#CleaningManagementSystem"/>
+    <rdfs:label xml:lang="ru">Система: школа</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_plan_daily_school"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_exec_after_classes"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_qc_spot_checks"/>
+    <reliesOn rdf:resource="http://example.org/cleaning#ex_std_public_areas"/>
+    <manages rdf:resource="http://example.org/cleaning#ex_res_pack_day"/>
+    <ensures rdf:resource="http://example.org/cleaning#ex_safety_wet_floor_protocol"/>
+    <compliesWith rdf:resource="http://example.org/cleaning#ex_eco_plastic_recycling"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_safety_first_aid">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Safety"/>
+    <rdfs:label xml:lang="ru">Безопасность: первая помощь и инциденты</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_siz_respirator"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_training_induction"/>
+    <mandatoryFor rdf:resource="http://example.org/cleaning#ex_exec_weekend_team"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Safety</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_sys_warehouse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#CleaningManagementSystem"/>
+    <rdfs:label xml:lang="ru">Система: склад</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_plan_warehouse_shift"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_exec_night_shift"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_qc_safety_walkthrough"/>
+    <reliesOn rdf:resource="http://example.org/cleaning#ex_std_industrial_safety"/>
+    <manages rdf:resource="http://example.org/cleaning#ex_res_pack_night"/>
+    <ensures rdf:resource="http://example.org/cleaning#ex_safety_electrical_rules"/>
+    <compliesWith rdf:resource="http://example.org/cleaning#ex_eco_general_waste"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_eco_general_waste">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#EcologyDisposal"/>
+    <rdfs:label xml:lang="ru">Экология: общий бытовой мусор</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ecology</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nafa88af96fc54c559165defddf3d225a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Safety</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_material_tile">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#SurfaceMaterials"/>
+    <rdfs:label xml:lang="ru">Материал: плитка</rdfs:label>
+    <influencesMethods rdf:resource="http://example.org/cleaning#ex_tasklist_after_classes"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SurfaceMaterial</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_fb_noise_complaint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Feedback"/>
+    <rdfs:label xml:lang="ru">Отзыв: шум от уборки в тихие часы</rdfs:label>
+    <adjusts rdf:resource="http://example.org/cleaning#ex_plan_weekly_office"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feedback</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_zoning_clinic_zones">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Zoning"/>
+    <rdfs:label xml:lang="ru">Зонирование: медцентр (кабинеты/ресепшен)</rdfs:label>
+    <contains rdf:resource="http://example.org/cleaning#ex_zoneList_clinic"/>
+    <sets rdf:resource="http://example.org/cleaning#ex_prior_clinic_disinfection"/>
+    <binds rdf:resource="http://example.org/cleaning#ex_tasklist_disinfection_clinic"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zoning</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5ad3c460e8ba4237871cc258427672b9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N882a8792ff7d4970990253f74f428292">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#frequencyIncreasedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">частота увеличена из-за</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#increasesFrequency"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb3ca3d5c6f424de0b8d48f671a128c66">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_wet_wipe_surfaces">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#WetCleaning"/>
+    <rdfs:label xml:lang="ru">Влажная уборка: протирка поверхностей</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WetTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#Disinfection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Дезинфекция</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Ncf6826b86fd641f495f49d5a99f6dade"/>
+    <rdfs:subClassOf rdf:nodeID="N9ea16ed147174407a91270e732eb0c5d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#considers">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">учитывает</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#FacilityProfile"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#consideredIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_wet_mop_floors">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#WetCleaning"/>
+    <rdfs:label xml:lang="ru">Влажная уборка: мытьё пола</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WetTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#Budget">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Бюджет</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N882a8792ff7d4970990253f74f428292"/>
+    <rdfs:subClassOf rdf:nodeID="N2cc349a3c2de47918f1a5f82df792e88"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#SurfaceMaterials">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Материалы поверхностей</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N5ad3c460e8ba4237871cc258427672b9"/>
+    <rdfs:subClassOf rdf:nodeID="Ne378a1ad829f456bb3807d45d3229f82"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_equip_steam_cleaner">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Equipment"/>
+    <rdfs:label xml:lang="ru">Оборудование: парогенератор</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipment</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne32eb59e563847c7a448709af3cd2c14">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#Feedback">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Обратная связь</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N6bc104feabc44594950df736ec898c6c"/>
+    <rdfs:subClassOf rdf:nodeID="Nfbb8f2c720254239bc87663b07f5d51a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#Checklists">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Чек-листы</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N946b0e10809541f1b0b2ca8333ec2d35"/>
+    <rdfs:subClassOf rdf:nodeID="Nada7cadcbea0416880921593eb6b717c"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_plan_event_cleanup">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:label xml:lang="ru">План: уборка после мероприятия</rdfs:label>
+    <considers rdf:resource="http://example.org/cleaning#ex_profile_event_hall"/>
+    <uses rdf:resource="http://example.org/cleaning#ex_zoning_event_space"/>
+    <defines rdf:resource="http://example.org/cleaning#ex_tasklist_post_event"/>
+    <forms rdf:resource="http://example.org/cleaning#ex_schedule_post_event"/>
+    <allocates rdf:resource="http://example.org/cleaning#ex_res_pack_event"/>
+    <embedsMeasures rdf:resource="http://example.org/cleaning#ex_safety_general_rules"/>
+    <alignsWith rdf:resource="http://example.org/cleaning#ex_std_public_areas"/>
+    <considersLimits rdf:resource="http://example.org/cleaning#ex_budget_event_cleanup"/>
+    <usesHistory rdf:resource="http://example.org/cleaning#ex_history_feedback_archive"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plan</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_res_pack_deep">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Resource"/>
+    <rdfs:label xml:lang="ru">Набор ресурсов: генеральная уборка</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_staff_team_omega"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_equip_polisher"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_chem_degreaser_kitchen"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resource</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#Planning">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Планирование работ</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N3469e7ec24c84a859f6b407a0d7cf190"/>
+    <rdfs:subClassOf rdf:nodeID="N89ef36fd84944004b6b76e6ce3939ced"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_schedule_morning_weekdays">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Schedule"/>
+    <rdfs:label xml:lang="ru">Расписание: будни (утро)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schedule</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#limitedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">лимитируется</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#limits"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_training_induction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Training"/>
+    <rdfs:label xml:lang="ru">Инструктаж: вводный</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Training</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_res_pack_evening">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Resource"/>
+    <rdfs:label xml:lang="ru">Набор ресурсов: вечерняя смена</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_staff_team_beta"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_equip_floor_scrubber"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_chem_glass_cleaner"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resource</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_fb_event_deadline">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Feedback"/>
+    <rdfs:label xml:lang="ru">Запрос: уложиться в короткий срок после мероприятия</rdfs:label>
+    <adjusts rdf:resource="http://example.org/cleaning#ex_plan_event_cleanup"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feedback</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_equip_wet_vacuum">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Equipment"/>
+    <rdfs:label xml:lang="ru">Оборудование: моющий пылесос</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipment</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncf89c99dfac94e9dbcad57ae5474c581">
+    <rdf:first rdf:resource="http://example.org/cleaning#FrequencyNorms"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N432e9032813a4e1db6532a70cbe818a5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N699db9efa52040e29018d62972499d75">
+    <rdf:first rdf:resource="http://example.org/cleaning#Staff"/>
+    <rdf:rest rdf:nodeID="N3c395713e9084988b6761ccdfec98754"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#includes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">включает</rdfs:label>
+    <rdfs:domain rdf:nodeID="N91f29ea80af048a5a11a2844ea880676"/>
+    <rdfs:range rdf:nodeID="Nd82f58b1d0da4bdf924b08cc38a15e8a"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#includedIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_qc_weekly_audit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#QualityControl"/>
+    <rdfs:label xml:lang="ru">Контроль: еженедельный аудит качества</rdfs:label>
+    <conducts rdf:resource="http://example.org/cleaning#ex_insp_weekly_audit"/>
+    <measures rdf:resource="http://example.org/cleaning#ex_kpi_smell_air"/>
+    <collects rdf:resource="http://example.org/cleaning#ex_fb_request_more_restrooms"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QualityControl</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N61e7475c49304affb9ac5e740d43948a">
+    <rdf:first rdf:resource="http://example.org/cleaning#Zoning"/>
+    <rdf:rest rdf:nodeID="N3a50aae9c80b451c841b6c8214761b56"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_dis_high_touch_points">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Disinfection"/>
+    <rdfs:label xml:lang="ru">Дезинфекция: контактные поверхности</rdfs:label>
+    <strengthensRequirements rdf:resource="http://example.org/cleaning#ex_safety_chemicals_handling"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisinfectionTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#conductedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">проводится</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#conducts"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_tasklist_disinfection_clinic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#TaskList"/>
+    <rdfs:label xml:lang="ru">Перечень задач: дезинфекция (медцентр)</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_dis_high_touch_points"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_dis_restrooms"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_dis_kitchenette"/>
+    <implementedThrough rdf:resource="http://example.org/cleaning#ex_exec_evening_shift"/>
+    <requires rdf:resource="http://example.org/cleaning#ex_res_pack_evening"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TaskList</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#uses">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">использует</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Zoning"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#usedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#usedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">используются в</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Checklists"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#QualityControl"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#usesChecklist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_access_after_19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#AccessRestrictions"/>
+    <rdfs:label xml:lang="ru">Ограничение доступа: после 19:00</rdfs:label>
+    <restrictsWindows rdf:resource="http://example.org/cleaning#ex_schedule_after_hours"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AccessRestriction</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#FacilityProfile">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Профиль помещения</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nb5fa4b8216564e1894444f13d77e51e8"/>
+    <rdfs:subClassOf rdf:nodeID="N3ee04164de3144c9a2d8f42d71ed5123"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#Staff">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/cleaning#Resource"/>
+    <rdfs:subClassOf rdf:nodeID="N9fc9e9b13cbd40b88c34a4c6e9b1a973"/>
+    <rdfs:subClassOf rdf:nodeID="N6dd59bad52114764ac0e1828c640c338"/>
+    <rdfs:label xml:lang="ru">Персонал</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd83e1a4bf0a743ae983e70f18763bbe8">
+    <rdf:first rdf:resource="http://example.org/cleaning#SIZ"/>
+    <rdf:rest rdf:nodeID="Ne55f3662a2564f8bb095d27d26d871e9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_staff_team_event">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Staff"/>
+    <rdfs:label xml:lang="ru">Команда «Ивент»</rdfs:label>
+    <undergoes rdf:resource="http://example.org/cleaning#ex_training_fast_turnaround"/>
+    <assignedBy rdf:resource="http://example.org/cleaning#ex_schedule_post_event"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Staff</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_wet_handles_wipe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#WetCleaning"/>
+    <rdfs:label xml:lang="ru">Влажная уборка: ручки/перила</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WetTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_profile_office_openspace">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#FacilityProfile"/>
+    <rdfs:label xml:lang="ru">Профиль помещения: офис (open-space)</rdfs:label>
+    <characterizedBy rdf:resource="http://example.org/cleaning#ex_traffic_high"/>
+    <contains rdf:resource="http://example.org/cleaning#ex_material_laminate"/>
+    <has rdf:resource="http://example.org/cleaning#ex_access_after_19"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FacilityProfile</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_budget_monthly_office">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Budget"/>
+    <rdfs:label xml:lang="ru">Бюджет: офис (месяц)</rdfs:label>
+    <limits rdf:resource="http://example.org/cleaning#ex_res_pack_morning"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Budget</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_wet_spot_cleaning">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#WetCleaning"/>
+    <rdfs:label xml:lang="ru">Влажная уборка: точечное удаление пятен</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WetTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#undergoes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">проходит</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Staff"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Training"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#undergoneBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_equip_polisher">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Equipment"/>
+    <rdfs:label xml:lang="ru">Оборудование: полировальная машина</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipment</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#isRestrictionOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">является ограничением для</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#has"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#hasEntityType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="ru">тип сущности</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_dis_after_illness">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Disinfection"/>
+    <rdfs:label xml:lang="ru">Дезинфекция: усиленная после заболевания</rdfs:label>
+    <strengthensRequirements rdf:resource="http://example.org/cleaning#ex_safety_first_aid"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisinfectionTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3a50aae9c80b451c841b6c8214761b56">
+    <rdf:first rdf:resource="http://example.org/cleaning#Standard"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#considersLimits">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">учитывает лимиты</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Budget"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#limitsConsideredIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_std_industrial_safety">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Standard"/>
+    <rdfs:label xml:lang="ru">Стандарт: склад (техника безопасности)</rdfs:label>
+    <sets rdf:resource="http://example.org/cleaning#ex_freq_warehouse_shift"/>
+    <formalizes rdf:resource="http://example.org/cleaning#ex_cl_warehouse"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standard</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_insp_weekly_audit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Inspections"/>
+    <rdfs:label xml:lang="ru">Инспекция: недельный аудит</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inspection</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_history_feedback_archive">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#DataHistory"/>
+    <rdfs:label xml:lang="ru">История: архив обратной связи</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_qc_customer_feedback_review">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#QualityControl"/>
+    <rdfs:label xml:lang="ru">Контроль: разбор отзывов пользователей</rdfs:label>
+    <conducts rdf:resource="http://example.org/cleaning#ex_insp_feedback_review"/>
+    <measures rdf:resource="http://example.org/cleaning#ex_kpi_complaints_rate"/>
+    <collects rdf:resource="http://example.org/cleaning#ex_fb_allergy_incident"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QualityControl</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_tasklist_daily_office">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#TaskList"/>
+    <rdfs:label xml:lang="ru">Перечень задач: ежедневные (офис)</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_dry_dusting_desks"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_dry_vacuum_carpets"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_wet_mop_floors"/>
+    <implementedThrough rdf:resource="http://example.org/cleaning#ex_exec_morning_shift"/>
+    <requires rdf:resource="http://example.org/cleaning#ex_res_pack_morning"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TaskList</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_sys_clinic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#CleaningManagementSystem"/>
+    <rdfs:label xml:lang="ru">Система: медицинский центр</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_plan_weekly_clinic"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_exec_evening_shift"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_qc_weekly_audit"/>
+    <reliesOn rdf:resource="http://example.org/cleaning#ex_std_hygiene_high"/>
+    <manages rdf:resource="http://example.org/cleaning#ex_res_pack_evening"/>
+    <ensures rdf:resource="http://example.org/cleaning#ex_safety_chemicals_handling"/>
+    <compliesWith rdf:resource="http://example.org/cleaning#ex_eco_chemical_disposal"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nada7cadcbea0416880921593eb6b717c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Checklist</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_staff_team_gamma">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Staff"/>
+    <rdfs:label xml:lang="ru">Бригада «Гамма»</rdfs:label>
+    <undergoes rdf:resource="http://example.org/cleaning#ex_training_equipment"/>
+    <assignedBy rdf:resource="http://example.org/cleaning#ex_schedule_night_shift"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Staff</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#characterizedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">характеризуется</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#FacilityProfile"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#FootTraffic"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#characterizes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_material_carpet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#SurfaceMaterials"/>
+    <rdfs:label xml:lang="ru">Материал: ковролин</rdfs:label>
+    <influencesMethods rdf:resource="http://example.org/cleaning#ex_tasklist_post_event"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SurfaceMaterial</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#WetCleaning">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Влажная уборка</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nce7eff9ce5c44543bb7eb483e23e9f60"/>
+    <rdfs:subClassOf rdf:nodeID="Nb042e21b847346c98d6216faf4ec64d5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndd7b951474994da49a77e961765ab46b">
+    <rdf:first rdf:resource="http://example.org/cleaning#QualityControl"/>
+    <rdf:rest rdf:nodeID="N105ba886e4ae4efbb0f3e2da46c18a34"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#Resource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Ресурсы</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nde680ff9c88a48cdae6be586426124be"/>
+    <rdfs:subClassOf rdf:nodeID="N4f09ca36cf904f7d90bbb18554084290"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc27e6731294f43b2a3aed80c96b4b9e2">
+    <rdf:first rdf:resource="http://example.org/cleaning#Zoning"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_plan_weekly_clinic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:label xml:lang="ru">План: недельный (медцентр)</rdfs:label>
+    <considers rdf:resource="http://example.org/cleaning#ex_profile_clinic_reception"/>
+    <uses rdf:resource="http://example.org/cleaning#ex_zoning_clinic_zones"/>
+    <defines rdf:resource="http://example.org/cleaning#ex_tasklist_disinfection_clinic"/>
+    <forms rdf:resource="http://example.org/cleaning#ex_schedule_evening_daily"/>
+    <allocates rdf:resource="http://example.org/cleaning#ex_res_pack_evening"/>
+    <embedsMeasures rdf:resource="http://example.org/cleaning#ex_safety_chemicals_handling"/>
+    <alignsWith rdf:resource="http://example.org/cleaning#ex_std_hygiene_high"/>
+    <considersLimits rdf:resource="http://example.org/cleaning#ex_budget_chemicals_limit"/>
+    <usesHistory rdf:resource="http://example.org/cleaning#ex_history_incidents_register"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plan</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3ee04164de3144c9a2d8f42d71ed5123">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FacilityProfile</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#restrictsWindows">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">ограничивает окна</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#AccessRestrictions"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Schedule"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#windowsRestrictedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#implementedThrough">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">реализуется через</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#TaskList"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#CleaningExecution"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#implements"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#requiredBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">требуется для</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#requires"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#manages">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">управляет</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#CleaningManagementSystem"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Resource"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#managedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ZonePriorities">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Приоритеты зон</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nb3ca3d5c6f424de0b8d48f671a128c66"/>
+    <rdfs:subClassOf rdf:nodeID="Nee14291b000e4c8c81dca358cec237e3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_wet_glass_wipe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#WetCleaning"/>
+    <rdfs:label xml:lang="ru">Влажная уборка: стекло/зеркала</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WetTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_tasklist_weekly_windows">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#TaskList"/>
+    <rdfs:label xml:lang="ru">Перечень задач: стекло и зеркала (еженедельно)</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_wet_glass_wipe"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_wet_windows_frames"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_dry_remove_dust_blinds"/>
+    <implementedThrough rdf:resource="http://example.org/cleaning#ex_exec_evening_shift"/>
+    <requires rdf:resource="http://example.org/cleaning#ex_res_pack_evening"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TaskList</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#undergoneBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">пройдено</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#undergoes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_zoneList_warehouse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#ZoneList"/>
+    <rdfs:label xml:lang="ru">Список зон: склад (погрузка/проходы/складирование)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZoneList</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N93e2cd0a7ae24c27a869e4e6b1d35a78">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ecology</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_safety_general_rules">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Safety"/>
+    <rdfs:label xml:lang="ru">Безопасность: общие правила</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_siz_nitrile_gloves"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_training_induction"/>
+    <mandatoryFor rdf:resource="http://example.org/cleaning#ex_exec_morning_shift"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Safety</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_siz_insulated_gloves">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#SIZ"/>
+    <rdfs:label xml:lang="ru">СИЗ: диэлектрические перчатки</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PPE</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9ea16ed147174407a91270e732eb0c5d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisinfectionTask</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6341616f0098468f914875461911db91">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AccessRestriction</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_staff_team_omega">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Staff"/>
+    <rdfs:label xml:lang="ru">Бригада «Омега»</rdfs:label>
+    <undergoes rdf:resource="http://example.org/cleaning#ex_training_deep_cleaning"/>
+    <assignedBy rdf:resource="http://example.org/cleaning#ex_schedule_weekend_deep"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Staff</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#increasesFrequency">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">увеличивает частоту</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#FootTraffic"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Schedule"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#frequencyIncreasedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#conducts">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">проводит</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#QualityControl"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Inspections"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#conductedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8f68df613f724099aa9c6aaa596bb8ed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PPE</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_res_pack_day">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Resource"/>
+    <rdfs:label xml:lang="ru">Набор ресурсов: дневная поддержка</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_staff_team_delta"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_equip_cleaning_cart"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_chem_restroom_descaler"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resource</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7d382e62b5c546a8ad20c21dbffcd470">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_safety_wet_floor_protocol">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Safety"/>
+    <rdfs:label xml:lang="ru">Безопасность: протокол мокрых полов</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_siz_non_slip_shoes"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_training_wet_floor"/>
+    <mandatoryFor rdf:resource="http://example.org/cleaning#ex_exec_after_classes"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Safety</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_schedule_weekend_deep">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Schedule"/>
+    <rdfs:label xml:lang="ru">Расписание: выходные (генеральная)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schedule</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_schedule_holiday_mode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Schedule"/>
+    <rdfs:label xml:lang="ru">Расписание: праздничный режим</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schedule</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4011f44e24e8439ca9db9efe1030ba58">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZoneList</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_planning_emergency_spill">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:label xml:lang="ru">План: экстренные проливы/разливы</rdfs:label>
+    <defines rdf:resource="http://example.org/cleaning#ex_tasklist_emergency_spill"/>
+    <forms rdf:resource="http://example.org/cleaning#ex_schedule_after_hours"/>
+    <allocates rdf:resource="http://example.org/cleaning#ex_res_pack_evening"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Planning</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#alignsWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">согласует</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Standard"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#alignedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_schedule_night_shift">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Schedule"/>
+    <rdfs:label xml:lang="ru">Расписание: ночная смена</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schedule</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_schedule_post_event">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Schedule"/>
+    <rdfs:label xml:lang="ru">Расписание: после мероприятия</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schedule</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_history_log_december">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#DataHistory"/>
+    <rdfs:label xml:lang="ru">История: журнал уборки (декабрь)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_profile_clinic_reception">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#FacilityProfile"/>
+    <rdfs:label xml:lang="ru">Профиль помещения: ресепшен (медцентр)</rdfs:label>
+    <characterizedBy rdf:resource="http://example.org/cleaning#ex_traffic_peak"/>
+    <contains rdf:resource="http://example.org/cleaning#ex_material_tile"/>
+    <has rdf:resource="http://example.org/cleaning#ex_access_pass_required"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FacilityProfile</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb042e21b847346c98d6216faf4ec64d5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WetTask</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#records">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">фиксирует</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#recordedIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_zoneList_lobby">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#ZoneList"/>
+    <rdfs:label xml:lang="ru">Список зон: входная группа (вестибюль/турникеты/лестницы)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZoneList</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N19315448164e4d48b3c93db35a294269">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inspection</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_tasklist_emergency_spill">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#TaskList"/>
+    <rdfs:label xml:lang="ru">Перечень задач: аварийная уборка проливов</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_wet_spot_cleaning"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_disinfect_spill_area"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_dry_absorb_spill"/>
+    <implementedThrough rdf:resource="http://example.org/cleaning#ex_exec_weekend_team"/>
+    <requires rdf:resource="http://example.org/cleaning#ex_res_pack_day"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TaskList</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_exec_post_event_team">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#CleaningExecution"/>
+    <rdfs:label xml:lang="ru">Выполнение: команда после мероприятия</rdfs:label>
+    <recordedIn rdf:resource="http://example.org/cleaning#ex_history_feedback_archive"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Execution</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf40b9d87d5f8478aabb3c6a6c07ffd4e">
+    <rdf:first rdf:resource="http://example.org/cleaning#Disinfection"/>
+    <rdf:rest rdf:nodeID="N699db9efa52040e29018d62972499d75"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9fee3583dee24f39be9b7118abd0ee53">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_dis_bins_area">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Disinfection"/>
+    <rdfs:label xml:lang="ru">Дезинфекция: зона мусорных баков</rdfs:label>
+    <strengthensRequirements rdf:resource="http://example.org/cleaning#ex_safety_general_rules"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisinfectionTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nce7eff9ce5c44543bb7eb483e23e9f60">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#QualityControl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Контроль качества</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Na033fc8327734d41be710428d721568c"/>
+    <rdfs:subClassOf rdf:nodeID="N6d3462ec1a064356ac01bba80bd2e2d3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_equip_floor_scrubber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Equipment"/>
+    <rdfs:label xml:lang="ru">Оборудование: поломоечная машина</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipment</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_exec_evening_shift">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#CleaningExecution"/>
+    <rdfs:label xml:lang="ru">Выполнение: вечерняя смена</rdfs:label>
+    <recordedIn rdf:resource="http://example.org/cleaning#ex_history_log_week50"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Execution</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#disposalRequiredBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">требуется для утилизации</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#requiresDisposal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_siz_respirator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#SIZ"/>
+    <rdfs:label xml:lang="ru">СИЗ: респиратор</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PPE</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_training_equipment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Training"/>
+    <rdfs:label xml:lang="ru">Инструктаж: использование оборудования</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Training</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_zoning_school_wings">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Zoning"/>
+    <rdfs:label xml:lang="ru">Зонирование: школа (крылья)</rdfs:label>
+    <contains rdf:resource="http://example.org/cleaning#ex_zoneList_school"/>
+    <sets rdf:resource="http://example.org/cleaning#ex_prior_school_corridors"/>
+    <binds rdf:resource="http://example.org/cleaning#ex_tasklist_after_classes"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zoning</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_dis_kitchenette">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Disinfection"/>
+    <rdfs:label xml:lang="ru">Дезинфекция: мини-кухня</rdfs:label>
+    <strengthensRequirements rdf:resource="http://example.org/cleaning#ex_safety_chemicals_handling"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisinfectionTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4f09ca36cf904f7d90bbb18554084290">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resource</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9fc9e9b13cbd40b88c34a4c6e9b1a973">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#FrequencyNorms">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Нормы частоты</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nff7854fb31e742f787885bea47b1d762"/>
+    <rdfs:subClassOf rdf:nodeID="N001844367a324ba0a8a828dec4d8bc14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nad1b1b33787f419b894590e48456336c">
+    <rdf:first rdf:resource="http://example.org/cleaning#ZonePriorities"/>
+    <rdf:rest rdf:nodeID="Ncf89c99dfac94e9dbcad57ae5474c581"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_insp_acceptance_deep">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Inspections"/>
+    <rdfs:label xml:lang="ru">Инспекция: приёмка после генеральной</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inspection</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N89ef36fd84944004b6b76e6ce3939ced">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plan</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_traffic_high">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#FootTraffic"/>
+    <rdfs:label xml:lang="ru">Поток людей: высокий</rdfs:label>
+    <increasesFrequency rdf:resource="http://example.org/cleaning#ex_schedule_high_traffic_day"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FootTraffic</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_dis_shared_devices">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Disinfection"/>
+    <rdfs:label xml:lang="ru">Дезинфекция: общие устройства (терминалы)</rdfs:label>
+    <strengthensRequirements rdf:resource="http://example.org/cleaning#ex_safety_chemicals_handling"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisinfectionTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_safety_electrical_rules">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Safety"/>
+    <rdfs:label xml:lang="ru">Безопасность: электробезопасность</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_siz_insulated_gloves"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_training_equipment"/>
+    <mandatoryFor rdf:resource="http://example.org/cleaning#ex_exec_night_shift"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Safety</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#forms">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">формирует</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Schedule"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#formedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#Training">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Инструктаж/обучение</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nb9e03e038ea04f509dbe8865d54c496c"/>
+    <rdfs:subClassOf rdf:nodeID="Nf45976dae0c7407a8a84d196df706ff4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#complianceRequiredBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">требуется для соблюдения</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#requiresCompliance"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N054a6273309a4ed38b0a0dcacc3f4692">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DryTask</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na033fc8327734d41be710428d721568c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#formedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">формируется</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#forms"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_kpi_compliance_safety">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#KPIAssessment"/>
+    <rdfs:label xml:lang="ru">KPI: соблюдение безопасности</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KPI</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_insp_spot_check">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Inspections"/>
+    <rdfs:label xml:lang="ru">Инспекция: выборочная проверка</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inspection</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_dry_vacuum_carpets">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#DryCleaning"/>
+    <rdfs:label xml:lang="ru">Сухая уборка: пылесос ковролина</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DryTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb9e03e038ea04f509dbe8865d54c496c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#influences">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">влияет на</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#ZonePriorities"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Schedule"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#influencedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_exec_morning_shift">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#CleaningExecution"/>
+    <rdfs:label xml:lang="ru">Выполнение: утренняя смена</rdfs:label>
+    <recordedIn rdf:resource="http://example.org/cleaning#ex_history_log_december"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Execution</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_chem_glass_cleaner">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Chemicals"/>
+    <rdfs:label xml:lang="ru">Средство: для стекол</rdfs:label>
+    <requiresCompliance rdf:resource="http://example.org/cleaning#ex_safety_general_rules"/>
+    <requiresDisposal rdf:resource="http://example.org/cleaning#ex_eco_general_waste"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chemical</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_traffic_peak">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#FootTraffic"/>
+    <rdfs:label xml:lang="ru">Поток людей: пиковый</rdfs:label>
+    <increasesFrequency rdf:resource="http://example.org/cleaning#ex_schedule_evening_daily"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FootTraffic</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#contains">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">содержит</rdfs:label>
+    <rdfs:domain rdf:nodeID="N97476d2a61b340f8b6eacce4fa518301"/>
+    <rdfs:range rdf:nodeID="N101d8f9c1b374c18bff774cc7c35b7c0"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#containedIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfbb8f2c720254239bc87663b07f5d51a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feedback</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N270573222c304c5fa1da87d3fd9fa86b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standard</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N907f92f156994453b3af5b4826604932">
+    <rdf:first rdf:resource="http://example.org/cleaning#Chemicals"/>
+    <rdf:rest rdf:nodeID="Nd83e1a4bf0a743ae983e70f18763bbe8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#Chemicals">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/cleaning#Resource"/>
+    <rdfs:subClassOf rdf:nodeID="N2d069580914e4bea85476efc7dc408ed"/>
+    <rdfs:subClassOf rdf:nodeID="Nb9550be1543549bbb3d7388357720861"/>
+    <rdfs:label xml:lang="ru">Химия/средства</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#collects">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">собирает</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#QualityControl"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Feedback"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#collectedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#has">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">имеет</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#FacilityProfile"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#AccessRestrictions"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#isRestrictionOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_traffic_low">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#FootTraffic"/>
+    <rdfs:label xml:lang="ru">Поток людей: низкий</rdfs:label>
+    <increasesFrequency rdf:resource="http://example.org/cleaning#ex_schedule_holiday_mode"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FootTraffic</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_prior_clinic_disinfection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#ZonePriorities"/>
+    <rdfs:label xml:lang="ru">Приоритеты: дезинфекция контактных зон (медцентр)</rdfs:label>
+    <influences rdf:resource="http://example.org/cleaning#ex_schedule_evening_daily"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZonePriority</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#Inspections">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Инспекции</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N0a549711f07544a5a899f8bd6bb19716"/>
+    <rdfs:subClassOf rdf:nodeID="N19315448164e4d48b3c93db35a294269"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N101d8f9c1b374c18bff774cc7c35b7c0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N224bd115062644cd9842b6d528726dba"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_fb_praise_kitchen">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Feedback"/>
+    <rdfs:label xml:lang="ru">Похвала: кухня в отличном состоянии</rdfs:label>
+    <adjusts rdf:resource="http://example.org/cleaning#ex_plan_general_cleaning"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feedback</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_zoning_office_floors">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Zoning"/>
+    <rdfs:label xml:lang="ru">Зонирование: офис (этажи)</rdfs:label>
+    <contains rdf:resource="http://example.org/cleaning#ex_zoneList_office"/>
+    <sets rdf:resource="http://example.org/cleaning#ex_prior_office_hygiene_first"/>
+    <binds rdf:resource="http://example.org/cleaning#ex_tasklist_daily_office"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zoning</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N005107da9b254fefbda54154e394ec96">
+    <rdf:first rdf:resource="http://example.org/cleaning#Safety"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbd083469befb44279439a6757bbb954e">
+    <rdf:first rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdf:rest rdf:nodeID="N36ce053c2d60486bbcf13535b93bf24e"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#sets">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">задаёт</rdfs:label>
+    <rdfs:domain rdf:nodeID="N5e3a7037904c40e5a0251942859c2093"/>
+    <rdfs:range rdf:nodeID="N808ae48fe722469bb8dc793bbc97207b"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#setBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#limits">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">лимитирует</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Budget"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Resource"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#limitedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#limitsConsideredIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">лимиты учитываются в</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#considersLimits"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#Schedule">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Расписание</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nfaf21365985c41b19ff8c051d2e0ed8b"/>
+    <rdfs:subClassOf rdf:nodeID="N5283a6176e794a238314c96ffa03bbce"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_prior_event_fast_turnaround">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#ZonePriorities"/>
+    <rdfs:label xml:lang="ru">Приоритеты: быстрый разворот после события</rdfs:label>
+    <influences rdf:resource="http://example.org/cleaning#ex_schedule_post_event"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZonePriority</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_staff_team_beta">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Staff"/>
+    <rdfs:label xml:lang="ru">Бригада «Бета»</rdfs:label>
+    <undergoes rdf:resource="http://example.org/cleaning#ex_training_chemicals"/>
+    <assignedBy rdf:resource="http://example.org/cleaning#ex_schedule_evening_daily"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Staff</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_cl_entrance_group">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Checklists"/>
+    <rdfs:label xml:lang="ru">Чек-лист: входная группа</rdfs:label>
+    <usedIn rdf:resource="http://example.org/cleaning#ex_qc_spot_checks"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Checklist</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#binds">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">привязывает</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Zoning"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#TaskList"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#boundBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_siz_goggles">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#SIZ"/>
+    <rdfs:label xml:lang="ru">СИЗ: защитные очки</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PPE</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_std_public_areas">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Standard"/>
+    <rdfs:label xml:lang="ru">Стандарт: общественные зоны</rdfs:label>
+    <sets rdf:resource="http://example.org/cleaning#ex_freq_entrance_more"/>
+    <formalizes rdf:resource="http://example.org/cleaning#ex_cl_entrance_group"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standard</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf8b3e30d730f4d759d67d199324a28be">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_traffic_medium">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#FootTraffic"/>
+    <rdfs:label xml:lang="ru">Поток людей: средний</rdfs:label>
+    <increasesFrequency rdf:resource="http://example.org/cleaning#ex_schedule_morning_weekdays"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FootTraffic</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5283a6176e794a238314c96ffa03bbce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schedule</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6d3462ec1a064356ac01bba80bd2e2d3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QualityControl</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N29aac9e3783a488289575a8d7170224f">
+    <rdf:first rdf:resource="http://example.org/cleaning#WetCleaning"/>
+    <rdf:rest rdf:nodeID="Nf40b9d87d5f8478aabb3c6a6c07ffd4e"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_material_glass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#SurfaceMaterials"/>
+    <rdfs:label xml:lang="ru">Материал: стекло</rdfs:label>
+    <influencesMethods rdf:resource="http://example.org/cleaning#ex_tasklist_deep_cleaning"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SurfaceMaterial</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_freq_office_daily">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#FrequencyNorms"/>
+    <rdfs:label xml:lang="ru">Норма частоты: офис (ежедневно)</rdfs:label>
+    <configures rdf:resource="http://example.org/cleaning#ex_schedule_morning_weekdays"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frequency</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_kpi_clean_floor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#KPIAssessment"/>
+    <rdfs:label xml:lang="ru">KPI: чистота пола</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KPI</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#AccessRestrictions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Доступ/ограничения</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N7d382e62b5c546a8ad20c21dbffcd470"/>
+    <rdfs:subClassOf rdf:nodeID="N6341616f0098468f914875461911db91"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_freq_warehouse_shift">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#FrequencyNorms"/>
+    <rdfs:label xml:lang="ru">Норма частоты: склад (каждая смена)</rdfs:label>
+    <configures rdf:resource="http://example.org/cleaning#ex_schedule_night_shift"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frequency</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_prior_warehouse_safety">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#ZonePriorities"/>
+    <rdfs:label xml:lang="ru">Приоритеты: безопасность проходов (склад)</rdfs:label>
+    <influences rdf:resource="http://example.org/cleaning#ex_schedule_night_shift"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZonePriority</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_history_kpi_archive">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#DataHistory"/>
+    <rdfs:label xml:lang="ru">История: архив KPI</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_qc_spot_checks">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#QualityControl"/>
+    <rdfs:label xml:lang="ru">Контроль: выборочные проверки</rdfs:label>
+    <conducts rdf:resource="http://example.org/cleaning#ex_insp_spot_check"/>
+    <measures rdf:resource="http://example.org/cleaning#ex_kpi_time_completion"/>
+    <collects rdf:resource="http://example.org/cleaning#ex_fb_stains_on_floor"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QualityControl</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3469e7ec24c84a859f6b407a0d7cf190">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#EcologyDisposal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Экология/утилизация</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N9fee3583dee24f39be9b7118abd0ee53"/>
+    <rdfs:subClassOf rdf:nodeID="N93e2cd0a7ae24c27a869e4e6b1d35a78"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N392100599c814aebbfc844a73d1c5ea3">
+    <rdf:first rdf:resource="http://example.org/cleaning#CleaningManagementSystem"/>
+    <rdf:rest rdf:nodeID="N82128548167845e489b038498602b197"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#embedsMeasures">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">закладывает меры</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Safety"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#measuresEmbeddedIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#adjustedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">корректируется</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#adjusts"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nee14291b000e4c8c81dca358cec237e3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZonePriority</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_equip_vacuum_pro">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Equipment"/>
+    <rdfs:label xml:lang="ru">Оборудование: промышленный пылесос</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equipment</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_schedule_high_traffic_day">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Schedule"/>
+    <rdfs:label xml:lang="ru">Расписание: день с высоким потоком</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schedule</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_qc_safety_walkthrough">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#QualityControl"/>
+    <rdfs:label xml:lang="ru">Контроль: обход по безопасности</rdfs:label>
+    <conducts rdf:resource="http://example.org/cleaning#ex_insp_safety_walkthrough"/>
+    <measures rdf:resource="http://example.org/cleaning#ex_kpi_compliance_safety"/>
+    <collects rdf:resource="http://example.org/cleaning#ex_fb_slippery_area"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QualityControl</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2cc349a3c2de47918f1a5f82df792e88">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Budget</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#assigns">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">назначает</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#assignedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_cl_warehouse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Checklists"/>
+    <rdfs:label xml:lang="ru">Чек-лист: склад</rdfs:label>
+    <usedIn rdf:resource="http://example.org/cleaning#ex_qc_safety_walkthrough"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Checklist</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_res_pack_event">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Resource"/>
+    <rdfs:label xml:lang="ru">Набор ресурсов: уборка после мероприятия</rdfs:label>
+    <includes rdf:resource="http://example.org/cleaning#ex_staff_team_event"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_equip_wet_vacuum"/>
+    <includes rdf:resource="http://example.org/cleaning#ex_chem_eco_concentrate"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Resource</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_training_fast_turnaround">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Training"/>
+    <rdfs:label xml:lang="ru">Инструктаж: уборка в сжатые сроки</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Training</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_exec_after_classes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#CleaningExecution"/>
+    <rdfs:label xml:lang="ru">Выполнение: после занятий</rdfs:label>
+    <recordedIn rdf:resource="http://example.org/cleaning#ex_history_kpi_archive"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Execution</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N46c5c85b3ae245f3ab646864cd082f26">
+    <rdf:first rdf:resource="http://example.org/cleaning#ZoneList"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_staff_team_alpha">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Staff"/>
+    <rdfs:label xml:lang="ru">Бригада «Альфа»</rdfs:label>
+    <undergoes rdf:resource="http://example.org/cleaning#ex_training_induction"/>
+    <assignedBy rdf:resource="http://example.org/cleaning#ex_schedule_morning_weekdays"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Staff</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfaf21365985c41b19ff8c051d2e0ed8b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N91f29ea80af048a5a11a2844ea880676">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N392100599c814aebbfc844a73d1c5ea3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_insp_feedback_review">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Inspections"/>
+    <rdfs:label xml:lang="ru">Инспекция: разбор отзывов</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inspection</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#Zoning">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Зонирование</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nd5144d6176104e75b03498dfba4b3ba5"/>
+    <rdfs:subClassOf rdf:nodeID="N8fe0c30a0baa4444a5b62760b18897cd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_fb_slippery_area">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Feedback"/>
+    <rdfs:label xml:lang="ru">Инцидент: скользкий участок после мойки</rdfs:label>
+    <adjusts rdf:resource="http://example.org/cleaning#ex_plan_daily_school"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feedback</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#basisFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">является основой для</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#reliesOn"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2d069580914e4bea85476efc7dc408ed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6bc185fc0c2540b8932ede22d5fd9376">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KPI</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_history_log_week50">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#DataHistory"/>
+    <rdfs:label xml:lang="ru">История: журнал уборки (неделя 50)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#influencedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">находится под влиянием</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#influences"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N82128548167845e489b038498602b197">
+    <rdf:first rdf:resource="http://example.org/cleaning#TaskList"/>
+    <rdf:rest rdf:nodeID="Nc764a65e1882404593dad3ce0aae1e96"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_wet_windows_frames">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#WetCleaning"/>
+    <rdfs:label xml:lang="ru">Влажная уборка: окна (рамы и подоконники)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WetCleaning</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_eco_plastic_recycling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#EcologyDisposal"/>
+    <rdfs:label xml:lang="ru">Экология: сдача пластика</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ecology</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb8c3ff24ace543c2bdbcb325c2bd7387">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_fb_allergy_incident">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Feedback"/>
+    <rdfs:label xml:lang="ru">Инцидент: жалоба на запах/аллергию</rdfs:label>
+    <adjusts rdf:resource="http://example.org/cleaning#ex_plan_weekly_clinic"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feedback</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_staff_responder_day">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Staff"/>
+    <rdfs:label xml:lang="ru">Дежурный сотрудник (день)</rdfs:label>
+    <undergoes rdf:resource="http://example.org/cleaning#ex_training_induction"/>
+    <assignedBy rdf:resource="http://example.org/cleaning#ex_schedule_high_traffic_day"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Staff</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_schedule_after_hours">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Schedule"/>
+    <rdfs:label xml:lang="ru">Расписание: после закрытия</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schedule</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_profile_office_meeting_rooms">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#FacilityProfile"/>
+    <rdfs:label xml:lang="ru">Профиль помещения: офис (переговорные)</rdfs:label>
+    <characterizedBy rdf:resource="http://example.org/cleaning#ex_traffic_medium"/>
+    <contains rdf:resource="http://example.org/cleaning#ex_material_glass"/>
+    <has rdf:resource="http://example.org/cleaning#ex_access_quiet_hours"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FacilityProfile</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#DryCleaning">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Сухая уборка</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N61e2732896f24afd8c6b255b79d7df63"/>
+    <rdfs:subClassOf rdf:nodeID="N054a6273309a4ed38b0a0dcacc3f4692"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_zoneList_school">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#ZoneList"/>
+    <rdfs:label xml:lang="ru">Список зон: школа (коридоры/классы/столовая)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZoneList</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#reliesOn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">опирается на</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#CleaningManagementSystem"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Standard"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#basisFor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#mandatoryFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">обязательна при</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Safety"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#CleaningExecution"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#mandatedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#methodsInfluencedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">методы зависят от</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#influencesMethods"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N182d12e7db3d4b4caff34c46880bcd83">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">System</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb5fa4b8216564e1894444f13d77e51e8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#assignedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">назначается по</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Staff"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Schedule"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#assigns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_siz_nitrile_gloves">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#SIZ"/>
+    <rdfs:label xml:lang="ru">СИЗ: перчатки нитриловые</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PPE</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_zoneList_event">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#ZoneList"/>
+    <rdfs:label xml:lang="ru">Список зон: ивент (зал/сцена/гримёрка)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZoneList</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_budget_quarterly_school">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Budget"/>
+    <rdfs:label xml:lang="ru">Бюджет: школа (квартал)</rdfs:label>
+    <limits rdf:resource="http://example.org/cleaning#ex_res_pack_day"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Budget</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#defines">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">определяет</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#Planning"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#TaskList"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#definedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#FootTraffic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Поток людей</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nffc59afbd02142e9ac983781e2590ef5"/>
+    <rdfs:subClassOf rdf:nodeID="Nd1b0c63d664a42e892f632d08d730692"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd89c92055b5c4d87a526a6651d65920b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_disinfect_spill_area">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Disinfection"/>
+    <rdfs:label xml:lang="ru">Дезинфекция: обработка зоны пролива</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disinfection</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne55f3662a2564f8bb095d27d26d871e9">
+    <rdf:first rdf:resource="http://example.org/cleaning#Training"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf45976dae0c7407a8a84d196df706ff4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Training</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nad12175972a542b1bf7b4ee2f3a17246">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0477e73d1c2d448eb610cda89cde7d67">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_kpi_glass_clean">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#KPIAssessment"/>
+    <rdfs:label xml:lang="ru">KPI: чистота стекла</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KPI</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3c395713e9084988b6761ccdfec98754">
+    <rdf:first rdf:resource="http://example.org/cleaning#Equipment"/>
+    <rdf:rest rdf:nodeID="N907f92f156994453b3af5b4826604932"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncf6826b86fd641f495f49d5a99f6dade">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_dry_wipe_keyboards">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#DryCleaning"/>
+    <rdfs:label xml:lang="ru">Сухая уборка: протирка техники (без жидкости)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DryTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N42a98814716447ee8b1f24b9761d5a0e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N946b0e10809541f1b0b2ca8333ec2d35">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#consideredIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">учитывается в</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#considers"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#alignedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">согласуется в</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#alignsWith"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#implements">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">выполняет</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#implementedThrough"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ZoneList">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Список зон</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N42a98814716447ee8b1f24b9761d5a0e"/>
+    <rdfs:subClassOf rdf:nodeID="N4011f44e24e8439ca9db9efe1030ba58"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#Safety">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Безопасность</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N432e9032813a4e1db6532a70cbe818a5"/>
+    <rdfs:subClassOf rdf:nodeID="Nafa88af96fc54c559165defddf3d225a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N06eced94a41e4ed3bc52ba41558ae728">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd82f58b1d0da4bdf924b08cc38a15e8a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nbd083469befb44279439a6757bbb954e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nea39df9ee8c9459ba9ceb1994442ca49">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#windowsRestrictedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">окна ограничены</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#restrictsWindows"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne378a1ad829f456bb3807d45d3229f82">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SurfaceMaterial</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_chem_disinfectant_quat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Chemicals"/>
+    <rdfs:label xml:lang="ru">Средство: дезинфицирующее (ЧАС)</rdfs:label>
+    <requiresCompliance rdf:resource="http://example.org/cleaning#ex_safety_chemicals_handling"/>
+    <requiresDisposal rdf:resource="http://example.org/cleaning#ex_eco_chemical_disposal"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chemical</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_wet_machine_scrub">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#WetCleaning"/>
+    <rdfs:label xml:lang="ru">Влажная уборка: машинная мойка пола</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WetTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_cl_kitchen">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Checklists"/>
+    <rdfs:label xml:lang="ru">Чек-лист: кухня</rdfs:label>
+    <usedIn rdf:resource="http://example.org/cleaning#ex_qc_acceptance_after_deep"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Checklist</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_zoneList_clinic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#ZoneList"/>
+    <rdfs:label xml:lang="ru">Список зон: медцентр (ресепшен/кабинеты/санузлы)</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZoneList</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8fe0c30a0baa4444a5b62760b18897cd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zoning</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_dry_trash_collection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#DryCleaning"/>
+    <rdfs:label xml:lang="ru">Сухая уборка: сбор и вынос мусора</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DryTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_training_deep_cleaning">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Training"/>
+    <rdfs:label xml:lang="ru">Инструктаж: генеральная уборка</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Training</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#characterizes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">характеризует</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#characterizedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_dry_remove_dust_vents">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#DryCleaning"/>
+    <rdfs:label xml:lang="ru">Сухая уборка: удаление пыли с решёток</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DryTask</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_std_office_baseline">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#Standard"/>
+    <rdfs:label xml:lang="ru">Стандарт: офис (базовый)</rdfs:label>
+    <sets rdf:resource="http://example.org/cleaning#ex_freq_office_daily"/>
+    <formalizes rdf:resource="http://example.org/cleaning#ex_cl_office_openspace"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standard</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd1b0c63d664a42e892f632d08d730692">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasEntityType"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FootTraffic</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0a549711f07544a5a899f8bd6bb19716">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#managedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">управляется</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#manages"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_history_incidents_register">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#DataHistory"/>
+    <rdfs:label xml:lang="ru">История: журнал инцидентов</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_material_laminate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#SurfaceMaterials"/>
+    <rdfs:label xml:lang="ru">Материал: ламинат</rdfs:label>
+    <influencesMethods rdf:resource="http://example.org/cleaning#ex_tasklist_daily_office"/>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SurfaceMaterial</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#measuredBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">измеряется</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#measures"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#Standard">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="ru">Стандарты</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nf8b3e30d730f4d759d67d199324a28be"/>
+    <rdfs:subClassOf rdf:nodeID="N270573222c304c5fa1da87d3fd9fa86b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N61e2732896f24afd8c6b255b79d7df63">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ensuredBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">обеспечивается</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#ensures"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#containedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">содержится в</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#contains"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#formalizedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">оформляется</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#formalizes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#requires">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">требует</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/cleaning#TaskList"/>
+    <rdfs:range rdf:resource="http://example.org/cleaning#Resource"/>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#requiredBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#ex_dry_absorb_spill">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://example.org/cleaning#DryCleaning"/>
+    <rdfs:label xml:lang="ru">Сухая уборка: впитывание и сбор пролива</rdfs:label>
+    <hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</hasStatus>
+    <hasEntityType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DryCleaning</hasEntityType>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6110f76f34a14654a4089e23a05a75b0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N105ba886e4ae4efbb0f3e2da46c18a34">
+    <rdf:first rdf:resource="http://example.org/cleaning#DryCleaning"/>
+    <rdf:rest rdf:nodeID="N29aac9e3783a488289575a8d7170224f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nffc59afbd02142e9ac983781e2590ef5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.org/cleaning#hasStatus"/>
+    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">active</owl:hasValue>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N97476d2a61b340f8b6eacce4fa518301">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N3eeeb72b08644e1cb91704ef8687139e"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/cleaning#setBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="ru">задаётся</rdfs:label>
+    <owl:inverseOf rdf:resource="http://example.org/cleaning#sets"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5e3a7037904c40e5a0251942859c2093">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N61e7475c49304affb9ac5e740d43948a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N224bd115062644cd9842b6d528726dba">
+    <rdf:first rdf:resource="http://example.org/cleaning#SurfaceMaterials"/>
+    <rdf:rest rdf:nodeID="N46c5c85b3ae245f3ab646864cd082f26"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3eeeb72b08644e1cb91704ef8687139e">
+    <rdf:first rdf:resource="http://example.org/cleaning#FacilityProfile"/>
+    <rdf:rest rdf:nodeID="Nc27e6731294f43b2a3aed80c96b4b9e2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc764a65e1882404593dad3ce0aae1e96">
+    <rdf:first rdf:resource="http://example.org/cleaning#Resource"/>
+    <rdf:rest rdf:nodeID="N005107da9b254fefbda54154e394ec96"/>
+  </rdf:Description>
+</rdf:RDF>

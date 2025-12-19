@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Выберите помещение и/или пакет услуг</h2>
+
+<form action="{{ url_for('recommend') }}" method="post" class="card">
+  <fieldset>
+    <legend>1) Базовый способ подбора</legend>
+
+    <label>
+      <input type="radio" name="mode" value="auto" checked>
+      Авто (по списку зон / типу помещения)
+    </label>
+{#    <label>#}
+{#      <input type="radio" name="mode" value="explicit">#}
+{#      Вручную (выбрать пакет)#}
+{#    </label>#}
+
+    <div class="grid">
+      <div>
+        <label for="zone_list"><b>Список зон (для авто-подбора)</b></label>
+        <select name="zone_list" id="zone_list">
+          <option value="">— не выбрано —</option>
+          {% for uri, name in zone_lists %}
+            <option value="{{ uri }}">{{ name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div>
+        <label for="tasklist"><b>Пакет услуг (для ручного выбора)</b></label>
+        <select name="tasklist" id="tasklist">
+          <option value="">— не выбрано —</option>
+          {% for uri, name in tasklists %}
+            <option value="{{ uri }}">{{ name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div>
+        <label for="traffic"><b>Поток людей</b></label>
+        <select name="traffic" id="traffic">
+          <option value="">— не выбрано —</option>
+          {% for uri, name in traffic %}
+            <option value="{{ uri }}">{{ name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>2) Дополнительные опции</legend>
+    <label><input type="checkbox" name="add_emergency"> Добавить пакет: экстренный пролив/разлив</label><br>
+    <label><input type="checkbox" name="add_windows"> Добавить пакет: окна (еженедельно)</label><br>
+    <label><input type="checkbox" name="add_deep"> Добавить пакет: генеральная уборка</label>
+  </fieldset>
+
+  <button type="submit">Получить рекомендации</button>
+</form>
+
+{% endblock %}

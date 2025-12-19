@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title or "Рекомендательная система уборки" }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div>
+        <h1>Подбор услуг уборки</h1>
+              </div>
+      <nav class="menu">
+        <a href="{{ url_for('index') }}">Подбор</a>
+        <a href="{{ url_for('packages') }}">Все пакеты</a>
+
+        <div class="menu-group">
+          <span class="menu-title">Фильтры ▾</span>
+          <div class="menu-dropdown">
+            <a href="{{ url_for('filter1_zone') }}">Фильтр 1: ZoneList</a>
+            <a href="{{ url_for('filter2_tasktypes') }}">Фильтр 2: Типы работ</a>
+            <a href="{{ url_for('filter3_schedule') }}">Фильтр 3: Расписание</a>
+            <a href="{{ url_for('filter4_resources') }}">Фильтр 4: Ресурсы</a>
+            <a href="{{ url_for('filter5_diverse') }}">Фильтр 5: Диверсный</a>
+          </div>
+        </div>
+
+              </nav>
+    </header>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-wrap">
+          {% for cat, msg in messages %}
+            <div class="flash {{ cat }}">{{ msg }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+          </footer>
+  </div>
+</body>
+</html>

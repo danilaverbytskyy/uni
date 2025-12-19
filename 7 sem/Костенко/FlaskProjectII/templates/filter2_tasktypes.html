@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Фильтр 2 — по типам работ</h2>
+<p>Отметь нужные типы работ. После нажатия покажутся все пакеты: подходящие — зелёным, неподходящие — красным.</p>
+
+<form action="{{ url_for('filter2_tasktypes') }}" method="post" class="card">
+  <fieldset>
+    <legend>Типы работ</legend>
+    <label><input type="checkbox" name="want_dry" {% if want_dry %}checked{% endif %}> Сухая уборка</label>
+    <label><input type="checkbox" name="want_wet" {% if want_wet %}checked{% endif %}> Влажная уборка</label>
+    <label><input type="checkbox" name="want_dis" {% if want_dis %}checked{% endif %}> Дезинфекция</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Режим</legend>
+    <label><input type="radio" name="mode" value="all" {% if mode == "all" %}checked{% endif %}> Пакет должен содержать ВСЕ выбранные типы (пересечение)</label>
+    <label><input type="radio" name="mode" value="any" {% if mode == "any" %}checked{% endif %}> Пакет должен содержать ЛЮБОЙ из выбранных типов (объединение)</label>
+  </fieldset>
+
+  <button type="submit">Показать</button>
+</form>
+
+
+{% if submitted %}
+  <section class="card">
+    <h3>Результаты</h3>
+    {% if cards and cards|length > 0 %}
+      <ul class="list-reset">
+        {% for c in cards %}
+          <li class="pill {% if c.is_match %}highlight-pill{% else %}red-pill{% endif %}">
+            {{ c.name }}
+            {% if c.is_match %}
+              <span class="ok-badge">подходит</span>
+            {% else %}
+              <span class="bad-badge">не подходит</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Нет данных для отображения.</p>
+    {% endif %}
+  </section>
+{% endif %}
+
+
+{% endblock %}

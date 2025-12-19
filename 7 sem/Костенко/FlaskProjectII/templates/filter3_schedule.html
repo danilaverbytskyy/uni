@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Фильтр 3 — пакеты с расписанием</h2>
+<p>Можно указать слово для поиска в названии расписания (например: "ежедневно", "еженедельно").</p>
+
+<form action="{{ url_for('filter3_schedule') }}" method="post" class="card">
+  <label for="schedule_keyword"><b>Слово в названии расписания (необязательно)</b></label>
+  <input type="text" name="schedule_keyword" id="schedule_keyword" value="{{ schedule_keyword }}" placeholder="например: ежедневно, еженедельно, ночь">
+  <button type="submit">Показать</button>
+</form>
+
+
+{% if submitted %}
+  <section class="card">
+    <h3>Результаты</h3>
+    {% if cards and cards|length > 0 %}
+      <ul class="list-reset">
+        {% for c in cards %}
+          <li class="pill {% if c.is_match %}highlight-pill{% else %}red-pill{% endif %}">
+            {{ c.name }}
+            {% if c.is_match %}
+              <span class="ok-badge">подходит</span>
+            {% else %}
+              <span class="bad-badge">не подходит</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Нет данных для отображения.</p>
+    {% endif %}
+  </section>
+{% endif %}
+
+
+{% endblock %}
