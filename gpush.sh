@@ -4,6 +4,6 @@ set -e
 git status
 git add .
 
-git commit -m "ew"
+git commit -m "Полная версия"
 
 git push
