@@ -3,6 +3,8 @@ kind: ConfigMap
 metadata:
   name: ui-config
   namespace: user-platform-exam
+  labels:
+    app: user-platform
 data:
   LOGIN_TITLE: "Вход в систему"
   REGISTER_TITLE: "Регистрация"

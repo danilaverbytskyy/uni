@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
   <h1>Личная страница пользователя</h1>
-  <p class="muted">После входа вы попадаете сюда и видите данные своего профиля.</p>
 
   <div id="noToken" class="flash error" style="display:none;">
     Токен не найден. Сначала войдите в систему.
@@ -9,7 +8,6 @@
 
   <section id="cabinet" style="display:none;">
     <h3>Ваш JWT токен</h3>
-    <p class="muted">Он используется для обращений к другим сервисам как <code>Authorization: Bearer &lt;token&gt;</code>.</p>
 
     <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
       <button type="button" onclick="copyToken()">Копировать токен</button>
@@ -17,7 +15,7 @@
       <span id="copyStatus" class="muted"></span>
     </div>
 
-    <pre style="margin-top:10px;"><code id="jwtToken"></code></pre>
+    <pre style="margin-top:10px; margin-right: 100px;"><code id="jwtToken"></code></pre>
 
     <hr />
 

@@ -64,45 +64,44 @@ def create_app() -> Flask:
         return render_template("login.html", login_title=app.config["LOGIN_TITLE"], token=token)
 
 
-@app.get("/me")
-def me_page():
-    # Личная страница пользователя (после входа)
-    return render_template("me.html")
+    @app.get("/me")
+    def me_page():
+        return render_template("me.html")
 
-def _proxy_profile_service(method: str, token: str, body=None):
-    base_url = app.config.get("PROFILE_SERVICE_URL", "http://profile-service:5000")
-    url = base_url.rstrip("/") + "/api/profile"
+    def _proxy_profile_service(method: str, token: str, body=None):
+        base_url = app.config.get("PROFILE_SERVICE_URL", "http://profile-service:5000")
+        url = base_url.rstrip("/") + "/api/profile"
 
-    headers = {"Authorization": f"Bearer {token}"}
-    data = None
-    if body is not None:
-        data = json.dumps(body).encode("utf-8")
-        headers["Content-Type"] = "application/json"
+        headers = {"Authorization": f"Bearer {token}"}
+        data = None
+        if body is not None:
+            data = json.dumps(body).encode("utf-8")
+            headers["Content-Type"] = "application/json"
 
-    req = urllib.request.Request(url, data=data, headers=headers, method=method.upper())
-    try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            raw = resp.read().decode("utf-8")
-            return resp.getcode(), raw
-    except urllib.error.HTTPError as e:
-        raw = e.read().decode("utf-8")
-        return e.code, raw
-    except Exception:
-        return 503, json.dumps({"error": "profile service unavailable"})
+        req = urllib.request.Request(url, data=data, headers=headers, method=method.upper())
+        try:
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                raw = resp.read().decode("utf-8")
+                return resp.getcode(), raw
+        except urllib.error.HTTPError as e:
+            raw = e.read().decode("utf-8")
+            return e.code, raw
+        except Exception:
+            return 503, json.dumps({"error": "profile service unavailable"})
 
-@app.route("/api/me/profile", methods=["GET", "PUT"])
-def api_me_profile():
-    token = get_bearer_token(request.headers.get("Authorization"))
-    if not token:
-        return jsonify({"error": "missing bearer token"}), 401
+    @app.route("/api/me/profile", methods=["GET", "PUT"])
+    def api_me_profile():
+        token = get_bearer_token(request.headers.get("Authorization"))
+        if not token:
+            return jsonify({"error": "missing bearer token"}), 401
 
-    if request.method == "GET":
-        status, raw = _proxy_profile_service("GET", token)
-    else:
-        body = request.get_json(silent=True) or {}
-        status, raw = _proxy_profile_service("PUT", token, body=body)
+        if request.method == "GET":
+            status, raw = _proxy_profile_service("GET", token)
+        else:
+            body = request.get_json(silent=True) or {}
+            status, raw = _proxy_profile_service("PUT", token, body=body)
 
-    return raw, status, {"Content-Type": "application/json"}
+        return raw, status, {"Content-Type": "application/json"}
 
     @app.post("/api/register")
     def api_register():

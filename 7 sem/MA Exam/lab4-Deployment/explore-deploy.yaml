@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: explore-deploy
+  labels:
+    app: explore-deploy-app
+spec:
+  minReadySeconds: 10
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: explore-deploy-app
+  template:
+    metadata:
+      name: nginx-container
+      labels:
+        app: explore-deploy-app
+    spec:
+      containers:
+        - name: explore-deploy-container
+          image: nginx:1.25
+          ports:
+            - containerPort: 80

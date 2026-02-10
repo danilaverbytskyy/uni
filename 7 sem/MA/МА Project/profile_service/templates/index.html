@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
   <h1>Profile Service</h1>
-  <p class="muted">UI для проверки API профиля. Нужен JWT из auth-service.</p>
+  <p class="muted">Нужен JWT из auth-service.</p>
 
   <div class="card grid">
     <h3>JWT</h3>
     <textarea id="token" rows="3" placeholder="Вставь JWT токен сюда..."></textarea>
     <div class="row">
       <button type="button" onclick="saveToken()">Сохранить</button>
-      <button type="button" onclick="loadToken()">Загрузить</button>
+{#      <button type="button" onclick="loadToken()">Загрузить</button>#}
       <button type="button" onclick="copyToken()">Копировать</button>
       <span id="status" class="muted"></span>
     </div>
