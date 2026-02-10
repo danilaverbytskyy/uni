@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Profile Service</h1>
+  <p class="muted">UI для проверки API профиля. Нужен JWT из auth-service.</p>
+
+  <div class="card grid">
+    <h3>JWT</h3>
+    <textarea id="token" rows="3" placeholder="Вставь JWT токен сюда..."></textarea>
+    <div class="row">
+      <button type="button" onclick="saveToken()">Сохранить</button>
+      <button type="button" onclick="loadToken()">Загрузить</button>
+      <button type="button" onclick="copyToken()">Копировать</button>
+      <span id="status" class="muted"></span>
+    </div>
+  </div>
+
+  <div class="card grid" style="margin-top:16px;">
+    <h3>Профиль</h3>
+    <div class="row">
+      <button type="button" onclick="getProfile()">Получить профиль</button>
+    </div>
+
+    <div class="grid">
+      <input id="full_name" placeholder="full_name" />
+      <input id="email" placeholder="email" />
+      <textarea id="bio" rows="3" placeholder="bio"></textarea>
+      <button type="button" onclick="updateProfile()">Обновить профиль (PUT)</button>
+    </div>
+
+    <h4>Ответ</h4>
+    <pre><code id="out">{}</code></pre>
+  </div>
+
+  <script>
+    function setStatus(msg) {
+      const s = document.getElementById("status");
+      if (!s) return;
+      s.textContent = msg || "";
+      if (msg) setTimeout(()=>{ s.textContent = ""; }, 2000);
+    }
+    function tokenValue() {
+      return (document.getElementById("token")?.value || "").trim();
+    }
+    function loadToken() {
+      const t = localStorage.getItem("jwt_token") || "";
+      const el = document.getElementById("token");
+      if (el) el.value = t;
+      setStatus(t ? "Токен загружен" : "В localStorage токена нет");
+    }
+    function saveToken() {
+      const t = tokenValue();
+      if (!t) return setStatus("Пустой токен");
+      localStorage.setItem("jwt_token", t);
+      setStatus("Сохранено");
+    }
+    async function copyToken() {
+      const t = tokenValue();
+      if (!t) return setStatus("Пустой токен");
+      try {
+        await navigator.clipboard.writeText(t);
+        setStatus("Скопировано ✔");
+      } catch(e) {
+        const ta = document.createElement("textarea");
+        ta.value = t;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        setStatus("Скопировано ✔");
+      }
+    }
+    function headers() {
+      const t = tokenValue();
+      return t ? { "Authorization": "Bearer " + t } : {};
+    }
+    function show(obj) {
+      document.getElementById("out").textContent = JSON.stringify(obj, null, 2);
+    }
+
+    async function getProfile() {
+      try {
+        const r = await fetch("/api/profile", { headers: headers() });
+        const data = await r.json();
+        show(data);
+        if (r.ok) {
+          document.getElementById("full_name").value = data.full_name ?? "";
+          document.getElementById("email").value = data.email ?? "";
+          document.getElementById("bio").value = data.bio ?? "";
+        }
+      } catch (e) {
+        show({error: String(e)});
+      }
+    }
+
+    async function updateProfile() {
+      const body = {
+        full_name: document.getElementById("full_name").value,
+        email: document.getElementById("email").value,
+        bio: document.getElementById("bio").value,
+      };
+      try {
+        const r = await fetch("/api/profile", {
+          method: "PUT",
+          headers: { ...headers(), "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+        });
+        const data = await r.json();
+        show(data);
+      } catch (e) {
+        show({error: String(e)});
+      }
+    }
+
+    // автозагрузка токена
+    loadToken();
+  </script>
+{% endblock %}

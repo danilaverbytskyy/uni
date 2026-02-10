@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Личная страница пользователя</h1>
+  <p class="muted">После входа вы попадаете сюда и видите данные своего профиля.</p>
+
+  <div id="noToken" class="flash error" style="display:none;">
+    Токен не найден. Сначала войдите в систему.
+  </div>
+
+  <section id="cabinet" style="display:none;">
+    <h3>Ваш JWT токен</h3>
+    <p class="muted">Он используется для обращений к другим сервисам как <code>Authorization: Bearer &lt;token&gt;</code>.</p>
+
+    <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+      <button type="button" onclick="copyToken()">Копировать токен</button>
+      <button type="button" onclick="logout()">Выйти</button>
+      <span id="copyStatus" class="muted"></span>
+    </div>
+
+    <pre style="margin-top:10px;"><code id="jwtToken"></code></pre>
+
+    <hr />
+
+    <h2>Профиль</h2>
+    <div id="profileStatus" class="muted"></div>
+
+    <form id="profileForm" onsubmit="return saveProfile(event)">
+      <input name="username" placeholder="Логин" disabled />
+      <input name="full_name" placeholder="ФИО" />
+      <input name="email" placeholder="Email" />
+      <textarea name="bio" placeholder="О себе" rows="4"></textarea>
+      <button type="submit">Сохранить профиль</button>
+    </form>
+  </section>
+
+  <script>
+    function getToken() {
+      return localStorage.getItem("jwt_token") || "";
+    }
+
+    function show(el, yes) {
+      if (!el) return;
+      el.style.display = yes ? "" : "none";
+    }
+
+    async function copyToken() {
+      const text = document.getElementById("jwtToken").textContent.trim();
+      if (!text) return;
+
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch (e) {
+        // fallback
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+      }
+      const s = document.getElementById("copyStatus");
+      if (s) s.textContent = "Скопировано ✔";
+      setTimeout(()=>{ if (s) s.textContent = ""; }, 2000);
+    }
+
+    function logout() {
+      localStorage.removeItem("jwt_token");
+      window.location.href = "{{ url_for('login_page') }}";
+    }
+
+    async function loadProfile() {
+      const statusEl = document.getElementById("profileStatus");
+      if (statusEl) statusEl.textContent = "Загружаем профиль…";
+
+      const token = getToken();
+      const resp = await fetch("/api/me/profile", {
+        headers: { "Authorization": "Bearer " + token }
+      });
+
+      const text = await resp.text();
+      let data = null;
+      try { data = JSON.parse(text); } catch (e) {}
+
+      if (!resp.ok) {
+        if (statusEl) statusEl.textContent = (data && data.error) ? data.error : ("Ошибка загрузки (" + resp.status + ")");
+        return;
+      }
+
+      if (statusEl) statusEl.textContent = "Профиль загружен.";
+
+      const form = document.getElementById("profileForm");
+      if (!form) return;
+
+      form.username.value = data.username || "";
+      form.full_name.value = data.full_name || "";
+      form.email.value = data.email || "";
+      form.bio.value = data.bio || "";
+    }
+
+    async function saveProfile(event) {
+      event.preventDefault();
+      const statusEl = document.getElementById("profileStatus");
+      if (statusEl) statusEl.textContent = "Сохраняем…";
+
+      const token = getToken();
+      const form = document.getElementById("profileForm");
+      const body = {
+        full_name: form.full_name.value,
+        email: form.email.value,
+        bio: form.bio.value
+      };
+
+      const resp = await fetch("/api/me/profile", {
+        method: "PUT",
+        headers: {
+          "Authorization": "Bearer " + token,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body)
+      });
+
+      const text = await resp.text();
+      let data = null;
+      try { data = JSON.parse(text); } catch (e) {}
+
+      if (!resp.ok) {
+        if (statusEl) statusEl.textContent = (data && data.error) ? data.error : ("Ошибка сохранения (" + resp.status + ")");
+        return false;
+      }
+
+      if (statusEl) statusEl.textContent = "Сохранено ✔";
+      return false;
+    }
+
+    (function init() {
+      const token = getToken();
+      const noTokenEl = document.getElementById("noToken");
+      const cabinetEl = document.getElementById("cabinet");
+
+      if (!token) {
+        show(noTokenEl, true);
+        show(cabinetEl, false);
+        return;
+      }
+
+      show(noTokenEl, false);
+      show(cabinetEl, true);
+
+      document.getElementById("jwtToken").textContent = token;
+      loadProfile();
+    })();
+  </script>
+{% endblock %}
