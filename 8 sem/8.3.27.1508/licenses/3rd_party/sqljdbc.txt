@@ -1,1 +1,0 @@
-MICROSOFT JDBC DRIVER 6.2 FOR SQL SERVER.  Copyright (c) Microsoft Corp
